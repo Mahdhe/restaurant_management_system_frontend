@@ -1,33 +1,22 @@
 import React from 'react'
-import { Router, Routes } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 import Reservation from './pages/Reservation'
-import GalleryPage from './pages/GalleryPage'
+
+
 
 const App = () => {
-
   return (
-
-    // <div className='px-4 sm:[5vw] md:[7vw] lg:[9vw]'>
-
-    //   <Routes>
-
-    //     <Route path='/reservation' element={<Reservation/>} />
-
-    //   </Routes>
-
-    // </div>
-
     <>
+      <Navbar />
 
-      <div className='sm:[5vw] md:[7vw] lg:[9vw]'>
-
+     
         <Reservation></Reservation>
-        {/* <GalleryPage></GalleryPage> */}
         
-      </div>
-
+      
+      
+      <Footer />
     </>
-
   )
 }
 
