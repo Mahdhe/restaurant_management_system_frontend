@@ -18,8 +18,10 @@ const Navbar = () => {
     <nav className="w-full bg-[#0B1220] px-6 md:px-10 py-4 flex items-center justify-between relative z-50">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2 shrink-0">
-        <UtensilsCrossed className="text-orange-500" size={22} strokeWidth={2.2} />
-        <span className="text-white text-xl font-semibold tracking-wide">
+        <div className="flex items-center justify-center w-[42px] h-[42px] p-[9px] bg-[#E67E22] rounded-[14px]">
+          <UtensilsCrossed className="text-white" size={22} strokeWidth={2.2} />
+        </div>
+        <span className="text-white text-[22px] font-bold font-playfair leading-[1.3] tracking-normal text-center align-middle">
           Versailles
         </span>
       </Link>
@@ -43,7 +45,7 @@ const Navbar = () => {
         <button
           type="button"
           aria-label="Toggle dark mode"
-          className="w-9 h-9 flex items-center justify-center rounded-full border border-slate-600 text-gray-300 hover:text-orange-500 hover:border-orange-500 transition-colors duration-200"
+          className="w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border border-slate-600 text-gray-300 hover:text-orange-500 hover:border-orange-500 transition-colors duration-200"
         >
           <Moon size={16} />
         </button>
@@ -57,7 +59,7 @@ const Navbar = () => {
 
         <button
           type="button"
-          className="px-5 py-2 rounded-md bg-orange-500 text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
+          className="px-5 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
         >
           Order Online
         </button>
