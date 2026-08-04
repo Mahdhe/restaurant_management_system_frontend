@@ -32,7 +32,7 @@ bg-main-gradient
   }}
 />
 
-  {/* Blue Glow */}
+  {/* ellipse two */}
   <div
     style={{
       position: "absolute",
