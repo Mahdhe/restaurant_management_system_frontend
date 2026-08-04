@@ -17,7 +17,7 @@ const menuItems = [
   },
   {
     id: 2,
-    name: "Grilled Chiken",
+    name: "Grilled Chicken",
     description: "Tender grilled chicken with herbs and seasoning",
     price: 1850,
     category: "Starters",
@@ -88,11 +88,12 @@ export default function OrderOnline() {
     );
   };
 
-  const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
   const orderTotal = cart.reduce(
     (total, item) => total + item.price * item.quantity,
     0,
   );
+
+  const total = orderTotal + (orderType === "Delivery" ? 500 : 0);
 
   return (
     <div className="min-h-screen font-dmsans">
@@ -165,8 +166,8 @@ export default function OrderOnline() {
 
         {/* Menu and cart */}
         <section className="mx-auto px-5 py-18 bg-[#0F1923]">
-          <div className="flex mx-auto max-w-280 gap-10 xl:px-0">
-            <div className="grid grid-cols-2 gap-5 w-2/3">
+          <div className="flex items-start mx-auto max-w-280 gap-10 xl:px-0">
+            <div className="grid grid-cols-2 gap-5 w-2/3 self-start">
               {filteredItems.length > 0 ? (
                 filteredItems.map((item) => (
                   <article
@@ -210,14 +211,11 @@ export default function OrderOnline() {
             </div>
 
             {/* Cart */}
-            <aside className="w-137.5 rounded-[14px] h-fit bg-[#1C2A38] py-10 px-7.5 lg:sticky lg:top-6">
+            <aside
+              className={`w-137.5 rounded-xl h-fit py-10 px-7.5 lg:sticky lg:top-6 ${cart.length > 0 ? "bg-[#0F1923] border border-[#F39C1266]" : "bg-[#1C2A38]"}`}
+            >
               <div className="flex items-center justify-between">
                 <h2 className="text-[24px] text-white font-bold">Your Order</h2>
-                {itemCount > 0 && (
-                  <span className="rounded-full bg-[#ed850e] px-2.5 py-1 font-bold text-xs text-white">
-                    {itemCount}
-                  </span>
-                )}
               </div>
 
               {cart.length === 0 ? (
@@ -225,33 +223,35 @@ export default function OrderOnline() {
                   Your cart is empty - add a dish to begin.
                 </p>
               ) : (
-                <div className="my-6 space-y-4">
+                <div className="my-6 space-y-4 ">
                   {cart.map((item) => (
                     <div
                       key={item.id}
-                      className="pb-4 border-b border-slate-600/50"
+                      className="pb-2 border-b border-slate-600/50"
                     >
                       <div className="flex justify-between gap-4">
                         <div>
-                          <p className="font-semibold text-white">
+                          <p className="font-playfair font-semibold text-[#F0F4F8] text-[14px] tracking-wider">
                             {item.name}
                           </p>
-                          <p className="mt-1 text-[#ed850e] text-sm">
+                          <p className="mt-1 text-[#F0F4F8B3] text-[11px] font-lighter">
                             {formatPrice(item.price)}
                           </p>
                         </div>
 
-                        <div className="flex h-8 items-center border border-slate-600 rounded-lg ">
+                        <div className="flex h-8 items-center ">
                           <button
                             onClick={() => updateQuantity(item.id, -1)}
-                            className="px-2 text-slate-300 hover:text-[#ed850e]"
+                            className="px-2 text-white"
                           >
                             -
                           </button>
-                          <span className="px-2 text-sm">{item.quantity}</span>
+                          <span className="px-2 text-[14px] text-white">
+                            {item.quantity}
+                          </span>
                           <button
                             onClick={() => updateQuantity(item.id, 1)}
-                            className="px-2 text-slate-300 hover:text-[#ed850e]"
+                            className="px-2 text-white"
                           >
                             +
                           </button>
@@ -260,11 +260,76 @@ export default function OrderOnline() {
                     </div>
                   ))}
 
-                  <div className="flex justify-between pt-2 font-bold text-white">
-                    <span>Total</span>
-                    <span className="text-[#ed850e]">
-                      {formatPrice(orderTotal)}
+                  <div className="text-[#F0F4F8B3] border-b border-slate-600/50 pb-2 pt-5">
+                    <div className="flex justify-between">
+                      <span className=" text-[13px]">Subtotal</span>
+                      <span className=" text-[13px]">
+                        {formatPrice(orderTotal)}
+                      </span>
+                    </div>
+
+                    <div className="flex justify-between pt-4">
+                      <span className=" text-[13px]">Delivery Fee</span>
+                      <span className=" text-[13px]">
+                        {formatPrice(orderType === "Delivery" ? 500 : 0)}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between pt-2 text-[#F0F4F8]">
+                    <span className="text-[16px] pt-1 font-semibold">
+                      Total
                     </span>
+                    <span className="text-[#E67E22] font-playfair font-bold text-[24px]">
+                      {formatPrice(total)}
+                    </span>
+                  </div>
+
+                  {/* form */}
+                  <div className="space-y-3">
+                    <div className="flex-col gap-1 flex">
+                      <label className="text-[14px] text-[#F0F4F8]">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Your name"
+                        className="border border-slate-600 rounded-[10px] text-slate-200 px-3 py-2 placeholder:text-[#8A9BB0] placeholder:text-[14px] outline-none focus:border-[#E67E2266]"
+                      />
+                    </div>
+                    <div className="flex-col gap-1 flex">
+                      <label className="text-[14px] text-[#F0F4F8]">
+                        Phone Number
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="+94 77 123 4567"
+                        className="border border-slate-600 rounded-[10px] text-slate-200 px-3 py-2 placeholder:text-[#8A9BB0] placeholder:text-[14px] outline-none focus:border-[#E67E2266]"
+                      />
+                    </div>
+                    <div className="flex-col gap-1 flex">
+                      <label className="text-[14px] text-[#F0F4F8]">
+                        Delivery Address
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Street, City"
+                        className="border border-slate-600 rounded-[10px] text-slate-200 px-3 py-2 placeholder:text-[#8A9BB0] placeholder:text-[14px] outline-none focus:border-[#E67E2266]"
+                      />
+                    </div>
+                    <div className="flex-col gap-1 flex">
+                      <label className="text-[14px] text-[#F0F4F8]">
+                        Order Notes(Optional)
+                      </label>
+                      <textarea
+                        name="orderNotes"
+                        id=""
+                        cols="30"
+                        rows="3"
+                        className="border border-slate-600 rounded-[10px] text-slate-200 px-3 py-2 placeholder:text-[#8A9BB0] placeholder:text-[14px] outline-none focus:border-[#E67E2266]"
+                        placeholder="Allergies, Special Requests..."
+                      ></textarea>{" "}
+                    </div>
                   </div>
                 </div>
               )}
@@ -278,7 +343,7 @@ export default function OrderOnline() {
                       : "Add items before placing an order.",
                   )
                 }
-                className="w-full rounded-[10px] border border-slate-500 bg-[#243447] py-2.5 px-4.5 text-[14px] transition text-[#F0F4F8] font-semibold hover:text-white cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
+                className={`w-full rounded-[10px] py-2.5 px-4.5 text-[14px] transition font-semibold cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 ${cart.length > 0 ? "bg-[#E67E22] text-slate-50" : "bg-[#243447] text-slate-50 border border-slate-300"}`}
               >
                 PLACE ORDER
               </button>

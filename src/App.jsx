@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
@@ -7,9 +8,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <div>
-        <OrderOnline />
-      </div>
+      <Routes>
+        <Route path="/order-online" element={<OrderOnline />} />
+      </Routes>
       <Footer />
     </>
   );

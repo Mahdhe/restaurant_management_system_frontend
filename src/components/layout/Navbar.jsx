@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { UtensilsCrossed, Moon, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -13,6 +13,9 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const location = useLocation();
+  const isOrderOnlinePage = location.pathname === "/order-online";
 
   return (
     <nav className="w-full bg-[#0F1923] border-b border-slate-700 px-6 md:px-10 py-4 z-50">
@@ -63,12 +66,14 @@ const Navbar = () => {
             Track Order
           </button>
 
-          <button
-            type="button"
-            className="font-dmsans px-4 py-2.25 rounded-[10px] bg-[#E67E22] text-white text-sm font-semibold hover:bg-[#D46B1A] transition-colors duration-200 cursor-pointer"
-          >
-            Order Online
-          </button>
+          {!isOrderOnlinePage && (
+            <button
+              type="button"
+              className="font-dmsans px-4 py-2.25 rounded-[10px] bg-[#E67E22] text-white text-sm font-semibold hover:bg-[#D46B1A] transition-colors duration-200 cursor-pointer"
+            >
+              Order Online
+            </button>
+          )}
         </div>
 
         {/* Mobile Toggle */}
@@ -98,9 +103,12 @@ const Navbar = () => {
               <button className="px-4 py-2 rounded-md border border-slate-600 text-gray-200 text-sm font-medium flex-1">
                 Track Order
               </button>
-              <button className="px-4 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold flex-1">
-                Order Online
-              </button>
+
+              {!isOrderOnlinePage && (
+                <button className="px-4 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold flex-1">
+                  Order Online
+                </button>
+              )}
             </div>
           </div>
         )}
