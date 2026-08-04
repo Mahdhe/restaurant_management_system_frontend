@@ -2,8 +2,8 @@ import React from 'react'
 
 const MainHero = () => {
     return (
-        <section className="w-full bg-[#0F1923] px-6 md:px-16 lg:px-40 py-14 sm:py-16 lg:py-20">
-            <div className="relative mx-auto overflow-hidden text-center w-full max-w-[1200px] min-h-[356px] p-5 sm:p-10 rounded-xl items-center flex"
+        <section className="w-full bg-[#0F1923] px-6 md:px-16 py-14 sm:py-16 lg:py-20">
+            <div className="relative mx-auto overflow-hidden text-center w-full max-w-[1400px] min-h-[356px] p-5 sm:p-10 rounded-xl items-center flex"
                 style={{
                     background:
                         "radial-gradient(50% 130% at 15% 50%, rgba(230, 126, 34, 0.18) 0%, rgba(15, 25, 35, 1) 90%, rgba(41, 128, 185, 0.16) 150%)",

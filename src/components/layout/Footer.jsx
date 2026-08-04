@@ -4,7 +4,7 @@ const Footer = () => {
   const year = 2026;
 
   return (
-    <footer className="w-full bg-[#0B1220] px-6 md:px-16 lg:px-40 pt-14 pb-6">
+    <footer className="w-full bg-[#0B1220] px-6 md:px-16 lg:px-20 pt-14 pb-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
