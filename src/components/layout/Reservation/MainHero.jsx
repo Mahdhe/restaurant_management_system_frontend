@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainHero = () => {
     return (
-        <section className="w-full bg-[#0F1923] py-16 px-6 sm:px-12 lg:px-[120px]">
+        <section className="w-full bg-[#0F1923] px-6 md:px-16 lg:px-40 py-14 sm:py-16 lg:py-20">
             <div className="relative mx-auto overflow-hidden text-center w-full max-w-[1200px] min-h-[356px] p-5 sm:p-10 rounded-xl items-center flex"
                 style={{
                     background:

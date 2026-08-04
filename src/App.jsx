@@ -9,12 +9,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-
-     
-        <Reservation></Reservation>
-        
-      
-      
+        <Reservation></Reservation>            
       <Footer />
     </>
   )

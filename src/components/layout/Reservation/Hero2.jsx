@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero2 = () => {
   return (
-    <section className="w-full bg-[#0F1923] px-4 py-12 sm:px-8 lg:px-[80px] lg:py-[72px]"
+    <section className="w-full bg-[#0F1923] px-6 md:px-16 lg:px-40 py-14 sm:py-16 lg:py-20"
     
     style={{
               background: "radial-gradient(40% 80% at 80% 30%, rgba(41, 128, 185, 0.16) -300%, rgba(15, 25, 35, 1) 50%)",
