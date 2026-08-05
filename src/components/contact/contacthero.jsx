@@ -12,6 +12,7 @@ min-h-125
 md:h-151.75
 overflow-hidden
 bg-main-gradient
+
 ">
 
 
@@ -55,9 +56,8 @@ bg-main-gradient
   w-full
   min-h-125
   lg:h-147
-  px-6
-  sm:px-10
-  lg:px-30
+ px-4
+ md:px-10
   lg:py-18
   pt-20
   sm:pt-24
@@ -77,12 +77,11 @@ bg-main-gradient
     relative
     z-10
     w-full
-    max-w-300
-    mx-auto
+    
     h-auto
     sm:h-95
     lg:h-125.75
-    
+
     lg:pt-18
     bg-cover
     bg-center
@@ -121,7 +120,7 @@ bg-main-gradient
 flex flex-col gap-4 lg:gap-5 w-full">
 
 
-  <h1 className="w-full max-w-300 text-[#F0F4F8]  text-3xl sm:text-4xl lg:text-[56px] leading-tight lg:leading-[80px] font-extrabold text-center tracking-[0.008em]"
+  <h1 className="w-full  text-[#F0F4F8]  text-3xl sm:text-4xl lg:text-[56px] leading-tight lg:leading-[80px] font-extrabold text-center tracking-[0.008em]"
   style={{
     fontFamily:"Playfair-Display",
   }}
@@ -130,7 +129,7 @@ flex flex-col gap-4 lg:gap-5 w-full">
     Get In Touch
   </h1>
 
-  <p className="w-full max-w-300  text-[#FFFFFF] text-base sm:text-xl lg:text-[24px] leading-6 lg:leading-[26px] font-bold text-center tracking-[0.008em] px-2"
+  <p className="w-full  text-[#FFFFFF] text-base sm:text-xl lg:text-[24px] leading-6 lg:leading-[26px] font-bold text-center tracking-[0.008em] px-2"
     style={{
     fontFamily:"Playfair-Display",
   }}
