@@ -27,7 +27,7 @@ const menuGroups = [
       { label: "Table Management", icon: TableProperties },
       { label: "Reservations", icon: CalendarDays, badge: "12" },
       { label: "Oder Management", icon: ClipboardList },
-      { label: "Kitchen Display", icon: ChefHat, badge: "8", active: true },
+      { label: "Kitchen Display", icon: ChefHat, badge: "8" },
     ],
   },
   {
@@ -63,7 +63,7 @@ const menuGroups = [
   },
 ];
 
-export default function AdminSidebar() {
+export default function AdminSidebar({ user, activeItem, onNavigate }) {
   return (
     <aside className="flex min-h-screen w-60 text-slate-400 flex-col bg-[#1a2535] font-dmsans">
       <div className="border-b px-9 py-3 border-slate-700">
@@ -97,8 +97,12 @@ export default function AdminSidebar() {
                   <a
                     href="#"
                     key={item.label}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      onNavigate(item.label);
+                    }}
                     className={`flex h-9 items-center px-3 gap-3 rounded-lg text-[13px] font-medium transition-colors ${
-                      item.active
+                      activeItem === item.label
                         ? "bg-[#e67e221a] text-[#e67e22]"
                         : "text-slate-400 hover:bg-slate-700/50 hover:text-slate-100"
                     }`}
@@ -127,14 +131,16 @@ export default function AdminSidebar() {
       <div className="p-2.5">
         <div className="flex gap-3 items-center rounded-[10px] bg-[#243447] text-xs font-bold text-orange-500">
           <div className="text-xs text-[#e67e22] font-bold">
-            <span className="m-2 p-3 rounded-full bg-[#1c2a38]">AK</span>
+            <span className="m-2 p-3 rounded-full bg-[#1c2a38]">
+              {user.initials}
+            </span>
           </div>
 
           <div className="py-2">
             <h4 className="text-[13px] text-slate-100 font-semibold">
-              Ashan k.
+              {user.name}
             </h4>
-            <p className="text-[11px] text-slate-500">Super Admin</p>
+            <p className="text-[11px] text-slate-500">{user.roleLabel}</p>
           </div>
         </div>
       </div>
