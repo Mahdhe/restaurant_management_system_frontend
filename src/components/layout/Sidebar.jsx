@@ -1,69 +1,14 @@
-import {
-  Bell,
-  CalendarDays,
-  ChartNoAxesCombined,
-  ChefHat,
-  ClipboardList,
-  CreditCard,
-  LayoutDashboard,
-  Package,
-  Settings,
-  ShieldCheck,
-  TableProperties,
-  TicketPercent,
-  UserRound,
-  UsersRound,
-  UtensilsCrossed,
-} from "lucide-react";
-
-const menuGroups = [
-  {
-    title: "MAIN",
-    items: [{ label: "Dashboard", icon: LayoutDashboard }],
-  },
-  {
-    title: "OPERATIONS",
-    items: [
-      { label: "Table Management", icon: TableProperties },
-      { label: "Reservations", icon: CalendarDays, badge: "12" },
-      { label: "Oder Management", icon: ClipboardList },
-      { label: "Kitchen Display", icon: ChefHat, badge: "8" },
-    ],
-  },
-  {
-    title: "FINANCE",
-    items: [
-      { label: "Billing & Payments", icon: CreditCard },
-      { label: "Coupons & Tax", icon: TicketPercent },
-    ],
-  },
-  {
-    title: "MANAGEMENT",
-    items: [
-      { label: "Menu Management", icon: UtensilsCrossed },
-      { label: "Inventory & Stock", icon: Package },
-      { label: "Staff Management", icon: UsersRound },
-      { label: "Roles & Permissions", icon: ShieldCheck },
-    ],
-  },
-  {
-    title: "CRM",
-    items: [
-      { label: "Customers", icon: UserRound },
-      { label: "Notifications", icon: Bell, badge: "7" },
-    ],
-  },
-  {
-    title: "INSIGHTS",
-    items: [{ label: "Reports & Analytics", icon: ChartNoAxesCombined }],
-  },
-  {
-    title: "SYSTEM",
-    items: [{ label: "Authentication & Security", icon: Settings }],
-  },
-];
+import { UtensilsCrossed } from "lucide-react";
+import { menuGroups } from "../../data/SidebarMenu";
 
 export default function AdminSidebar({ user, activeItem, onNavigate }) {
+  const filterGroup = menuGroups
+    .map((group) => ({
+      ...group,
+      items: group.items.filter((item) => item.roles.includes(user.role)),
+    }))
+    .filter((group) => group.items.length > 0);
+
   return (
     <aside className="flex min-h-screen w-60 text-slate-400 flex-col bg-[#1a2535] font-dmsans">
       <div className="border-b px-9 py-3 border-slate-700">
@@ -83,7 +28,7 @@ export default function AdminSidebar({ user, activeItem, onNavigate }) {
       </div>
 
       <nav className="flex-1 overflow-y-auto py-6 px-2.5">
-        {menuGroups.map((group) => (
+        {filterGroup.map((group) => (
           <div key={group.title} className="mb-7 last:mb-0">
             <p className="text-[10px] mb-3 text-[#556070] font-medium px-5">
               {group.title}
