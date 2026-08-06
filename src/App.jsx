@@ -1,16 +1,15 @@
 import "./App.css";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
-import OrderOnline from "./pages/OrderOnline";
+import Gallery from "./pages/Gallery";
+
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div>
-        <OrderOnline />
-      </div>
-      <Footer />
+      {/* <Navbar /> */}
+      <Gallery></Gallery>
+      {/* <Footer /> */}
     </>
   );
 }
