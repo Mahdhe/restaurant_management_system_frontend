@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AdminSidebar from "./components/layout/AdminSidebar";
+import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
 
