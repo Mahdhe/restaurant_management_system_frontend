@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+<<<<<<< HEAD
     <nav className="w-full bg-[#0F1923] border-b border-slate-700 px-6 md:px-10 py-4 z-50">
       <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
         {/* Logo */}
@@ -25,6 +26,88 @@ const Navbar = () => {
               size={22}
               strokeWidth={2.2}
             />
+=======
+    <nav className="w-full bg-[#0B1220] px-6 md:px-10 py-4 flex items-center justify-between relative z-50">
+      {/* Logo */}
+      <Link to="/" className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center justify-center w-[42px] h-[42px] p-[9px] bg-[#E67E22] rounded-[14px]">
+          <UtensilsCrossed className="text-white" size={22} strokeWidth={2.2} />
+        </div>
+        <span className="text-white text-[22px] font-bold font-playfair leading-[1.3] tracking-normal text-center align-middle">
+          Versailles
+        </span>
+      </Link>
+
+      {/* Desktop Nav Links */}
+      <ul className="hidden lg:flex items-center gap-8">
+        {NAV_LINKS.map((link) => (
+          <li key={link.name}>
+            <Link
+              to={link.path}
+              className="text-gray-200 text-[13px] font-medium tracking-wide hover:text-orange-500 transition-colors duration-200"
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      {/* Desktop Right Actions */}
+      <div className="hidden md:flex items-center gap-3">
+        <button
+          type="button"
+          aria-label="Toggle dark mode"
+          className="w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border border-slate-600 text-gray-300 hover:text-orange-500 hover:border-orange-500 transition-colors duration-200"
+        >
+          <Moon size={16} />
+        </button>
+
+        <button
+          type="button"
+          className="px-4 py-2 rounded-md border border-slate-600 text-gray-200 text-sm font-medium hover:border-orange-500 hover:text-orange-500 transition-colors duration-200"
+        >
+          Track Order
+        </button>
+
+        <button
+          type="button"
+          className="px-5 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
+        >
+          Order Online
+        </button>
+      </div>
+
+      {/* Mobile Toggle */}
+      <button
+        type="button"
+        className="md:hidden text-gray-200"
+        aria-label="Toggle menu"
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        {isOpen ? <X size={26} /> : <Menu size={26} />}
+      </button>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#0B1220] border-t border-slate-800 flex flex-col gap-5 px-6 py-6 md:hidden">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              onClick={() => setIsOpen(false)}
+              className="text-gray-200 text-sm font-medium tracking-wide hover:text-orange-500 transition-colors duration-200"
+            >
+              {link.name}
+            </Link>
+          ))}
+          <div className="flex items-center gap-3 pt-3">
+            <button className="px-4 py-2 rounded-md border border-slate-600 text-gray-200 text-sm font-medium flex-1">
+              Track Order
+            </button>
+            <button className="px-4 py-2 rounded-md bg-orange-500 text-white text-sm font-semibold flex-1">
+              Order Online
+            </button>
+>>>>>>> 1c93b9cc310022852f0db7dc47e5569b1223df93
           </div>
 
           <span className="font-playfair text-[#F0F4F8] text-[22px] font-bold tracking-[1.3px]">

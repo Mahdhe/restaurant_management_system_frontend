@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @import "tailwindcss";
@@ -13,4 +14,11 @@
 
 .font-dmsans{
     font-family: var(--font-dmsans)
+=======
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: "Playfair Display", DM Sans, serif;
+>>>>>>> 1c93b9cc310022852f0db7dc47e5569b1223df93
 }

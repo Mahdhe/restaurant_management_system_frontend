@@ -4,6 +4,7 @@ const Footer = () => {
   const year = 2026;
 
   return (
+<<<<<<< HEAD
     <footer className="w-full bg-[#0F1923] px-6 md:px-16 py-18 pb-6 border-t border-slate-700 font-dmsans overflow-hidden">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 xl:grid-cols-[417px_234px_234px_235px]">
@@ -105,6 +106,18 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-white text-xs">
             @{year} Versailles Restaurant &amp; Cafe
+=======
+    <footer className="w-full bg-[#0B1220] px-6 md:px-16 pt-14 pb-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Brand */}
+        <div>
+          <h3 className="text-white text-lg font-playfair">Versailles</h3>
+          <p className="text-gray-400 text-[11px] tracking-[0.2em] mt-1">
+            RESTAURANT &amp; CAFE
+          </p>
+          <p className="text-gray-400 text-sm mt-4 leading-relaxed max-w-xs">
+            An address for unforgettable evenings, in the heart of Colombo.
+>>>>>>> 1c93b9cc310022852f0db7dc47e5569b1223df93
           </p>
           <p className="text-white text-xs">Colombo, Sri Lanka</p>
         </div>
