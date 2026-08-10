@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-[#0B1220] px-6 md:px-10 py-4 flex items-center justify-between relative z-50">
+    <nav className="w-full bg-[#0F1923] px-6 lg:px-[120px] md:px-10 py-4 flex items-center justify-between relative z-50 border-b border-slate-800">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2 shrink-0">
         <div className="flex items-center justify-center w-[42px] h-[42px] p-[9px] bg-[#E67E22] rounded-[14px]">
@@ -32,7 +32,7 @@ const Navbar = () => {
           <li key={link.name}>
             <Link
               to={link.path}
-              className="text-gray-200 text-[13px] font-medium tracking-wide hover:text-orange-500 transition-colors duration-200"
+              className="text-gray-200 text-[13px] font-medium tracking-wide hover:text-[#E67E22] transition-colors duration-200"
             >
               {link.name}
             </Link>
@@ -45,14 +45,18 @@ const Navbar = () => {
         <button
           type="button"
           aria-label="Toggle dark mode"
+<<<<<<< HEAD
           className="w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border border-slate-600 text-gray-300 hover:text-orange-500 hover:border-orange-500 transition-colors duration-200"
+=======
+          className="w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border border-slate-600 text-gray-300 hover:text-[#E67E22] hover:border-orange-500 transition-colors duration-200"
+>>>>>>> development
         >
           <Moon size={16} />
         </button>
 
         <button
           type="button"
-          className="px-4 py-2 rounded-md border border-slate-600 text-gray-200 text-sm font-medium hover:border-orange-500 hover:text-orange-500 transition-colors duration-200"
+          className="px-4 py-2 rounded-md border border-slate-600 text-gray-200 text-sm font-medium hover:border-orange-500 hover:text-[#E67E22] transition-colors duration-200"
         >
           Track Order
         </button>
@@ -83,7 +87,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className="text-gray-200 text-sm font-medium tracking-wide hover:text-orange-500 transition-colors duration-200"
+              className="text-gray-200 text-sm font-medium tracking-wide hover:text-[#E67E22] transition-colors duration-200"
             >
               {link.name}
             </Link>
