@@ -12,7 +12,7 @@ const GALLERY_IMAGES = [
 
 const Gallery = () => {
   return (
-    <section className="w-full bg-[#0B1220] px-6 md:px-16 lg:px-[120px] py-16 md:py-24">
+    <section className="w-full bg-[#0F1923] px-6 md:px-16 lg:px-[120px] py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-6">

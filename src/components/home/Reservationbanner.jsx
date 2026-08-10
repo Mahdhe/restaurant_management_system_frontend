@@ -2,7 +2,7 @@ import { Calendar } from "lucide-react";
 
 const ReservationBanner = () => {
   return (
-    <section className="w-full bg-[#0B1220] px-6 md:px-16 lg:px-[120px] py-16">
+    <section className="w-full bg-[#0F1923] px-6 md:px-16 lg:px-[120px] py-16">
       <div className="max-w-7xl mx-auto rounded-2xl bg-gradient-to-br from-orange-900/40 via-[#1A2535] to-[#0B1220] p-8 md:p-14 relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative">
           {/* Left column */}

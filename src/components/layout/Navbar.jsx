@@ -45,11 +45,7 @@ const Navbar = () => {
         <button
           type="button"
           aria-label="Toggle dark mode"
-<<<<<<< HEAD
-          className="w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border border-slate-600 text-gray-300 hover:text-orange-500 hover:border-orange-500 transition-colors duration-200"
-=======
           className="w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border border-slate-600 text-gray-300 hover:text-[#E67E22] hover:border-orange-500 transition-colors duration-200"
->>>>>>> development
         >
           <Moon size={16} />
         </button>
