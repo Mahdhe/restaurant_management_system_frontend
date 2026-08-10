@@ -14,16 +14,20 @@ function App() {
   };
 
   return (
-    <div className="flex min-h-screen">
-      <AdminSidebar
-        user={currentUser}
-        activeItem={activeItem}
-        onNavigate={setActiveItem}
-      />
+    <div className="min-h-screen">
+      <div className="flex items-start">
+        <div className="sticky top-0 self-start">
+          <AdminSidebar
+            user={currentUser}
+            activeItem={activeItem}
+            onNavigate={setActiveItem}
+          />
+        </div>
 
-      <main className="h-screen min-w-0 flex-1">
-        <Header user={currentUser} page={pageDetials[activeItem]} />
-      </main>
+        <main className="min-w-0 flex-1">
+          <Header user={currentUser} page={pageDetials[activeItem]} />
+        </main>
+      </div>
     </div>
   );
 }
