@@ -4,7 +4,7 @@ const Footer = () => {
   const year = 2026;
 
   return (
-    <footer className="w-full bg-[#0B1220] px-6 md:px-16 pt-14 pb-6">
+    <footer className="w-full bg-[#0F1923] px-6 lg:px-[120px] md:px-16 pt-14 pb-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
@@ -19,7 +19,7 @@ const Footer = () => {
 
         {/* Explore */}
         <div>
-          <h4 className="text-orange-500 text-sm font-semibold tracking-wide mb-4">
+          <h4 className="text-[#E67E22] text-sm font-semibold tracking-wide mb-4">
             EXPLORE
           </h4>
           <ul className="space-y-3">
@@ -48,7 +48,7 @@ const Footer = () => {
 
         {/* Support */}
         <div>
-          <h4 className="text-orange-500 text-sm font-semibold tracking-wide mb-4">
+          <h4 className="text-[#E67E22] text-sm font-semibold tracking-wide mb-4">
             SUPPORT
           </h4>
           <ul className="space-y-3">
@@ -72,7 +72,7 @@ const Footer = () => {
 
         {/* Hours */}
         <div>
-          <h4 className="text-orange-500 text-sm font-semibold tracking-wide mb-4">
+          <h4 className="text-[#E67E22] text-sm font-semibold tracking-wide mb-4">
             HOURS
           </h4>
           <p className="text-gray-400 text-sm">Mon – Sun</p>

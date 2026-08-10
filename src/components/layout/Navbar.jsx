@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-[#0B1220] px-6 md:px-10 py-4 flex items-center justify-between relative z-50">
+    <nav className="w-full bg-[#0F1923] px-6 lg:px-[120px] md:px-10 py-4 flex items-center justify-between relative z-50">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2 shrink-0">
         <div className="flex items-center justify-center w-[42px] h-[42px] p-[9px] bg-[#E67E22] rounded-[14px]">
