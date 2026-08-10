@@ -8,8 +8,9 @@ function ContactMap(){
 <section
 className="
 w-full
- px-4
+ px-6
  md:px-10
+ lg:px-[120px]
 min-h-150
 py-10
 lg:py-18
@@ -22,9 +23,6 @@ bg-main-gradient
 
 <div className="
 w-full
-mx-auto
-px-4
-md:px-10
 h-70
 sm:h-90
 lg:h-113.75

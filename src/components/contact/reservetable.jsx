@@ -12,8 +12,9 @@ w-full
 h-auto
 min-h-105
 lg:min-h-124.5
-px-4
+px-6
 md:px-10
+lg:px-[120px]
 py-10
 md:py-12
 lg:py-18
@@ -29,8 +30,6 @@ overflow-hidden
 className="
 relative
 w-full
-mx-auto
-
 min-h-88.5
 px-4
 sm:px-6

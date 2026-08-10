@@ -8,6 +8,9 @@ function ContactHero(){
 className="
 relative
 w-full
+px-6
+md:px-10
+lg:px-[120px]
 min-h-125
 md:h-151.75
 overflow-hidden
@@ -56,8 +59,6 @@ bg-main-gradient
   w-full
   min-h-125
   lg:h-147
- px-4
- md:px-10
   lg:py-18
   pt-20
   sm:pt-24

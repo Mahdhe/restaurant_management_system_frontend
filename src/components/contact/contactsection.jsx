@@ -14,10 +14,11 @@ function ContactSection(){
     className="
     relative
     w-full
+    px-6
+    md:px-10
+    lg:px-[120px]
     h-auto
     lg:min-h-177.75
-    px-4
-    md:px-10
     py-10
     lg:py-18
     bg-main-gradient
@@ -49,8 +50,6 @@ function ContactSection(){
 className="
 relative
 w-full
-
-mx-auto
 h-auto
 lg:h-full
 z-10
@@ -58,7 +57,7 @@ flex
 flex-col
 lg:flex-row
 gap-8
-lg:gap-20
+lg:gap-12
 "
 >
 
