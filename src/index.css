@@ -5,12 +5,17 @@
 :root {
   --font-playfair: "Playfair Display", serif;
   --font-dmsans: "DM Sans", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
 }
 
-.font-playfair{
-    font-family: var(--font-playfair)
+.font-playfair {
+  font-family: var(--font-playfair);
 }
 
-.font-dmsans{
-    font-family: var(--font-dmsans)
+.font-dmsans {
+  font-family: var(--font-dmsans);
+}
+
+.font-jetbrains {
+  font-family: var(--font-jetbrains);
 }

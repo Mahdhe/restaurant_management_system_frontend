@@ -6,10 +6,13 @@ import { useState } from "react";
 import { QueueStats } from "../../../data/QueueStats";
 import { QueueOrders } from "../../../data/QueueOrders";
 import OrderCard from "../components/OrderCard";
-import { KitchenSummery } from "../../../data/KitchenSummery";
+import KitchenSummeryCard from "../components/KitchenSummeryCard";
+import PriorityOrderCard from "../components/PriorityOrderCard";
+import FilterCard, { filterButtons } from "../components/StationFilterCard";
 
-export default function KitchenQueueContent({ label, value, valuColor }) {
+export default function KitchenQueueContent() {
   const [activeButton, setActiveButton] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("all");
 
   return (
     <>
@@ -37,27 +40,21 @@ export default function KitchenQueueContent({ label, value, valuColor }) {
         onSelect={setActiveButton}
       />
 
-      <div className="flex gap-3">
-        <div className="mt-6 grid grid-cols-3 gap-5">
+      <div className="flex gap-5 items-start">
+        <div className="mt-6 grid grid-cols-3 gap-4 w-225">
           {QueueOrders.map((order) => (
             <OrderCard key={order.id} {...order} />
           ))}
         </div>
 
-        {/* Kitchen summery */}
-        <div>
-          <div>
-            <h1>Kitchen Summer</h1>
-
-            <div>
-              {KitchenSummery.map((summery) => (
-                <div key={summery.label} className="flex justify-between">
-                  <p>{label}</p>
-                  <span>{value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="mt-6 flex-1 flex-col space-y-5">
+          <KitchenSummeryCard />
+          <PriorityOrderCard />
+          <FilterCard
+            buttons={filterButtons}
+            activeButton={activeFilter}
+            onSelect={setActiveFilter}
+          />
         </div>
       </div>
     </>

@@ -1,11 +1,11 @@
 export default function ActionButtons({ buttons, activeButton, onSelect }) {
   return (
-    <div className="mt-6 flex flex-wrap gap-3">
+    <div className="mt-7 flex flex-wrap gap-2">
       {buttons.map((button) => (
         <button
           key={button.id}
           onClick={() => onSelect(button.id)}
-          className={`rounded-lg px-5 py-2 text-sm font-medium transition-colors ${activeButton === button.id ? "bg-[#e67e22] text-white" : "bg-[#1c2b3a] text-slate-300 border border-slate-700"}`}
+          className={`rounded-full px-3 py-0.5 text-[12px] font-medium transition-colors border ${activeButton === button.id ? "bg-[#e67e221a] text-[#e67e22] border-[#e67e224d]" : "bg-[#243447] text-[#8a9bb0] border border-white/15"}`}
         >
           {button.label}
         </button>
