@@ -10,6 +10,7 @@ export default function StatsGrid({ stats }) {
           value={stat.value}
           subtitle={stat.subtitle}
           valueColor={stat.valueColor}
+          subtitleColor={stat.subtitleColor}
         />
       ))}
     </div>

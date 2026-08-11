@@ -23,7 +23,7 @@ export default function KitchenQueue() {
 
   return (
     <div>
-      <KitchenDashboardHeader />
+      <KitchenDashboardHeader activeTab={activeTab}/>
       <KitchenTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="mt-5">{renderContent()}</div>
     </div>

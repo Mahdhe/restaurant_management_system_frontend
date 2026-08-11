@@ -30,7 +30,10 @@ export default function KitchenSummeryCard() {
 
       <div className="px-4 pt-8 pb-3 space-y-5.5">
         {Summery.map((sum) => (
-          <div className="flex justify-between border-b border-white/15 pb-1">
+          <div
+            key={sum.label}
+            className="flex justify-between border-b border-white/15 pb-1"
+          >
             <p className="text-[13px] text-[#8a9bb0]">{sum.label}</p>
             <span className={`font-semibold text-[13px] ${sum.valueColor}`}>
               {sum.value}

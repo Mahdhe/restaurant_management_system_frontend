@@ -34,7 +34,10 @@ export default function PriorityOrderCard() {
 
       <div className="space-y-4 px-5 pb-5">
         {PriorityOrders.map((order) => (
-          <div className="flex justify-between bg-[#243447] border border-white/15 px-2.5 py-3 rounded-xl">
+          <div
+            key={order.orderNo}
+            className="flex justify-between bg-[#243447] border border-white/15 px-2.5 py-3 rounded-xl"
+          >
             <div>
               <h3 className="font-semibold text-[#f0f4f8] text-[14px] leading-normal">
                 {order.orderNo}

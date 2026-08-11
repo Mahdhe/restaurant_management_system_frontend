@@ -10,7 +10,7 @@ function App() {
   const currentUser = {
     name: "Ashan k.",
     initials: "AK",
-    role: "manager",
+    role: "admin",
     roleLabel: "Super Admin",
   };
 
@@ -25,7 +25,7 @@ function App() {
           />
         </div>
 
-        <main className="min-w-0 flex-1">
+        <main className="sticky top-0 min-w-0 flex-1">
           <Header user={currentUser} page={pageDetials[activeItem]} />
           <div>
             <KitchenDashboard />

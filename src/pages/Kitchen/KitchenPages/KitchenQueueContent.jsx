@@ -5,10 +5,10 @@ import { QueueButtons } from "../../../data/QueueButtons";
 import { useState } from "react";
 import { QueueStats } from "../../../data/QueueStats";
 import { QueueOrders } from "../../../data/QueueOrders";
-import OrderCard from "../components/OrderCard";
-import KitchenSummeryCard from "../components/KitchenSummeryCard";
-import PriorityOrderCard from "../components/PriorityOrderCard";
-import FilterCard, { filterButtons } from "../components/StationFilterCard";
+import QueueOrderCard from "../components/QueueOrderCard";
+import KitchenSummeryCard from "../components/KitchenQueueComponents/KitchenSummeryCard";
+import PriorityOrderCard from "../components/KitchenQueueComponents/PriorityOrderCard";
+import FilterCard, { filterButtons } from "../components/KitchenQueueComponents/StationFilterCard";
 
 export default function KitchenQueueContent() {
   const [activeButton, setActiveButton] = useState("all");
@@ -43,7 +43,7 @@ export default function KitchenQueueContent() {
       <div className="flex gap-5 items-start">
         <div className="mt-6 grid grid-cols-3 gap-4 w-225">
           {QueueOrders.map((order) => (
-            <OrderCard key={order.id} {...order} />
+            <QueueOrderCard key={order.id} {...order} />
           ))}
         </div>
 

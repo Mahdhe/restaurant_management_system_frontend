@@ -1,4 +1,8 @@
-export default function KitchenDashboardHeader() {
+import { HeaderActions } from "../../../data/HeaderActions";
+
+export default function KitchenDashboardHeader({ activeTab }) {
+  const actions = HeaderActions[activeTab];
+
   return (
     <div className="flex items-center justify-between mb-5">
       <div>
@@ -13,13 +17,18 @@ export default function KitchenDashboardHeader() {
       </div>
 
       <div className="flex gap-3">
-        <button className="px-4 rounded-[10px] py-2 bg-[#243447] border border-white/10 font-medium text-[14px] text-[#f0f4f8] hover:bg-slate-700">
-          Print Queue
-        </button>
-
-        <button className="px-4 rounded-[10px] py-2 bg-[#e67e22] text-[#f0f4f8] text-[14px] font-semibold">
-          Start Next Order
-        </button>
+        {actions.map((action) => (
+          <button
+            key={action.label}
+            className={
+              action.type === "primary"
+                ? "px-4 rounded-[10px] py-2 bg-[#e67e22] text-[#f0f4f8] text-[14px] font-semibold "
+                : "px-4 rounded-[10px] py-2 bg-[#243447] border border-white/10 font-medium text-[14px] text-[#f0f4f8]"
+            }
+          >
+            {action.label}
+          </button>
+        ))}
       </div>
     </div>
   );
