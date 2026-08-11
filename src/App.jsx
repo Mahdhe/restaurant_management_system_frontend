@@ -1,11 +1,12 @@
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="min-h-[60vh] bg-[#0B1220]" /> 
+      <AboutUs />
       <Footer />
     </>
   );
