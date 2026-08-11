@@ -10,7 +10,7 @@ function App() {
   const currentUser = {
     name: "Ashan k.",
     initials: "AK",
-    role: "admin",
+    role: "manager",
     roleLabel: "Super Admin",
   };
 
