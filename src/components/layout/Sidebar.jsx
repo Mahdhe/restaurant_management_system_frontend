@@ -10,7 +10,7 @@ export default function AdminSidebar({ user, activeItem, onNavigate }) {
     .filter((group) => group.items.length > 0);
 
   return (
-    <aside className="flex shrink-0 w-60 text-slate-400 flex-col bg-[#1a2535] font-dmsans">
+    <aside className="flex min-h-screen shrink-0 w-60 text-slate-400 flex-col bg-[#1a2535] font-dmsans">
       <div className="border-b px-9 py-3 border-slate-700">
         {/* logo */}
         <div className="flex gap-3 items-center">
@@ -73,7 +73,7 @@ export default function AdminSidebar({ user, activeItem, onNavigate }) {
         ))}
       </nav>
 
-      <div className="p-2.5">
+      <div className="mt-auto p-2.5">
         <div className="flex gap-3 items-center rounded-[10px] bg-[#243447] text-xs font-bold text-orange-500">
           <div className="text-xs text-[#e67e22] font-bold">
             <span className="m-2 p-3 rounded-full bg-[#1c2a38]">
