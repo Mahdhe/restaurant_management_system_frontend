@@ -4,7 +4,7 @@ import { ProgressStats } from "../../../data/ProgressStats";
 import ActionButtons from "../components/ActionButtons";
 import StatsGrid from "../components/StatsGrid";
 import { ProgressOrders } from "../../../data/ProgressOrders";
-import ProgressOrderCard from "../components/ProgressOrderCard";
+import ProgressOrderCard from "../components/ProgressOrderComponents/ProgressOrderCard";
 
 export default function InProgressOrders() {
   const [activeButton, setActiveButton] = useState("all");

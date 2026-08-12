@@ -1,4 +1,4 @@
-export const Summery = [
+const Summery = [
   {
     label: "Active cooks",
     value: "5",

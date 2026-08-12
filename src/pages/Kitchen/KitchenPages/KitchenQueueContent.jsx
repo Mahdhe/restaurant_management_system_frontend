@@ -5,10 +5,10 @@ import { QueueButtons } from "../../../data/QueueButtons";
 import { useState } from "react";
 import { QueueStats } from "../../../data/QueueStats";
 import { QueueOrders } from "../../../data/QueueOrders";
-import QueueOrderCard from "../components/QueueOrderCard";
 import KitchenSummeryCard from "../components/KitchenQueueComponents/KitchenSummeryCard";
 import PriorityOrderCard from "../components/KitchenQueueComponents/PriorityOrderCard";
 import FilterCard, { filterButtons } from "../components/KitchenQueueComponents/StationFilterCard";
+import QueueOrderCard from "../components/KitchenQueueComponents/QueueOrderCard";
 
 export default function KitchenQueueContent() {
   const [activeButton, setActiveButton] = useState("all");

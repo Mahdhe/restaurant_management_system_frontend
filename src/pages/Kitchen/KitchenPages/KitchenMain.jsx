@@ -5,7 +5,7 @@ import KitchenTabs from "../components/KitchenTabs";
 import KitchenQueueContent from "./KitchenQueueContent";
 import KitchenDashboardHeader from "../components/KitchenDashboardHeader";
 
-export default function KitchenQueue() {
+export default function KitchenMain() {
   const [activeTab, setActiveTab] = useState("queue");
 
   const renderContent = () => {
