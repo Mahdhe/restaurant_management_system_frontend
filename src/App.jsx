@@ -1,13 +1,34 @@
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import { useState } from "react";
+import AdminSidebar from "./components/layout/Sidebar";
+import Header from "./components/layout/Header";
+import { pageDetials } from "./data/PageDetails";
 
 function App() {
+  const [activeItem, setActiveItem] = useState("Dashboard");
+
+  const currentUser = {
+    name: "Ashan k.",
+    initials: "AK",
+    role: "waiter",
+    roleLabel: "Super Admin",
+  };
+
   return (
-    <>
-      <Navbar />
-      <div className="min-h-[60vh] bg-[#0B1220]" /> 
-      <Footer />
-    </>
+    <div className="min-h-screen">
+      <div className="flex items-start">
+        <div className="sticky top-0 self-start">
+          <AdminSidebar
+            user={currentUser}
+            activeItem={activeItem}
+            onNavigate={setActiveItem}
+          />
+        </div>
+
+        <main className="min-w-0 flex-1">
+          <Header user={currentUser} page={pageDetials[activeItem]} />
+        </main>
+      </div>
+    </div>
   );
 }
 
