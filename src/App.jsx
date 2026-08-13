@@ -2,6 +2,7 @@ import { useState } from "react";
 import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
+import DashboardOverview from "./pages/DashboardOverview";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -9,7 +10,7 @@ function App() {
   const currentUser = {
     name: "Ashan k.",
     initials: "AK",
-    role: "waiter",
+    role: "admin",
     roleLabel: "Super Admin",
   };
 
@@ -25,7 +26,13 @@ function App() {
         </div>
 
         <main className="min-w-0 flex-1">
-          <Header user={currentUser} page={pageDetials[activeItem]} />
+          <div className="sticky top-0 z-40">
+            <Header user={currentUser} page={pageDetials[activeItem]} />
+          </div>
+
+          <div>
+            {activeItem === "Dashboard" && <DashboardOverview />}
+          </div>
         </main>
       </div>
     </div>

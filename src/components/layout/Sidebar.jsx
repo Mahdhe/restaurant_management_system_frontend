@@ -13,7 +13,7 @@ export default function AdminSidebar({ user, activeItem, onNavigate }) {
     <aside className="flex min-h-screen shrink-0 w-60 text-slate-400 flex-col bg-[#1a2535] font-dmsans">
       <div className="border-b px-9 py-3 border-slate-700">
         {/* logo */}
-        <div className="flex gap-3 items-center">
+        <div className="top-0 flex gap-3 items-center">
           <div className="grid h-8 w-8 text-white bg-[#e67e22] rounded-md place-items-center">
             <UtensilsCrossed size={20} strokeWidth={3} />
           </div>
