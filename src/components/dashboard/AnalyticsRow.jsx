@@ -42,7 +42,7 @@ const AnalyticsRow = () => {
           </button>
         </div>
 
-        <div className="bg-[#0B1220] rounded-lg p-4">
+        <div className="bg-[#243447] rounded-lg p-4">
           <p className="text-gray-500 text-xs text-center font-medium mb-2">
             Revenue Chart
           </p>
@@ -88,7 +88,7 @@ const AnalyticsRow = () => {
           {QUICK_ACTIONS.map((action) => (
             <div
               key={action.id}
-              className="flex items-center justify-between bg-[#0B1220] border border-slate-800 rounded-lg px-4 py-3"
+              className="flex items-center justify-between bg-[#243447] border border-slate-800 rounded-lg px-4 py-3"
             >
               <span className="text-gray-200 text-sm">{action.label}</span>
               <button

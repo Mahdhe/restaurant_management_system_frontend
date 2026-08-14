@@ -64,7 +64,7 @@ const KPIRow = () => {
         return (
           <div
             key={item.id}
-            className="bg-[#101B2C] border border-slate-800 rounded-xl p-5"
+            className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5"
           >
             <div className="flex items-center gap-2 mb-4">
               <span
