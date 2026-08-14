@@ -1,0 +1,42 @@
+const tabs = [
+  {
+    id: "dashboard",
+    label: "Inventory Dashboard",
+  },
+  {
+    id: "Stock-list",
+    label: "Ingredients Stock List",
+  },
+  {
+    id: "add-edit-stock",
+    label: "Add/Edit Stock",
+  },
+  {
+    id: "stockAlert",
+    label: "Low Stock Alert",
+  },
+  {
+    id: "supplier",
+    label: "Supplier Management",
+  },
+  {
+    id: "stock-track",
+    label: "Stock Usage Tracking",
+  },
+];
+
+export default function InventoryTabs({ activeTab, setActiveTab }) {
+  return (
+    <div className="bg-[#1c2c38] rounded-[14px] border border-white/10 p-2 w-234">
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`px-4 py-2 rounded-[10px] text-sm font-medium ${activeTab === tab.id ? "bg-[#e67e22] text-[#f0f4f8]" : "text-slate-400 hover:text-[#f0f4f8]"}`}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+  );
+}
