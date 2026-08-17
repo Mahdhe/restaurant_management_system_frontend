@@ -1,5 +1,5 @@
 import DashboardPageHeader from "../components/dashboard/DashboardPageHeader";
-import AlertBanner from "../components/dashboard/AlertBanner";
+import AlertBanner from "../components/dashboard/ui/AlertBanner";
 import KPIRow from "../components/dashboard/KPIRow";
 import AnalyticsRow from "../components/dashboard/AnalyticsRow";
 import TableAndTopItemsRow from "../components/dashboard/Tableandtopitemsrow";

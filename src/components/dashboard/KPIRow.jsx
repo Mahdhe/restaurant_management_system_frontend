@@ -3,9 +3,8 @@ import {
   ClipboardList,
   CheckCircle2,
   XCircle,
-  ArrowUp,
-  ArrowDown,
 } from "lucide-react";
+import StatCard from "../dashboard/ui/StatCard";
 
 const KPI_DATA = [
   {
@@ -57,37 +56,9 @@ const KPI_DATA = [
 const KPIRow = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-      {KPI_DATA.map((item) => {
-        const Icon = item.icon;
-        const TrendIcon = item.trendDirection === "down" ? ArrowDown : ArrowUp;
-
-        return (
-          <div
-            key={item.id}
-            className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5"
-          >
-            <div className="flex items-center gap-2 mb-4">
-              <span
-                className={`w-7 h-7 rounded-md flex items-center justify-center ${item.iconBg}`}
-              >
-                <Icon size={15} className={item.iconColor} />
-              </span>
-              <span className="text-gray-400 text-xs font-medium tracking-wide uppercase">
-                {item.label}
-              </span>
-            </div>
-
-            <p className="text-white text-2xl font-bold mb-1">
-              {item.value}
-            </p>
-
-            <p className={`flex items-center gap-1 text-xs ${item.trendColor}`}>
-              {item.trendDirection && <TrendIcon size={12} />}
-              {item.trend}
-            </p>
-          </div>
-        );
-      })}
+      {KPI_DATA.map((item) => (
+        <StatCard key={item.id} {...item} />
+      ))}
     </div>
   );
 };

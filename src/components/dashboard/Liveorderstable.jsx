@@ -1,3 +1,5 @@
+import StatusBadge from "../dashboard/ui/StatusBadge";
+
 const ORDERS = [
   {
     id: "ORD-0412",
@@ -24,13 +26,6 @@ const ORDERS = [
     time: "7:25 PM",
   },
 ];
-
-const STATUS_STYLES = {
-  Cooking: "bg-orange-500/10 text-orange-400 border-orange-700",
-  Paid: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
-  Ready: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
-  Pending: "bg-slate-500/10 text-slate-400 border-slate-600",
-};
 
 const LiveOrdersTable = () => {
   return (
@@ -92,11 +87,7 @@ const LiveOrdersTable = () => {
                   {order.total}
                 </td>
                 <td className="px-4 py-4">
-                  <span
-                    className={`inline-block text-xs font-medium px-3 py-1 rounded-full border ${STATUS_STYLES[order.status] || STATUS_STYLES.Pending}`}
-                  >
-                    {order.status}
-                  </span>
+                  <StatusBadge status={order.status} />
                 </td>
                 <td className="px-4 py-4 text-gray-400 text-sm">
                   {order.time}
