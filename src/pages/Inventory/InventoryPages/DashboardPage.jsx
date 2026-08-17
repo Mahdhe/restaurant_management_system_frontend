@@ -10,7 +10,9 @@ export default function DashboardPage() {
       <StatsGrid stats={InventoryStats} />
 
       <div className="flex gap-5 items-start">
-        <div className="mt-6 w-283"><StockOverview /></div>
+        <div className="mt-6 w-283">
+          <StockOverview />
+        </div>
 
         <div className="mt-6 flex flex-col space-y-5">
           <QuickActions />
