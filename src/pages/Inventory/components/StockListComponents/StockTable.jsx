@@ -19,7 +19,7 @@ export default function StockTable() {
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-[#243447] text-[11px] text-[#8a9bb0] uppercase">
-              <th className="font-medium text-left p-4 rounded-l-[14px]">
+              <th className="font-medium text-center p-4 rounded-l-[14px]">
                 Ingredient
               </th>
 
