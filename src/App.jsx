@@ -3,6 +3,7 @@ import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
 import DashboardOverview from "./pages/DashboardOverview";
+import TableManagement from "./pages/TableManagement";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -32,6 +33,7 @@ function App() {
 
           <div>
             {activeItem === "Dashboard" && <DashboardOverview />}
+            {activeItem === "Table Management" && <TableManagement />}
           </div>
         </main>
       </div>
