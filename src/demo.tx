@@ -2,8 +2,6 @@ import { useState } from "react";
 import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
-
-
 import ReservationRoutes from "./routes/ReservationRoutes";
 
 function App() {
@@ -19,7 +17,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <div className="flex items-start">
-        <div className="sticky top-0 self-start">
+        <div className="sticky top-0 h-screen shrink-0 self-start">
           <AdminSidebar
             user={currentUser}
             activeItem={activeItem}
@@ -28,11 +26,12 @@ function App() {
         </div>
 
         <main className="min-w-0 flex-1">
-          <Header user={currentUser} page={pageDetials[activeItem]} />
-         
-          {/* dashboard */}
-          
-      <ReservationRoutes />
+          <Header
+            user={currentUser}
+            page={pageDetials[activeItem]}
+          />
+
+          <ReservationRoutes />
         </main>
       </div>
     </div>
