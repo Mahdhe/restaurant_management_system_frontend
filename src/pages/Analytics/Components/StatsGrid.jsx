@@ -1,6 +1,6 @@
 import StatsCard from "./StatsCard";
 
-export default function AnalyticsStats({ stats, columns = 4 }) {
+export default function StatsGrid({ stats, columns = 4 }) {
   const columnClasses = {
     4: "grid-cols-4",
     6: "grid-cols-6",
