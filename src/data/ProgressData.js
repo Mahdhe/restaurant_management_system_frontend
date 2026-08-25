@@ -167,3 +167,41 @@ export const occupanctInsights = [
     textColor: "text-[#2980B9]",
   },
 ];
+
+export const comparisionData = [
+  {
+    name: "May Revenue",
+    percentage: "40%",
+    width: "40%",
+    color: "bg-[#E67E22]",
+    textColor: "text-[#E67E22]",
+  },
+  {
+    name: "Long wait time",
+    percentage: "25%",
+    width: "25%",
+    color: "bg-[#F39C12]",
+    textColor: "text-[#F39C12]",
+  },
+  {
+    name: "Payment Failure",
+    percentage: "18%",
+    width: "18%",
+    color: "bg-[#E74C3C]",
+    textColor: "text-[#E74C3C]",
+  },
+  {
+    name: "Item Unavailable",
+    percentage: "12%",
+    width: "12%",
+    color: "bg-[#2980B9]",
+    textColor: "text-[#2980B9]",
+  },
+  {
+    name: "Other",
+    percentage: "5%",
+    width: "5%",
+    color: "bg-[#556070]",
+    textColor: "text-[#556070]",
+  },
+];
