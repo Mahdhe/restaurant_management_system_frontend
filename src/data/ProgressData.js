@@ -205,3 +205,41 @@ export const comparisionData = [
     textColor: "text-[#556070]",
   },
 ];
+
+export const costs = [
+  {
+    name: "Protien",
+    percentage: "48%",
+    width: "48%",
+    color: "bg-[#E74C3C]",
+    textColor: "text-[#E74C3C]",
+  },
+  {
+    name: "Produce",
+    percentage: "22%",
+    width: "22%",
+    color: "bg-[#27AE60]",
+    textColor: "text-[#27AE60]",
+  },
+  {
+    name: "Grains",
+    percentage: "18%",
+    width: "18%",
+    color: "bg-[#e67e22]",
+    textColor: "text-[#e67e22]",
+  },
+  {
+    name: "Dairy",
+    percentage: "8%",
+    width: "8%",
+    color: "bg-[#2980B9]",
+    textColor: "text-[#2980B9]",
+  },
+  {
+    name: "Other",
+    percentage: "4%",
+    width: "4%",
+    color: "bg-[#556070]",
+    textColor: "text-[#556070]",
+  },
+];

@@ -60,7 +60,7 @@ export default function DailySalesBreakdown() {
       </div>
 
       {/* table */}
-      <div className="px-5 py-2.5 overflow-x-auto">
+      <div className="py-2.5 overflow-x-auto mt-5">
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-[#243447] text-[11px] uppercase text-[#8a9bb0]">
