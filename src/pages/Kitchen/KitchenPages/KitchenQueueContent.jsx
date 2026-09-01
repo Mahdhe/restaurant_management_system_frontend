@@ -16,7 +16,7 @@ export default function KitchenQueueContent() {
 
   return (
     <>
-      <StatsGrid stats={QueueStats} />
+      <StatsGrid stats={QueueStats} columns={4}/>
 
       <div className="flex w-full h-14 border border-[#e74c3c] bg-[#e74c3c1a] rounded-[14px] mt-5 items-center px-5 py-4 justify-between">
         <div className="flex gap-3">

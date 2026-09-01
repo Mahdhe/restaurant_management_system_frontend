@@ -11,7 +11,7 @@ export default function InProgressOrders() {
 
   return (
     <div>
-      <StatsGrid stats={ProgressStats} />
+      <StatsGrid stats={ProgressStats} columns={4}/>
 
       {/* action button */}
       <ActionButtons

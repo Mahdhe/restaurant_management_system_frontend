@@ -12,7 +12,7 @@ export default function CompletedArchive() {
 
   return (
     <div>
-      <StatsGrid stats={CompletedStats} />
+      <StatsGrid stats={CompletedStats} columns={4}/>
 
       {/* action button */}
       <ActionButtons
