@@ -1,8 +1,13 @@
 import StatsCard from "./StatsCard";
 
-export default function StatsGrid({ stats }) {
+export default function StatsGrid({ stats, columns = 4 }) {
+  const columnClasses = {
+    4: "grid-cols-4",
+    6: "grid-cols-6",
+  };
+
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className={`grid ${columnClasses[columns]} gap-4`}>
       {stats.map((stat) => (
         <StatsCard
           key={stat.title}
