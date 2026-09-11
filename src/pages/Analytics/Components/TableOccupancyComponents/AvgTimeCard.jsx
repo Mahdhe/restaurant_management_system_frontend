@@ -18,22 +18,26 @@ const data = [
 
 export default function AvgTurnTime() {
   return (
-    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] overflow-hidden">
-      <div className="border border-b border-white/15 px-5 pt-5 pb-2.5">
+    <div className="w-full min-w-0 rounded-[14px] border border-white/15 bg-[#1c2a38] overflow-hidden">
+      <div className="border border-b border-white/15 px-4 sm:px-5 pt-4 sm:pt-5 pb-2.5">
         <h2 className="text-[14px] font-semibold text-[#f0f4f8]">
           Item Insights
         </h2>
       </div>
 
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
         {data.map((item) => (
           <div
             key={item.label}
-            className="flex items-center justify-between border-b border-white/15 py-[9.5px]"
+            className="flex items-center justify-between gap-3 border-b border-white/15 py-[9.5px] min-w-0"
           >
-            <span className="text-[13px] text-[#8a9bb0]">{item.label}</span>
+            <span className="min-w-0 text-[12px] sm:text-[13px] text-[#8a9bb0]">
+              {item.label}
+            </span>
 
-            <span className={`text-[13px] font-semibold ${item.valueColor}`}>
+            <span
+              className={`shrink-0 text-right text-[12px] sm:text-[13px] font-semibold ${item.valueColor}`}
+            >
               {item.value}
             </span>
           </div>

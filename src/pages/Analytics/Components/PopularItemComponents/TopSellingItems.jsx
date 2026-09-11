@@ -37,10 +37,10 @@ const maxOrders = 126;
 
 export default function TopSellingItems() {
   return (
-    <div className="mt-4 rounded-[14px] border border-white/15 bg-[#1c2a38] overflow-hidden pb-3">
+    <div className="mt-4 w-full min-w-0 rounded-[14px] border border-white/15 bg-[#1c2a38] overflow-hidden pb-3">
       {/* header */}
-      <div className="flex items-center justify-between px-6 pt-5 pb-4">
-        <div>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 pt-4 sm:pt-5 pb-4">
+        <div className="min-w-0">
           <h2 className="text-[14px] text-[#f0f4f8] font-semibold">
             Top Selling Items
           </h2>
@@ -50,13 +50,13 @@ export default function TopSellingItems() {
           </p>
         </div>
 
-        <span className="rounded-full border border-[#E67E224D] bg-[#E67E220F] px-2.25 py-1 text-[11px] font-semibold text-[#e67e22]">
+        <span className="w-fit rounded-full border border-[#E67E224D] bg-[#E67E220F] px-2.25 py-1 text-[11px] font-semibold text-[#e67e22] whitespace-nowrap">
           488 orders total
         </span>
       </div>
 
       {/* items */}
-      <div className="px-6">
+      <div className="px-4 sm:px-6">
         {topSellings.map((item, index) => {
           const width = `${(item.orders / maxOrders) * 100}%`;
 
@@ -65,7 +65,7 @@ export default function TopSellingItems() {
               key={item.rank}
               className={`py-4 ${index !== topSellings.length - 1 ? "border-b border-white/15" : ""}`}
             >
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 {/* rank */}
                 <div
                   className={`grid h-7 w-7 shrink-0 place-items-center rounded-sm bg-[#E67E220F] text-[14px] font-extrabold ${item.rank === 1 ? "text-[#e67e22]" : "text-[#e67e22]"}`}
@@ -75,7 +75,7 @@ export default function TopSellingItems() {
 
                 {/* name + progress */}
                 <div className="min-w-0 flex-1">
-                  <p className="mb-1 text-[14px] font-semibold text-[#f0f4f8]">
+                  <p className="mb-1 text-[13px] sm:text-[14px] font-semibold text-[#f0f4f8]">
                     {item.name}
                   </p>
 

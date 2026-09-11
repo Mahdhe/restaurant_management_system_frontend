@@ -21,15 +21,15 @@ const cardData = [
 
 export default function OccupancyChart() {
   return (
-    <div className="mt-4 rounded-2xl border border-white/15 bg-[#1c2a38] overflow-hidden p-5 font-dmsans">
+    <div className="mt-4 w-full min-w-0 rounded-2xl border border-white/15 bg-[#1c2a38] overflow-hidden p-4 sm:p-5 font-dmsans">
       {/* header */}
       <div className="pb-3.5">
-        <div className="flex items-center gap-3">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-[#e67e220f] text-[#e67e22]">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#e67e220f] text-[#e67e22]">
             <Clock1 size={18} />
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h2 className="text-[14px] font-semibold text-[#f0f4f8]">
               Occupancy by Hour
             </h2>
@@ -42,14 +42,17 @@ export default function OccupancyChart() {
       </div>
 
       {/* chart */}
-      <div className="space-y-4 py-5">
+      <div className="space-y-4 py-4 sm:py-5 w-full min-w-0">
         {occupanctInsights.map((item) => (
-          <div key={item.time} className="flex items-center gap-3">
-            <span className="w-15.25 text-[14px] text-[#8A9BB0] block text-center">
+          <div
+            key={item.time}
+            className="flex items-center gap-2 sm:gap-3 min-w-0"
+          >
+            <span className="w-14 sm:w-15.25 shrink-0 text-[12px] sm:text-[14px] text-[#8A9BB0] block text-center">
               {item.time}
             </span>
 
-            <div className="h-[17.5px] flex-1 overflow-hidden rounded-md bg-[#5560704d]">
+            <div className="h-[17.5px] min-w-0 flex-1 overflow-hidden rounded-md bg-[#5560704d]">
               <div
                 className={`h-full rounded-md ${item.color}`}
                 style={{ width: item.width }}
@@ -57,7 +60,7 @@ export default function OccupancyChart() {
             </div>
 
             <span
-              className={`w-6.5 text-right text-[14px] font-semibold ${item.textColor}`}
+              className={`w-6.5 shrink-0 text-right text-[12px] sm:text-[14px] font-semibold ${item.textColor}`}
             >
               {item.percentage}
             </span>
@@ -65,19 +68,21 @@ export default function OccupancyChart() {
         ))}
       </div>
 
-      <div className="grid grid-cols-3 gap-2.5 p-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-4 sm:p-5">
         {cardData.map((data) => (
           <div
             key={data.title}
-            className="rounded-xl bg-[#24344773] border border-white/15 px-2.5 py-6 text-center"
+            className="rounded-xl bg-[#24344773] border border-white/15 px-2.5 py-4 sm:py-6 text-center min-w-0"
           >
             <h2
-              className={`mb-1.5 text-[24px] font-extrabold leading-7 ${data.valueColor}`}
+              className={`mb-1.5 text-[20px] sm:text-[24px] font-extrabold leading-7 ${data.valueColor}`}
             >
               {data.title}
             </h2>
 
-            <span className="text-[16px] text-[#8a9bb0]">{data.subtitle}</span>
+            <span className="text-[14px] sm:text-[16px] text-[#8a9bb0]">
+              {data.subtitle}
+            </span>
           </div>
         ))}
       </div>

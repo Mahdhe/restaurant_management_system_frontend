@@ -22,15 +22,15 @@ const cardData = [
 
 export default function AnalyticsChart() {
   return (
-    <div className="mt-4 rounded-2xl border border-white/15 bg-[#1c2a38] overflow-hidden p-5 font-dmsans">
+    <div className="mt-4 w-full min-w-0 rounded-2xl border border-white/15 bg-[#1c2a38] overflow-hidden p-4 sm:p-5 font-dmsans">
       {/* header */}
       <div className="pb-3.5">
-        <div className="flex items-center gap-3">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-[#e67e220f] text-[#e67e22]">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#e67e220f] text-[#e67e22]">
             <Clock1 size={18} />
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h2 className="text-[14px] font-semibold text-[#f0f4f8]">
               Peak Hour Analytics
             </h2>
@@ -42,20 +42,24 @@ export default function AnalyticsChart() {
         </div>
       </div>
 
-      <BarChart data={peakHour} labels={peakHourLabels} />
+      <div className="w-full min-w-0 overflow-hidden">
+        <BarChart data={peakHour} labels={peakHourLabels} />
+      </div>
 
-      <div className="grid grid-cols-3 gap-2.5 p-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-4 sm:p-5">
         {cardData.map((data) => (
           <div
             key={data.title}
-            className="rounded-xl bg-[#24344773] border border-white/15 px-2.5 py-6 text-center"
+            className="rounded-xl bg-[#24344773] border border-white/15 px-2.5 py-4 sm:py-6 text-center min-w-0"
           >
             <h2
-              className={`mb-1.5 text-[24px] font-extrabold leading-7 ${data.valueColor}`}
+              className={`mb-1.5 text-[20px] sm:text-[24px] font-extrabold leading-7 ${data.valueColor}`}
             >
               {data.title}
             </h2>
-            <span className="text-[16px] text-[#8A9BB0]">{data.subtitle}</span>
+            <span className="text-[14px] sm:text-[16px] text-[#8A9BB0]">
+              {data.subtitle}
+            </span>
           </div>
         ))}
       </div>
