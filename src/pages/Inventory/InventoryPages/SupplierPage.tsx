@@ -1,4 +1,4 @@
-import { SupplierStats } from "../../../data/supplierStats";
+import { SupplierStats } from "../../../data/InventoryData/InventoryStats";
 import SupplierTable from "../components/SpplierComponents/SuplierTable";
 import SupplierForm from "../components/SpplierComponents/SupplierForm";
 import StatsGrid from "../components/StatsGrid";

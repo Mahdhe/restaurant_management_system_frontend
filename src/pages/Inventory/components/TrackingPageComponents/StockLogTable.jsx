@@ -1,4 +1,4 @@
-import { Logs } from "../../../../data/StockLog";
+import { Logs } from "../../../../data/InventoryData/StockOverview";
 
 export default function StockLog() {
   return (

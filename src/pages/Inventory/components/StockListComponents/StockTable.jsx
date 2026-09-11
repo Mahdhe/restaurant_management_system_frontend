@@ -1,4 +1,4 @@
-import { Stocks } from "../../../../data/StockListTable";
+import { Stocks } from "../../../../data/InventoryData/TableData";
 
 export default function StockTable() {
   return (

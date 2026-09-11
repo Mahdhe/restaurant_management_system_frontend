@@ -1,4 +1,4 @@
-import { LowStocks } from "../../../../data/LowStockTable";
+import { LowStocks } from "../../../../data/InventoryData/TableData";
 
 export default function StockAlertTable() {
   return (
@@ -16,7 +16,7 @@ export default function StockAlertTable() {
 
       {/* table */}
       <div className="w-full px-3 sm:px-5 py-2.5 overflow-x-auto">
-        <table className="w-full min-w-[760px] border-collapse">
+        <table className="w-full min-w-190 border-collapse">
           <thead>
             <tr className="bg-[#243447] text-[10px] sm:text-[11px] text-[#8a9bb0] uppercase">
               <th className="font-medium text-center p-3 sm:p-4 rounded-l-[14px]">

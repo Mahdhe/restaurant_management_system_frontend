@@ -1,4 +1,4 @@
-import { InventoryStats } from "../../../data/InventoryStats";
+import { InventoryStats } from "../../../data/InventoryData/InventoryStats";
 import QuickActions from "../components/DashboardComponents/QuickActions";
 import StockOverview from "../components/DashboardComponents/StockOverview";
 import StockSummary from "../components/DashboardComponents/StockSummary";

@@ -1,4 +1,4 @@
-import { stockItems } from "../../../../data/StockOverview";
+import { stockItems } from "../../../../data/InventoryData/StockOverview";
 
 export default function StockOverview() {
   return (

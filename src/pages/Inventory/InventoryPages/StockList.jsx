@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ActionButtons from "../components/StockListComponents/ActionButtons";
-import { StockFilterButtons } from "../../../data/ActionButtons";
 import StockTable from "../components/StockListComponents/StockTable";
+import { StockFilterButtons } from "../../../data/InventoryData/ActionButtons";
 
 export default function StockList() {
   const [activeButton, setActiveButton] = useState("all");

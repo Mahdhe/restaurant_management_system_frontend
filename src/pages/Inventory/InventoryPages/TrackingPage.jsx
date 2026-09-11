@@ -1,4 +1,4 @@
-import { StockStats } from "../../../data/StockStats";
+import { StockStats } from "../../../data/InventoryData/InventoryStats";
 import StatsGrid from "../components/StatsGrid";
 import StockLog from "../components/TrackingPageComponents/StockLogTable";
 import TopUsage from "../components/TrackingPageComponents/TopUsageCard";
