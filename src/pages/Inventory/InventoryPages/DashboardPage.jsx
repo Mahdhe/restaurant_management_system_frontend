@@ -6,11 +6,11 @@ import StatsGrid from "../components/StatsGrid";
 
 export default function DashboardPage() {
   return (
-    <div>
+    <div className="w-full min-w-0">
       <StatsGrid stats={InventoryStats} columns={4}/>
 
-      <div className="flex gap-5 items-start">
-        <div className="mt-6 w-283">
+      <div className="flex flex-col xl:flex-row gap-5 items-start">
+        <div className="mt-6 w-full xl:w-283 min-w-0">
           <StockOverview />
         </div>
 

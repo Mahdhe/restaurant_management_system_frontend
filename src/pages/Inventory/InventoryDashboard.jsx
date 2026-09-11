@@ -31,7 +31,7 @@ export default function InventoryDashboard() {
   };
 
   return (
-    <div>
+    <div className="w-full min-w-0">
       <InventoryHeader />
       <InventoryTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="mt-5">{renderContent()}</div>

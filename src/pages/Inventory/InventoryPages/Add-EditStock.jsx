@@ -4,8 +4,8 @@ import StockPreview from "../components/Add-EditPageComponents/StockPreview";
 
 export default function AddOrEditStock() {
   return (
-    <div className="flex gap-5 items-start">
-      <div className=" w-202">
+    <div className="w-full min-w-0 flex flex-col xl:flex-row gap-5 items-start">
+      <div className="w-full xl:w-202">
         <Form />
       </div>
 

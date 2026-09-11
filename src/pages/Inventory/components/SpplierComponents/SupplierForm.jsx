@@ -30,15 +30,15 @@ export default function SupplierForm() {
   };
 
   return (
-    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] pb-5">
+    <div className="w-full min-w-0 rounded-[14px] border border-white/15 bg-[#1c2a38] pb-5">
       {/* header */}
-      <div className="border-b border-white/15 px-5 py-3">
-        <h1 className="text-[18px] font-bold text-[#f0f4f8]">
+      <div className="border-b border-white/15 px-4 sm:px-5 py-3">
+        <h1 className="text-[16px] sm:text-[18px] font-bold text-[#f0f4f8]">
           Add / Edit Supplier
         </h1>
       </div>
 
-      <form onSubmit={handleSubmit} className="p-5">
+      <form onSubmit={handleSubmit} className="p-4 sm:p-5">
         <div className="space-y-4">
           <FormField label="SUPPLIER NAME">
             <input
@@ -46,7 +46,7 @@ export default function SupplierForm() {
               name="supplierNmae"
               value={form.name}
               onChange={handleChange}
-              className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+              className="w-full min-w-0 rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
             />
           </FormField>
 
@@ -56,7 +56,7 @@ export default function SupplierForm() {
               name="category"
               value={form.category}
               onChange={handleChange}
-              className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+              className="w-full min-w-0 rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
             />
           </FormField>
 
@@ -66,7 +66,7 @@ export default function SupplierForm() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+              className="w-full min-w-0 rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
             />
           </FormField>
 
@@ -76,7 +76,7 @@ export default function SupplierForm() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+              className="w-full min-w-0 rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
             />
           </FormField>
         </div>
@@ -84,7 +84,7 @@ export default function SupplierForm() {
         <div className="mt-4">
           <button
             onClick={handleCancel}
-            className="h-10 w-full rounded-[10px] bg-[#e67e22] px-4 py-2 text-[14px] font-semibold text-[#f0f4f8]"
+            className="h-10 w-full rounded-[10px] bg-[#e67e22] px-4 py-2 text-[13px] sm:text-[14px] font-semibold text-[#f0f4f8]"
           >
             Save Supplier
           </button>
@@ -96,8 +96,8 @@ export default function SupplierForm() {
 
 function FormField({ label, children }) {
   return (
-    <div>
-      <label className="mb-1 block text-[14px] font-medium uppercase traking-[0.1px] text-[#8a9bb0]">
+    <div className="min-w-0">
+      <label className="mb-1 block text-[12px] sm:text-[14px] font-medium uppercase traking-[0.1px] text-[#8a9bb0]">
         {label}
       </label>
 

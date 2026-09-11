@@ -5,15 +5,15 @@ import StatsGrid from "../components/StatsGrid";
 
 export default function SupplierPage() {
   return (
-    <div>
+    <div className="w-full min-w-0">
       <StatsGrid stats={SupplierStats} />
 
-      <div className="flex gap-5">
-        <div className="mt-6 w-202">
+      <div className="flex flex-col xl:flex-row gap-5 w-full min-w-0">
+        <div className="mt-6 w-full xl:w-202 min-w-0">
           <SupplierTable />
         </div>
 
-        <div className="mt-6 flex-1">
+        <div className="mt-6 w-full xl:flex-1 min-w-0">
           <SupplierForm />
         </div>
       </div>

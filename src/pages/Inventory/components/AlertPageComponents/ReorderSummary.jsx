@@ -18,29 +18,33 @@ const summary = [
 
 export default function ReorderSummary() {
   return (
-    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] pb-3">
+    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] pb-3 w-full min-w-0">
       {/* header */}
-      <div className="border-b border-white/15 px-5 pt-5 pb-2.5">
-        <h2 className="text-[18px] font-bold text-[#f0f4f8]">
+      <div className="border-b border-white/15 px-4 sm:px-5 pt-4 sm:pt-5 pb-2.5">
+        <h2 className="text-[16px] sm:text-[18px] font-bold text-[#f0f4f8]">
           Reorder Summary
         </h2>
       </div>
 
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         {summary.map((item) => (
           <div
             key={item.name}
-            className="flex items-center justify-between border-b border-white/15 py-2.5"
+            className="flex items-center justify-between gap-3 border-b border-white/15 py-2.5"
           >
-            <span className="text-[13px] text-[#8a9bb0]">{item.name}</span>
+            <span className="text-[12px] sm:text-[13px] text-[#8a9bb0]">
+              {item.name}
+            </span>
 
-            <span className={`text-[13px] font-semibold ${item.valueColor}`}>
+            <span
+              className={`shrink-0 text-[12px] sm:text-[13px] font-semibold ${item.valueColor}`}
+            >
               {item.value}
             </span>
           </div>
         ))}
 
-        <button className="mt-5 w-full py-2 rounded-[10px] text-[#f0f4f8] bg-[#e67e22] font-semibold text-[14px]">
+        <button className="mt-5 w-full py-2 rounded-[10px] text-[#f0f4f8] bg-[#e67e22] font-semibold text-[13px] sm:text-[14px]">
           Create Purchase Order
         </button>
       </div>

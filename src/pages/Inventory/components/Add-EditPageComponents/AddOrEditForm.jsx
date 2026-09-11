@@ -35,20 +35,20 @@ export default function Form() {
   };
 
   return (
-    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] p-5">
+    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] p-4 sm:p-5 min-w-0">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <h1 className="text-[18px] font-bold text-[#f0f4f8]">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <h1 className="text-[16px] sm:text-[18px] font-bold text-[#f0f4f8]">
           Add/Edit Stock Item
         </h1>
 
-        <span className="rounded-full border border-[#2980b94d] bg-[#2980b91a] items-center px-2.25 py-0.5 text-[11px] font-semibold text-[#2980b9]">
+        <span className="self-start sm:self-auto rounded-full border border-[#2980b94d] bg-[#2980b91a] items-center px-2.25 py-0.5 text-[10px] sm:text-[11px] font-semibold text-[#2980b9]">
           Inventory Form
         </span>
       </div>
 
       <form onSubmit={handleSubmit} className="py-5">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="space-y-4">
             {/* Ingredient Name */}
             <FormField label="INGREDIENT NAME">
@@ -57,7 +57,7 @@ export default function Form() {
                 name="ingredientName"
                 value={form.ingredientName}
                 onChange={handleChange}
-                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
               />
             </FormField>
 
@@ -94,7 +94,7 @@ export default function Form() {
                 name="currentQty"
                 value={form.currentQty}
                 onChange={handleChange}
-                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
               />
             </FormField>
           </div>
@@ -107,7 +107,7 @@ export default function Form() {
                 name="minimumThreshold"
                 value={form.minimumThreshold}
                 onChange={handleChange}
-                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
               />
             </FormField>
 
@@ -118,7 +118,7 @@ export default function Form() {
                 name="reorderQty"
                 value={form.reorderQty}
                 onChange={handleChange}
-                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
               />
             </FormField>
 
@@ -144,7 +144,7 @@ export default function Form() {
                 name="unitCost"
                 value={form.unitCost}
                 onChange={handleChange}
-                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+                className="w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
               />
             </FormField>
           </div>
@@ -152,7 +152,7 @@ export default function Form() {
 
         {/* Notes */}
         <div className="mt-4">
-          <label className="mb-1 block text-[14px] font-medium uppercase tracking-[0.1px] text-[#8a9bb0]">
+          <label className="mb-1 block text-[13px] sm:text-[14px] font-medium uppercase tracking-[0.1px] text-[#8a9bb0]">
             NOTES
           </label>
 
@@ -161,23 +161,23 @@ export default function Form() {
             value={form.notes}
             onChange={handleChange}
             rows={2}
-            className="block h-18 resize-none w-full rounded-[10px] py-2 px-3 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium"
+            className="block h-18 resize-none w-full rounded-[10px] py-2 px-3 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium"
           />
         </div>
 
         {/* Buttons */}
-        <div className="mt-4 flex justify-end gap-3">
+        <div className="mt-4 flex flex-col-reverse sm:flex-row justify-end gap-3">
           <button
             type="button"
             onClick={handleCancel}
-            className="h-10 rounded-[10px] border border-white/15 bg-[#243447] px-4 py-2 text-[14px] font-bold text-[#f0f4f8] transition hover:bg-[#2a4055]"
+            className="w-full sm:w-auto h-10 rounded-[10px] border border-white/15 bg-[#243447] px-4 py-2 text-[13px] sm:text-[14px] font-bold text-[#f0f4f8] transition hover:bg-[#2a4055]"
           >
             Cancel
           </button>
 
           <button
             type="submit"
-            className="h-10 rounded-[10px] bg-[#e67e22] px-4 py-2 text-[14px] font-semibold text-[#f0f4f8] transition"
+            className="w-full sm:w-auto h-10 rounded-[10px] bg-[#e67e22] px-4 py-2 text-[13px] sm:text-[14px] font-semibold text-[#f0f4f8] transition"
           >
             Save Stock Items
           </button>
@@ -189,8 +189,8 @@ export default function Form() {
 
 function FormField({ label, children }) {
   return (
-    <div>
-      <label className="mb-1 block text-[14px] font-medium uppercase tracking-[0.1px] text-[#8a9bb0]">
+    <div className="min-w-0">
+      <label className="mb-1 block text-[13px] sm:text-[14px] font-medium uppercase tracking-[0.1px] text-[#8a9bb0]">
         {label}
       </label>
 
@@ -201,12 +201,12 @@ function FormField({ label, children }) {
 
 function SelectInput({ name, value, onChange, options = [] }) {
   return (
-    <div className="relative">
+    <div className="relative min-w-0">
       <select
         name={name}
         value={value}
         onChange={onChange}
-        className="appearance-none w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[14px] text-[#f0f4f8] font-medium pr-7.5"
+        className="appearance-none w-full rounded-[10px] py-2 px-3 h-10 bg-[#243447] border border-white/15 text-[13px] sm:text-[14px] text-[#f0f4f8] font-medium pr-7.5"
       >
         {options.map((option) => (
           <option key={option} value={option}>
