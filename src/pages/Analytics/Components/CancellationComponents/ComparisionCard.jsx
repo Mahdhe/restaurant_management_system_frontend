@@ -1,4 +1,4 @@
-import { comparisionData } from "../../../../data/ProgressData";
+import { comparisionData } from "../../../../data/AnalyticsData/ProgressData";
 
 export default function ComparisionGraph() {
   return (

@@ -1,5 +1,5 @@
 import { Briefcase } from "lucide-react";
-import { logs } from "../../../../data/TableData";
+import { logs } from "../../../../data/AnalyticsData/TableData";
 
 export default function LogTable() {
   return (

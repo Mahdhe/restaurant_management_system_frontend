@@ -1,4 +1,4 @@
-import { costs } from "../../../../data/ProgressData";
+import { costs } from "../../../../data/AnalyticsData/ProgressData";
 import ProgressBar from "../PrograssBar";
 
 export default function CostBreakdown() {

@@ -1,6 +1,6 @@
 import { BarChart3, ChevronDown } from "lucide-react";
 import BarChart from "../BarChart";
-import { revenueLabels, revenueTrend } from "../../../../data/GraphData";
+import { revenueLabels, revenueTrend } from "../../../../data/AnalyticsData/GraphData";
 
 export default function RevenueTrend() {
   return (

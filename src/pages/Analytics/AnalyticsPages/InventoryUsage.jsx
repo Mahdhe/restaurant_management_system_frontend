@@ -1,4 +1,4 @@
-import { Stats } from "../../../data/AnalyticsStats";
+import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
 import ExportReports from "../Components/ExportReports";
 import CostBreakdown from "../Components/InventoryUsageComponents/CostBreakdown";
 import TopIngredientTable from "../Components/InventoryUsageComponents/TopIngredientTable";

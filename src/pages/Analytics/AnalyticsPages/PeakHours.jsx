@@ -1,4 +1,4 @@
-import { Stats } from "../../../data/AnalyticsStats";
+import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
 import ExportReports from "../Components/ExportReports";
 import LiveInsights from "../Components/LiveInsights";
 import MonthComparison from "../Components/MonthComparison";

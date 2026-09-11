@@ -1,5 +1,5 @@
 import { Clock1 } from "lucide-react";
-import { occupanctInsights } from "../../../../data/ProgressData";
+import { occupanctInsights } from "../../../../data/AnalyticsData/ProgressData";
 
 const cardData = [
   {

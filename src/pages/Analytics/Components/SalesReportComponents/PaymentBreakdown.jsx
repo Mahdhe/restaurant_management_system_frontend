@@ -1,4 +1,4 @@
-import { payments } from "../../../../data/ProgressData";
+import { payments } from "../../../../data/AnalyticsData/ProgressData";
 import ProgressBar from "../PrograssBar";
 
 export default function PaymentBreakdown() {

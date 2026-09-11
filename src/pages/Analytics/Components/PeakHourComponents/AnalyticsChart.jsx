@@ -1,6 +1,6 @@
 import { Clock1 } from "lucide-react";
 import BarChart from "../BarChart";
-import { peakHour, peakHourLabels } from "../../../../data/GraphData";
+import { peakHour, peakHourLabels } from "../../../../data/AnalyticsData/GraphData";
 
 const cardData = [
   {

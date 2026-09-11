@@ -1,4 +1,4 @@
-import { cancellationStats, Stats } from "../../../data/AnalyticsStats";
+import { cancellationStats, Stats } from "../../../data/AnalyticsData/AnalyticsStats";
 import ComparisionGraph from "../Components/CancellationComponents/ComparisionCard";
 import LogTable from "../Components/CancellationComponents/LogTable";
 import ExportReports from "../Components/ExportReports";

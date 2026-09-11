@@ -1,4 +1,4 @@
-import { traffics } from "../../../../data/ProgressData";
+import { traffics } from "../../../../data/AnalyticsData/ProgressData";
 import ProgressBar from "../PrograssBar";
 
 export default function TrafficbyDay() {
