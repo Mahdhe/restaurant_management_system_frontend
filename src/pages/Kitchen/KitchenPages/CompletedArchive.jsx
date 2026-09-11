@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { CompletedStats } from "../../../data/CompletedStats";
-import { ProgressButtons } from "../../../data/ProgressButtons";
 import ActionButtons from "../components/ActionButtons";
 import StatsGrid from "../components/StatsGrid";
 import CompletedOrderTable from "../components/CompletedArchiveComponents/CompletedOrderTable";
 import PrepTime from "../components/CompletedArchiveComponents/PrepTimeGraph";
 import ShiftSummaryCard from "../components/CompletedArchiveComponents/ShiftSummaryCard";
+import { CompletedStats } from "../../../data/KitchenData/KitchenStats";
+import { ProgressButtons } from "../../../data/KitchenData/ActionButtons";
 
 export default function CompletedArchive() {
   const [activeButton, setActiveButton] = useState("all");

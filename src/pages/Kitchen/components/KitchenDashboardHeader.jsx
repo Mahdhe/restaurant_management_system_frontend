@@ -1,4 +1,4 @@
-import { HeaderActions } from "../../../data/HeaderActions";
+import { HeaderActions } from "../../../data/KitchenData/ActionButtons";
 
 export default function KitchenDashboardHeader({ activeTab }) {
   const actions = HeaderActions[activeTab];
