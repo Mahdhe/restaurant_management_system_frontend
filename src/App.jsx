@@ -2,7 +2,6 @@ import { useState } from "react";
 import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
-
 import InventoryDashboard from "./pages/Inventory/InventoryDashboard";
 
 function App() {
