@@ -24,28 +24,34 @@ export default function ProgressOrderCard({
   b2TextColor,
 }) {
   return (
-    <div className="rounded-2xl border border-white/15 px-4 bg-[#1c2a38] font-dmsans pb-4">
+    <div className="rounded-2xl border border-white/15 px-3 sm:px-4 bg-[#1c2a38] font-dmsans pb-4 min-w-0">
       {/* top content */}
-      <div className="flex justify-between pt-4 pb-2.5 border-b border-white/15 ">
-        <div>
-          <h2 className="font-jetbrains font-bold text-[#f0f4f8] text-[18px]">
+      <div className="flex justify-between gap-2 pt-4 pb-2.5 border-b border-white/15 ">
+        <div className="min-w-0">
+          <h2 className="font-jetbrains font-bold text-[#f0f4f8] text-[16px] sm:text-[18px] truncate">
             {orderNo}
           </h2>
-          <div className="flex gap-2">
-            <p className="text-[12px] text-[#556070]">{table}</p>
-            <p className="text-[12px] text-[#556070]">{waiter}</p>
+
+          <div className="flex gap-2 min-w-0">
+            <p className="text-[11px] sm:text-[12px] text-[#556070] truncate">
+              {table}
+            </p>
+
+            <p className="text-[11px] sm:text-[12px] text-[#556070] truncate">
+              {waiter}
+            </p>
           </div>
         </div>
 
-        <div>
+        <div className="shrink-0">
           <span
-            className={`rounded-full px-2.25 py-1 text-[11px] leading-4.5 font-semibold border ${StatusBorder} ${statusBg} ${statusColor}`}
+            className={`rounded-full px-2 py-1 text-[10px] sm:text-[11px] leading-4.5 font-semibold border ${StatusBorder} ${statusBg} ${statusColor}`}
           >
             {status}
           </span>
 
           <h1
-            className={`mt-1.5 text-[18px] text-center leading-4.5 font-bold font-jetbrains ${timeColor}`}
+            className={`mt-1.5 text-[16px] sm:text-[18px] text-center leading-4.5 font-bold font-jetbrains ${timeColor}`}
           >
             {timer}
           </h1>
@@ -60,19 +66,20 @@ export default function ProgressOrderCard({
             className="border-b border-white/15 pb-1"
           >
             {/* items + status */}
-            <div className="flex items-center justify-between">
-              <p className="text-[16px] font-bold text-white leading-4.5">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-[14px] sm:text-[16px] font-bold text-white leading-4.5 min-w-0">
                 {item}
               </p>
+
               <span
-                className={`rounded-full px-2.25 py-0.5 text-[11px] leading-4.5 font-semibold border ${itemText[index]} ${itemBorder[index]} ${itemBg[index]}`}
+                className={`rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] leading-4.5 font-semibold border ${itemText[index]} ${itemBorder[index]} ${itemBg[index]} shrink-0`}
               >
                 {itemsStatus[index]}
               </span>
             </div>
 
             {/* extra info */}
-            <p className="mt-0.5 text-[12px] text-[#8a9bb0] tracking-wider">
+            <p className="mt-0.5 text-[11px] sm:text-[12px] text-[#8a9bb0] tracking-wider">
               {extraInfo[index]}
             </p>
           </div>
@@ -81,13 +88,13 @@ export default function ProgressOrderCard({
 
       <div className="grid grid-cols-2 gap-2">
         <button
-          className={`mt-6 w-full rounded-[10px] items-center text-sm font-semibold border ${b1Border} ${b1TextColor} ${b1Color} py-2 px-4`}
+          className={`mt-6 w-full rounded-[10px] items-center text-xs sm:text-sm font-semibold border ${b1Border} ${b1TextColor} ${b1Color} py-2 px-2 sm:px-4`}
         >
           {b1Text}
         </button>
 
         <button
-          className={`mt-6 w-full rounded-[10px] items-center text-sm font-semibold border ${b2Border} ${b2TextColor} ${b2Color} py-2 px-4`}
+          className={`mt-6 w-full rounded-[10px] items-center text-xs sm:text-sm font-semibold border ${b2Border} ${b2TextColor} ${b2Color} py-2 px-2 sm:px-4`}
         >
           {b2Text}
         </button>

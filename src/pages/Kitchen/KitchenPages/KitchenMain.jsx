@@ -22,7 +22,7 @@ export default function KitchenMain() {
   };
 
   return (
-    <div>
+    <div className="w-full min-w-0">
       <KitchenDashboardHeader activeTab={activeTab}/>
       <KitchenTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="mt-5">{renderContent()}</div>

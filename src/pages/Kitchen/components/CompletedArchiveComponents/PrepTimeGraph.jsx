@@ -17,12 +17,12 @@ const data = [
 
 export default function PrepTime() {
   return (
-    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] p-4 font-dmsans">
-      <h2 className="border-b border-white/15 px-2 pb-3 text-[#f0f4f8] text-[18px] font-bold">
+    <div className="rounded-[14px] border border-white/15 bg-[#1c2a38] p-3 sm:p-4 font-dmsans min-w-0">
+      <h2 className="border-b border-white/15 px-2 pb-3 text-[#f0f4f8] text-[16px] sm:text-[18px] font-bold">
         Prep Time Trend
       </h2>
 
-      <div className="mt-4 border border-white/15 px-5 pt-8 pb-5 rounded-[14px] bg-[#243447]">
+      <div className="mt-4 border border-white/15 px-3 sm:px-5 pt-6 sm:pt-8 pb-4 sm:pb-5 rounded-[14px] bg-[#243447]">
         <ResponsiveContainer width="100%" height={220}>
           <BarChart
             data={data}

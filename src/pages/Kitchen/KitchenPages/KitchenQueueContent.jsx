@@ -18,16 +18,17 @@ export default function KitchenQueueContent() {
     <>
       <StatsGrid stats={QueueStats} columns={4}/>
 
-      <div className="flex w-full h-14 border border-[#e74c3c] bg-[#e74c3c1a] rounded-[14px] mt-5 items-center px-5 py-4 justify-between">
-        <div className="flex gap-3">
-          <TriangleAlert size={18} className="text-[#e74c3c]" />
-          <p className="font-semibold text-[14px] text-[#e74c3c]">
+      <div className="flex w-full min-h-14 border border-[#e74c3c] bg-[#e74c3c1a] rounded-[14px] mt-5 items-center px-3 sm:px-4 md:px-5 py-3 md:py-4 justify-between gap-3">
+        <div className="flex gap-3 items-start min-w-0">
+          <TriangleAlert size={18} className="text-[#e74c3c] shrink-0 mt-0.5" />
+
+          <p className="font-semibold text-[12px] sm:text-[13px] md:text-[14px] text-[#e74c3c]">
             Priority Warning: 3 orders have exceeded estimated prep time.
           </p>
         </div>
 
-        <div>
-          <button className="border border-[#556070] items-center px-3 py-1.5 text-[13px] font-semibold text-[#556070] rounded-[10px]">
+        <div className="shrink-0">
+          <button className="border border-[#556070] items-center px-2.5 sm:px-3 py-1.5 text-[11px] sm:text-[13px] font-semibold text-[#556070] rounded-[10px] whitespace-nowrap">
             View Delayed
           </button>
         </div>
@@ -40,14 +41,14 @@ export default function KitchenQueueContent() {
         onSelect={setActiveButton}
       />
 
-      <div className="flex gap-5 items-start">
-        <div className="mt-6 grid grid-cols-3 gap-4 w-225">
+      <div className="flex flex-col xl:flex-row gap-5 items-start">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full xl:w-225">
           {QueueOrders.map((order) => (
             <QueueOrderCard key={order.id} {...order} />
           ))}
         </div>
 
-        <div className="mt-6 flex-1 flex-col space-y-5">
+        <div className="mt-6 flex-1 w-full flex-col space-y-5">
           <KitchenSummeryCard />
           <PriorityOrderCard />
           <FilterCard

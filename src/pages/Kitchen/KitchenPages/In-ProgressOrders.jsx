@@ -10,8 +10,8 @@ export default function InProgressOrders() {
   const [activeButton, setActiveButton] = useState("all");
 
   return (
-    <div>
-      <StatsGrid stats={ProgressStats} columns={4}/>
+    <div className="w-full min-w-0">
+      <StatsGrid stats={ProgressStats} columns={4} />
 
       {/* action button */}
       <ActionButtons
@@ -20,7 +20,7 @@ export default function InProgressOrders() {
         onSelect={setActiveButton}
       />
 
-      <div className="mt-6 grid grid-cols-3 gap-4">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {ProgressOrders.map((order) => (
           <ProgressOrderCard key={order.id} {...order} />
         ))}
