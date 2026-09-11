@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <div className=" min-h-screen font-dmsans">
+    <div className="min-h-screen">
       <div className="flex items-start">
         <div className="sticky top-0 self-start">
           <AdminSidebar
