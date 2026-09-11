@@ -14,6 +14,9 @@ import WaiterAssignmentHistory from "../components/tablemanagement/WaiterAssignm
 import ActionsPanel from "../components/tablemanagement/ActionsPanel";
 import WarningPanel from "../components/tablemanagement/WarningPanel";
 import ActivityTimeline from "../components/dashboard/ui/ActivityTimeline";
+import AddEditTableForm from "../components/tablemanagement/AddEditTableForm";
+import TablePreviewCard from "../components/tablemanagement/TablePreviewCard";
+import InfoCard from "../components/dashboard/ui/InfoCard"; 
 
 
 const TableManagement = () => {
@@ -22,7 +25,7 @@ const TableManagement = () => {
   const [selectedTableId, setSelectedTableId] = useState("T04");
  
   return (
-    <div className="p-6 bg-[#0F1923]">
+    <div className="p-6 pb-34 bg-[#0F1923] ">
       <PageHeader
         title="Table Management"
         subtitle="Manage restaurant tables, floor layout, reservations, and occupancy status."
@@ -55,6 +58,15 @@ const TableManagement = () => {
                 className="px-4 py-2 rounded-md bg-red-500/10 border border-red-700 text-red-400 text-sm font-semibold hover:bg-red-500/20 transition-colors duration-200"
               >
                 Mark Available
+              </button>
+            </>
+          ) : activeTab === "Add/ Edit Table" ? (
+            <>
+              <button className="px-4 py-2 rounded-md bg-slate-800 border border-slate-700 text-gray-200 text-sm font-semibold">
+                Cancel
+              </button>
+              <button className="px-4 py-2 rounded-md bg-orange-500 text-white text-sm font-semibold">
+                Save Table
               </button>
             </>
           ) : null
@@ -148,7 +160,25 @@ const TableManagement = () => {
  
       {/* Add/ Edit Table tab content */}
       {activeTab === "Add/ Edit Table" && (
-        <p className="text-gray-400 text-sm">Add/Edit Table form goes here.</p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <AddEditTableForm
+              onSave={(data) => console.log("Save:", data)}
+              onReset={() => console.log("Reset clicked")}
+            />
+          </div>
+          <div className="space-y-6">
+            <TablePreviewCard tableNumber="T04" capacity="4" />
+            <InfoCard
+              title="Conflicts Rules"
+              description="Warn if reservation guest count exceeds capacity, if two reservations request same time/table, or if occupancy duration passes alert limit."
+            />
+            <InfoCard
+              title="Setup Notes"
+              description="Use blocked status for maintenance. Use cleaning status after guests leave until table is ready again."
+            />
+          </div>
+        </div>
       )}
     </div>
   );
