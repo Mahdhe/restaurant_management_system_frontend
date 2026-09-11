@@ -3,16 +3,13 @@ import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
 
-
-import ReservationRoutes from "./routes/ReservationRoutes";
-
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
 
   const currentUser = {
     name: "Ashan k.",
     initials: "AK",
-    role: "admin",
+    role: "waiter",
     roleLabel: "Super Admin",
   };
 
@@ -29,10 +26,6 @@ function App() {
 
         <main className="min-w-0 flex-1">
           <Header user={currentUser} page={pageDetials[activeItem]} />
-         
-          {/* dashboard */}
-          
-      <ReservationRoutes />
         </main>
       </div>
     </div>
