@@ -45,8 +45,8 @@ const PaymentMethodSelector = ({ selectedMethod, onSelect }) => {
             onClick={() => onSelect(method.id)}
             className={`flex flex-col items-center justify-center gap-2 rounded-xl border p-6 transition-colors duration-200 ${
               isActive
-                ? "bg-[#FDF3E3] border-orange-400"
-                : "bg-[#101B2C] border-slate-800 hover:border-slate-600"
+                ? "bg-[#E67E220F] border-orange-400"
+                : "bg-[#1C2A38] border-slate-800 hover:border-slate-600"
             }`}
           >
             <Icon size={22} className={method.iconColor} />

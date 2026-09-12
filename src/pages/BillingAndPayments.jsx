@@ -9,9 +9,14 @@ import TaxPreviewCard from "../components/billingpayments/TaxPreviewCard";
 import AlertBanner from "../components/billingpayments/AlertBanner";
 import SplitOptionsCard from "../components/billingpayments/SplitOptionsCard";
 import SplitSummaryCard from "../components/billingpayments/SplitSummaryCard";
+import PaymentMethodSelector from "../components/billingpayments/PaymentMethodSelector";
+import PaymentDetailsCard from "../components/billingpayments/PaymentDetailsCard";
+import PaymentSummaryCard from "../components/billingpayments/PaymentSummaryCard";
+import PartialSupportCard from "../components/billingpayments/PartialSupportCard";
 
 const BillingAndPayments = () => {
   const [activeTab, setActiveTab] = useState("Bill Summary");
+  const [selectedMethod, setSelectedMethod] = useState("Cash");
 
   return (
     <div className="p-6 pb-214  bg-[#0F1923] min-h-screen">
@@ -69,6 +74,19 @@ const BillingAndPayments = () => {
         </div>
       </>
     )}
+
+    {activeTab === "Payment Methods" && (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+        <PaymentMethodSelector selectedMethod={selectedMethod} onSelect={setSelectedMethod} />
+        <PaymentDetailsCard selectedMethod={selectedMethod} />
+      </div>
+      <div className="space-y-6">
+        <PaymentSummaryCard />
+        <PartialSupportCard />
+      </div>
+    </div>
+  )}
 
       {/* Other tab content (Split Bill, Payment Methods, Receipt, Refund Flow) goes here later */}
     </div>

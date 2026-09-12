@@ -8,7 +8,7 @@ import BillingAndPayments from "./pages/BillingAndPayments";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
-
+  
   const currentUser = {
     name: "Ashan k.",
     initials: "AK",
