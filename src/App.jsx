@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
 import DashboardOverview from "./pages/DashboardOverview";
 import TableManagement from "./pages/TableManagement";
+import BillingAndPayments from "./pages/BillingAndPayments";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -34,6 +35,7 @@ function App() {
           <div>
             {activeItem === "Dashboard" && <DashboardOverview />}
             {activeItem === "Table Management" && <TableManagement />}
+            {activeItem === "Billing & Payments" && <BillingAndPayments />}
           </div>
         </main>
       </div>

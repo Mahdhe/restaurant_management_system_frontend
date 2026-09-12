@@ -4,6 +4,7 @@ const STATUS_STYLES = {
   Paid: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
   Ready: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
   Pending: "bg-slate-500/10 text-slate-400 border-slate-600",
+  Unpaid: "bg-amber-500/10 text-amber-400 border-amber-700",
  
   // Table statuses
   Available: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
