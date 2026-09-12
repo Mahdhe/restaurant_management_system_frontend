@@ -13,6 +13,9 @@ import PaymentMethodSelector from "../components/billingpayments/PaymentMethodSe
 import PaymentDetailsCard from "../components/billingpayments/PaymentDetailsCard";
 import PaymentSummaryCard from "../components/billingpayments/PaymentSummaryCard";
 import PartialSupportCard from "../components/billingpayments/PartialSupportCard";
+import ReceiptPreview from "../components/billingpayments/ReceiptPreview";
+import ActionsPanel from "../components/billingpayments/ActionsPanel";
+import CustomerCopyCard from "../components/billingpayments/CustomerCopyCard";
 
 const BillingAndPayments = () => {
   const [activeTab, setActiveTab] = useState("Bill Summary");
@@ -84,6 +87,25 @@ const BillingAndPayments = () => {
       <div className="space-y-6">
         <PaymentSummaryCard />
         <PartialSupportCard />
+      </div>
+    </div>
+  )}
+
+    {activeTab === "Receipt" && (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+        <ReceiptPreview />
+      </div>
+      <div className="space-y-6">
+        <ActionsPanel
+          title="Receipt Actions"
+          actions={[
+            { label: "Print Receipt", variant: "filled" },
+            { label: "Email Customer", variant: "outline" },
+            { label: "Download pdf", variant: "disabled" },
+          ]}
+        />
+        <CustomerCopyCard />
       </div>
     </div>
   )}
