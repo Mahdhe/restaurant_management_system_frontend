@@ -40,7 +40,7 @@ const TableManagement = () => {
               </button>
               <button
                 type="button"
-                className="px-4 py-2 rounded-md bg-orange-500 text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
+                className="px-4 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
               >
                 + Add Table
               </button>
@@ -65,7 +65,7 @@ const TableManagement = () => {
               <button className="px-4 py-2 rounded-md bg-slate-800 border border-slate-700 text-gray-200 text-sm font-semibold">
                 Cancel
               </button>
-              <button className="px-4 py-2 rounded-md bg-orange-500 text-white text-sm font-semibold">
+              <button className="px-4 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold">
                 Save Table
               </button>
             </>
