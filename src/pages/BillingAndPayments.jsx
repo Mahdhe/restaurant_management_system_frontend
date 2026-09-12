@@ -16,6 +16,8 @@ import PartialSupportCard from "../components/billingpayments/PartialSupportCard
 import ReceiptPreview from "../components/billingpayments/ReceiptPreview";
 import ActionsPanel from "../components/tablemanagement/ActionsPanel";
 import CustomerCopyCard from "../components/billingpayments/CustomerCopyCard";
+import RefundItemsCard from "../components/billingpayments/RefundItemsCard";    
+import RefundSummaryCard from "../components/billingpayments/RefundSummaryCard";  
 
 const BillingAndPayments = () => {
   const [activeTab, setActiveTab] = useState("Bill Summary");
@@ -109,6 +111,15 @@ const BillingAndPayments = () => {
       </div>
     </div>
   )}
+
+      {activeTab === "Refund Flow" && (
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <RefundItemsCard onSelectionChange={(ids) => console.log("Selected:", ids)} />
+        </div>
+        <RefundSummaryCard onConfirm={() => console.log("Refund confirmed")} />
+      </div>
+    )}
 
       {/* Other tab content (Split Bill, Payment Methods, Receipt, Refund Flow) goes here later */}
     </div>

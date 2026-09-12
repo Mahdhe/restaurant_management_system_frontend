@@ -8,6 +8,7 @@ const STATUS_STYLES = {
   Unpaid: "bg-amber-500/10 text-amber-400 border-amber-700",
   "Partial Payment": "bg-amber-500/10 text-amber-400 border-amber-700",
   Refunded: "bg-blue-500/10 text-blue-400 border-blue-700",
+  "Refund Flow": "bg-red-500/10 text-red-400 border-red-700",
  
   // Table statuses
   Available: "bg-emerald-500/10 text-emerald-400 border-emerald-700",

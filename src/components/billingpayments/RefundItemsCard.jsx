@@ -44,7 +44,7 @@ const RefundItemsCard = ({ onSelectionChange }) => {
               className={`w-full flex items-center justify-between gap-3 rounded-lg border px-4 py-3 transition-colors duration-200 ${
                 isSelected
                   ? "border-orange-500 bg-orange-500/5"
-                  : "border-slate-700 bg-[#0B1220] hover:border-slate-600"
+                  : "border-slate-700 bg-[#1C2A38] hover:border-slate-600"
               }`}
             >
               <div className="flex items-center gap-3">
