@@ -13,7 +13,7 @@ const ReceiptPreview = ({
   total = "LKR 5,164",
 }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-6 sm:p-10 flex justify-center">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-6 sm:p-10 flex justify-center">
       <div className="w-full max-w-sm bg-[#FAF7F0] rounded-lg px-6 py-8 font-jetbrains text-[#1A1A1A]">
         {/* Header */}
         <div className="text-center mb-6">

@@ -14,7 +14,7 @@ import PaymentDetailsCard from "../components/billingpayments/PaymentDetailsCard
 import PaymentSummaryCard from "../components/billingpayments/PaymentSummaryCard";
 import PartialSupportCard from "../components/billingpayments/PartialSupportCard";
 import ReceiptPreview from "../components/billingpayments/ReceiptPreview";
-import ActionsPanel from "../components/billingpayments/ActionsPanel";
+import ActionsPanel from "../components/tablemanagement/ActionsPanel";
 import CustomerCopyCard from "../components/billingpayments/CustomerCopyCard";
 
 const BillingAndPayments = () => {
