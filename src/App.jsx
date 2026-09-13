@@ -5,6 +5,7 @@ import { pageDetials } from "./data/PageDetails";
 import DashboardOverview from "./pages/DashboardOverview";
 import TableManagement from "./pages/TableManagement";
 import BillingAndPayments from "./pages/BillingAndPayments";
+import StaffManagement from "./pages/StaffManagement";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -36,6 +37,7 @@ function App() {
             {activeItem === "Dashboard" && <DashboardOverview />}
             {activeItem === "Table Management" && <TableManagement />}
             {activeItem === "Billing & Payments" && <BillingAndPayments />}
+            {activeItem === "Staff Management" && <StaffManagement />}
           </div>
         </main>
       </div>
