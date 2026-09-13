@@ -7,7 +7,7 @@ const SHIFTS = [
 
 const ShiftCoverageCard = () => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <h2 className="text-white text-base font-semibold">Shift Coverage</h2>
         <span className="text-gray-500 text-xs">Today</span>

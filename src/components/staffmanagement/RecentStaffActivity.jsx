@@ -35,7 +35,7 @@ const ACTIVITY = [
 
 const RecentStaffActivity = () => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <div>
           <h2 className="text-white text-base font-semibold">

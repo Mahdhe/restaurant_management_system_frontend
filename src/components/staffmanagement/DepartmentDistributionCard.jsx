@@ -37,7 +37,7 @@ const DEPARTMENTS = [
 
 const DepartmentDistributionCard = () => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <h2 className="text-white text-base font-semibold mb-6">
         Department Distribution
       </h2>

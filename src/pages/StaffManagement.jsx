@@ -6,6 +6,12 @@ import AlertBanner from "../components/dashboard/ui/AlertBanner";
 import DepartmentDistributionCard from "../components/staffmanagement/DepartmentDistributionCard";
 import RevenueTrendCard from "../components/staffmanagement/RevenueTrendCard";
 import RecentStaffActivity from "../components/staffmanagement/RecentStaffActivity";
+import ActionsPanel from "../components/tablemanagement/ActionsPanel";
+import ShiftCoverageCard from "../components/staffmanagement/ShiftCoverageCard";
+import PendingLeaveRequestsCard from "../components/staffmanagement/PendingLeaveRequestsCard";
+import TopPerformerCard from "../components/staffmanagement/TopPerformerCard";
+import UpcomingBirthdaysCard from "../components/staffmanagement/UpcomingBirthdaysCard";
+import DepartmentDistributionSummary from "../components/staffmanagement/DepartmentDistributionSummary";
 
 
 const StaffManagement = () => {
@@ -48,9 +54,18 @@ const StaffManagement = () => {
                 <RecentStaffActivity />
             </div>
             <div className="space-y-6">
-                {/* Quick Actions, Shift Coverage, Pending Leave Requests,
-                    Top Performer, Upcoming Birthdays, and the second
-                    Department Distribution card go here next */}
+                <ActionsPanel title="Quick Actions" actions={[
+                    { label: "+ Add Stock Items", variant: "filled" },
+                    { label: "Assign Shift", variant: "outline" },
+                    { label: "Approve Leave", variant: "outline" },
+                    { label: "Generate Payroll", variant: "outline" },
+                    { label: "Export Staff List", variant: "outline" },
+                ]} />
+                <ShiftCoverageCard />
+                <PendingLeaveRequestsCard />
+                <TopPerformerCard />
+                <UpcomingBirthdaysCard />
+                <DepartmentDistributionSummary />
             </div>
             </div>
         </>

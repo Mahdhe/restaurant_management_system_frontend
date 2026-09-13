@@ -24,7 +24,7 @@ const RevenueTrendCard = ({ title = "Revenue Trend" }) => {
   const [range, setRange] = useState("Last 7 days");
 
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <span className="w-9 h-9 rounded-lg bg-orange-500/10 flex items-center justify-center">
