@@ -53,7 +53,7 @@ const LeaveRequestsCard = ({ onApprove, onReject, onView }) => {
   ).length;
 
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <h2 className="text-white text-base font-semibold">
           Leave Requests
@@ -66,7 +66,7 @@ const LeaveRequestsCard = ({ onApprove, onReject, onView }) => {
       <div className="overflow-x-auto">
         <table className="w-full min-w-[620px] border-collapse">
           <thead>
-            <tr className="bg-[#0B1220]">
+            <tr className="bg-[#243447]">
               <th className="text-left text-gray-500 text-[10px] font-medium tracking-wide uppercase px-2.5 py-2.5 rounded-l-md">
                 Employee
               </th>

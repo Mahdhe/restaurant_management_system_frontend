@@ -54,7 +54,7 @@ const ATTENDANCE_LOG = [
 
 const TodaysAttendanceLogCard = ({ date = "June 23, 2025" }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <div>
           <h2 className="text-white text-base font-semibold">
@@ -65,7 +65,7 @@ const TodaysAttendanceLogCard = ({ date = "June 23, 2025" }) => {
         <div className="relative">
           <input
             type="date"
-            className="bg-[#0B1220] border border-slate-700 rounded-md pl-3 pr-8 py-2 text-white text-xs focus:outline-none focus:border-orange-500"
+            className="bg-[#243447] border border-slate-700 rounded-md pl-3 pr-8 py-2 text-white text-xs focus:outline-none focus:border-orange-500"
           />
         </div>
       </div>
@@ -73,7 +73,7 @@ const TodaysAttendanceLogCard = ({ date = "June 23, 2025" }) => {
       <div className="overflow-x-auto">
         <table className="w-full min-w-[600px] border-collapse">
           <thead>
-            <tr className="bg-[#0B1220]">
+            <tr className="bg-[#243447]">
               <th className="text-left text-gray-500 text-[10px] font-medium tracking-wide uppercase px-2.5 py-2.5 rounded-l-md">
                 Employee
               </th>

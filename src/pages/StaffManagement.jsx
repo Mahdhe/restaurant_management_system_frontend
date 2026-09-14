@@ -24,6 +24,11 @@ import EmploymentSummaryCard from "../components/staffmanagement/EmploymentSumma
 import WeeklyShiftScheduleCard from "../components/staffmanagement/WeeklyShiftScheduleCard";
 import CoverageCard from "../components/staffmanagement/CoverageCard";
 import StatCard from "../components/dashboard/ui/StatCard";   
+import TodaysAttendanceLogCard from "../components/staffmanagement/TodaysAttendanceLogCard";
+import LeaveRequestsCard from "../components/staffmanagement/LeaveRequestsCard";
+import AttendanceSummaryCard from "../components/staffmanagement/AttendanceSummaryCard";
+import LeaveStatisticsCard from "../components/staffmanagement/LeaveStatisticsCard";
+import MonthlyRateCard from "../components/staffmanagement/MonthlyRateCard";
 
 
 const StaffManagement = () => {
@@ -36,6 +41,12 @@ const StaffManagement = () => {
   { id: 3, label: "Night Shift", value: "5", trend: "22:00 – 06:00", trendColor: "text-gray-400" },
   { id: 4, label: "Off Duty", value: "8", trend: "Rest day", trendColor: "text-gray-400" },
   ];
+  const ATTENDANCE_STATS = [
+  { id: 1, label: "Clocked In", value: "42", trend: "On time", trendColor: "text-emerald-400" },
+  { id: 2, label: "On Break", value: "5", trend: "Currently resting", trendColor: "text-gray-400" },
+  { id: 3, label: "Late Today", value: "3", trend: "Needs review", trendColor: "text-amber-400" },
+  { id: 4, label: "Clocked Out", value: "8", trend: "Shift ended", trendColor: "text-gray-400" },
+];
 
   return (
     <div className="p-6 bg-[#0F1923] min-h-screen">
@@ -148,6 +159,25 @@ const StaffManagement = () => {
                 ]}
               />
               <CoverageCard />
+            </div>
+          </div>
+        </>
+      )}
+
+      {activeTab === "Attendance & Leave" && (
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {ATTENDANCE_STATS.map((item) => <StatCard key={item.id} {...item} />)}
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2 space-y-6">
+              <TodaysAttendanceLogCard />
+              <LeaveRequestsCard onApprove={console.log} onReject={console.log} onView={console.log} />
+            </div>
+            <div className="space-y-6">
+              <AttendanceSummaryCard />
+              <LeaveStatisticsCard />
+              <MonthlyRateCard />
             </div>
           </div>
         </>
