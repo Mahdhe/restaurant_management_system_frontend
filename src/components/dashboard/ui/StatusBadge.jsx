@@ -40,6 +40,12 @@ const STATUS_STYLES = {
   Night: "bg-slate-500/10 text-slate-400 border-slate-600",
   "On Leave": "bg-amber-500/10 text-amber-400 border-amber-700",
   Inactive: "bg-slate-500/10 text-slate-400 border-slate-600",
+
+  // Department tags:
+  Kitchen: "bg-orange-500/10 text-orange-400 border-orange-700",
+  Service: "bg-blue-500/10 text-blue-400 border-blue-700",
+  Cashier: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
+  Management: "bg-slate-500/10 text-slate-400 border-slate-600",
 };
  
 const StatusBadge = ({ status }) => {
