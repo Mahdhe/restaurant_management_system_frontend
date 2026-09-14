@@ -4,7 +4,9 @@ const ProgressBarRow = ({
   label,
   sublabel,
   percentage,
+  displayValue,
   barColor = "bg-orange-500",
+  valueColor = "text-white",
   status,
 }) => {
   return (
@@ -12,11 +14,13 @@ const ProgressBarRow = ({
       <div className="flex items-center justify-between mb-2">
         <div>
           <p className="text-white text-sm font-semibold">{label}</p>
-          <p className="text-gray-500 text-xs mt-0.5">{sublabel}</p>
+          {sublabel && (
+            <p className="text-gray-500 text-xs mt-0.5">{sublabel}</p>
+          )}
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-white text-sm font-semibold">
-            {percentage}%
+          <span className={`text-sm font-semibold ${valueColor}`}>
+            {displayValue !== undefined ? displayValue : `${percentage}%`}
           </span>
           {status && <StatusBadge status={status} />}
         </div>
