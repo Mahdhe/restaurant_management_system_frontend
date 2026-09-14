@@ -51,7 +51,7 @@ const AddEditStaffForm = ({ onSave, onCancel }) => {
       />
 
       {/* Personal Information */}
-      <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5 mb-6">
+      <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5 mb-6">
         <h2 className="text-white text-base font-semibold">
           Personal Information
         </h2>
@@ -118,7 +118,7 @@ const AddEditStaffForm = ({ onSave, onCancel }) => {
       </div>
 
       {/* Job Information */}
-      <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+      <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
         <h2 className="text-white text-base font-semibold">
           Job Information
         </h2>
@@ -198,7 +198,7 @@ const AddEditStaffForm = ({ onSave, onCancel }) => {
           <button
             type="button"
             onClick={handleSave}
-            className="px-6 py-2.5 rounded-md bg-orange-500 text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
+            className="px-6 py-2.5 rounded-md bg-[#E67E22] text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
           >
             Save Employee
           </button>

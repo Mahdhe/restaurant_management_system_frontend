@@ -1,4 +1,4 @@
-import StatusBadge from "../ui/StatusBadge";
+import StatusBadge from "../dashboard/ui/StatusBadge";
 
 const EmployeePreviewCard = ({
   initials = "KP",
@@ -7,12 +7,12 @@ const EmployeePreviewCard = ({
   department = "Service",
 }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5 text-center">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5 text-center">
       <h2 className="text-white text-base font-semibold mb-5 text-left">
         Employee Preview
       </h2>
 
-      <div className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-xl font-bold mx-auto mb-3">
+      <div className="w-16 h-16 rounded-full bg-[#E67E22] flex items-center justify-center text-white text-xl font-bold mx-auto mb-3">
         {initials}
       </div>
       <p className="text-white text-base font-semibold">{name}</p>

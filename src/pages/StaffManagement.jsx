@@ -17,6 +17,11 @@ import FilterChips from "../components/dashboard/ui/FilterChips";
 import EmployeeDirectoryTable from "../components/staffmanagement/EmployeeDirectoryTable";
 import StaffSummaryCard from "../components/staffmanagement/StaffSummaryCard";
 import DepartmentDistributionByHeadcount from "../components/staffmanagement/DepartmentDistributionByHeadcount";
+import AddEditStaffForm from "../components/staffmanagement/AddEditStaffForm";
+import EmployeePreviewCard from "../components/staffmanagement/EmployeePreviewCard";
+import AttendanceSnapshotCard from "../components/staffmanagement/AttendanceSnapshotCard";
+import EmploymentSummaryCard from "../components/staffmanagement/EmploymentSummaryCard";
+
 
 const StaffManagement = () => {
   const [activeTab, setActiveTab] = useState("Staff Dashboard");
@@ -98,6 +103,22 @@ const StaffManagement = () => {
           </div>
         </>
       )}
+
+      {activeTab === "Add/ Edit Staff" && (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <AddEditStaffForm
+              onSave={(data) => console.log("Save employee:", data)}
+              onCancel={() => console.log("Cancelled")}
+            />
+          </div>
+          <div className="space-y-6">
+            <EmployeePreviewCard />
+            <AttendanceSnapshotCard />
+            <EmploymentSummaryCard />
+          </div>
+        </div>
+  )}
     </div>
   );
 };
