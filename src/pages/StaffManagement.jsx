@@ -21,12 +21,21 @@ import AddEditStaffForm from "../components/staffmanagement/AddEditStaffForm";
 import EmployeePreviewCard from "../components/staffmanagement/EmployeePreviewCard";
 import AttendanceSnapshotCard from "../components/staffmanagement/AttendanceSnapshotCard";
 import EmploymentSummaryCard from "../components/staffmanagement/EmploymentSummaryCard";
+import WeeklyShiftScheduleCard from "../components/staffmanagement/WeeklyShiftScheduleCard";
+import CoverageCard from "../components/staffmanagement/CoverageCard";
+import StatCard from "../components/dashboard/ui/StatCard";   
 
 
 const StaffManagement = () => {
   const [activeTab, setActiveTab] = useState("Staff Dashboard");
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState("All Staff");
+  const SHIFT_STATS = [
+  { id: 1, label: "Morning Shift", value: "18", trend: "06 – 14:00", trendColor: "text-gray-400" },
+  { id: 2, label: "Evening Shift", value: "12", trend: "14:00 – 22:00", trendColor: "text-gray-400" },
+  { id: 3, label: "Night Shift", value: "5", trend: "22:00 – 06:00", trendColor: "text-gray-400" },
+  { id: 4, label: "Off Duty", value: "8", trend: "Rest day", trendColor: "text-gray-400" },
+  ];
 
   return (
     <div className="p-6 bg-[#0F1923] min-h-screen">
@@ -118,7 +127,31 @@ const StaffManagement = () => {
             <EmploymentSummaryCard />
           </div>
         </div>
-  )}
+      )}
+
+      {activeTab === "Shift Scheduling" && (
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {SHIFT_STATS.map((item) => <StatCard key={item.id} {...item} />)}
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2">
+              <WeeklyShiftScheduleCard />
+            </div>
+            <div className="space-y-6">
+              <ActionsPanel
+                title="Shift Controls"
+                actions={[
+                  { label: "+ Assign Shift", variant: "filled" },
+                  { label: "Bulk Schedule", variant: "outline" },
+                  { label: "Generate Roster", variant: "outline" },
+                ]}
+              />
+              <CoverageCard />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

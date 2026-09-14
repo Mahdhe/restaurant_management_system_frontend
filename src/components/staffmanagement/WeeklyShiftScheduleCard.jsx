@@ -1,8 +1,8 @@
 const SHIFT_CODE_STYLES = {
-  M: "bg-orange-500 text-white",
-  E: "bg-blue-500 text-white",
-  N: "bg-slate-500 text-white",
-  OFF: "bg-emerald-500 text-white",
+  M: "bg-[#E67E220F] text-[#E67E22]",
+  E: "bg-[#2980B91F] text-[#2980B9]",
+  N: "bg-[#5560701F] text-[#556070]",
+  OFF: "bg-[#27AE601F] text-[#27AE60]",
 };
 
 const SHIFT_LEGEND = [
@@ -55,7 +55,7 @@ const WeeklyShiftScheduleCard = ({
   onNextWeek,
 }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 mb-75 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <div>
           <h2 className="text-white text-base font-semibold">
