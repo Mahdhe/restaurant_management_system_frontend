@@ -12,10 +12,16 @@ import PendingLeaveRequestsCard from "../components/staffmanagement/PendingLeave
 import TopPerformerCard from "../components/staffmanagement/TopPerformerCard";
 import UpcomingBirthdaysCard from "../components/staffmanagement/UpcomingBirthdaysCard";
 import DepartmentDistributionSummary from "../components/staffmanagement/DepartmentDistributionSummary";
-
+import SearchInput from "../components/dashboard/ui/SearchInput";
+import FilterChips from "../components/dashboard/ui/FilterChips";
+import EmployeeDirectoryTable from "../components/staffmanagement/EmployeeDirectoryTable";
+import StaffSummaryCard from "../components/staffmanagement/StaffSummaryCard";
+import DepartmentDistributionByHeadcount from "../components/staffmanagement/DepartmentDistributionByHeadcount";
 
 const StaffManagement = () => {
   const [activeTab, setActiveTab] = useState("Staff Dashboard");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeFilter, setActiveFilter] = useState("All Staff");
 
   return (
     <div className="p-6 bg-[#0F1923] min-h-screen">
@@ -68,6 +74,28 @@ const StaffManagement = () => {
                 <DepartmentDistributionSummary />
             </div>
             </div>
+        </>
+      )}
+      
+      {activeTab === "Staff Directory" && (
+        <>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+            <SearchInput placeholder="Search staff name, role, email..." value={searchQuery} onChange={setSearchQuery} />
+            <FilterChips
+              filters={["All Staff", "Kitchen", "Service", "Cashiers", "Managers", "Inactive", "On Leave"]}
+              activeFilter={activeFilter}
+              onChange={setActiveFilter}
+            />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[2.4fr_1fr] gap-6">
+            <div>
+              <EmployeeDirectoryTable />
+            </div>
+            <div className="space-y-6">
+              <StaffSummaryCard />
+              <DepartmentDistributionByHeadcount />
+            </div>
+          </div>
         </>
       )}
     </div>

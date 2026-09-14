@@ -61,7 +61,7 @@ const EmployeeDirectoryTable = ({
   onPageChange,
 }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <div>
           <h2 className="text-white text-base font-semibold">
@@ -90,7 +90,7 @@ const EmployeeDirectoryTable = ({
       <div className="overflow-x-auto">
         <table className="w-full min-w-[820px] border-collapse">
           <thead>
-            <tr className="bg-[#0B1220]">
+            <tr className="bg-[#243447]">
               <th className="text-left text-gray-500 text-xs font-medium tracking-wide uppercase px-4 py-3 rounded-l-md">
                 Employee
               </th>
@@ -210,7 +210,7 @@ const EmployeeDirectoryTable = ({
               onClick={() => onPageChange?.(page)}
               className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors duration-200 ${
                 page === currentPage
-                  ? "bg-orange-500 text-white"
+                  ? "bg-[#E67E22] text-white"
                   : "bg-slate-800 border border-slate-700 text-gray-300 hover:border-orange-500 hover:text-orange-500"
               }`}
             >

@@ -28,10 +28,18 @@ const STATUS_STYLES = {
   Wallet: "bg-blue-500/10 text-blue-400 border-blue-700",
   QR: "bg-blue-500/10 text-blue-400 border-blue-700",
 
+  // Coverage / staffing status
   "Fully Covered": "bg-emerald-500/10 text-emerald-400 border-emerald-700",
   "Moderate Coverage": "bg-amber-500/10 text-amber-400 border-amber-700",
   "Needs Attention": "bg-red-500/10 text-red-400 border-red-700",
   Live: "bg-emerald-500/10 text-emerald-400 border-emerald-700",
+
+  // Staff shifts and status
+  Morning: "bg-amber-500/10 text-amber-400 border-amber-700",
+  Evening: "bg-blue-500/10 text-blue-400 border-blue-700",
+  Night: "bg-slate-500/10 text-slate-400 border-slate-600",
+  "On Leave": "bg-amber-500/10 text-amber-400 border-amber-700",
+  Inactive: "bg-slate-500/10 text-slate-400 border-slate-600",
 };
  
 const StatusBadge = ({ status }) => {
