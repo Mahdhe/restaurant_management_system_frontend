@@ -51,12 +51,12 @@ const scoreColor = (score) => {
 
 const StaffPerformanceScoresCard = ({ pendingCount = 3 }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <div className="flex items-center justify-between mb-5">
         <h2 className="text-white text-base font-semibold">
           Staff Performance Scores
         </h2>
-        <span className="text-amber-400 text-xs font-semibold border border-amber-700 bg-amber-500/10 rounded-full px-3 py-1">
+        <span className="text-white text-xs font-semibold border bg-[#E67E22] border-amber-700 rounded-full px-3 py-1">
           {pendingCount} Pending
         </span>
       </div>
@@ -64,7 +64,7 @@ const StaffPerformanceScoresCard = ({ pendingCount = 3 }) => {
       <div className="overflow-x-auto">
         <table className="w-full min-w-[600px] border-collapse">
           <thead>
-            <tr className="bg-[#0B1220]">
+            <tr className="bg-[#243447]">
               <th className="text-left text-gray-500 text-[10px] font-medium tracking-wide uppercase px-2.5 py-2.5 rounded-l-md">
                 Employee
               </th>
@@ -124,7 +124,7 @@ const StaffPerformanceScoresCard = ({ pendingCount = 3 }) => {
                     <InlineProgressBar
                       percentage={(emp.rating / 5) * 100}
                       displayValue={emp.rating}
-                      barColor="bg-orange-500"
+                      barColor="bg-[#E67E22]"
                       valueColor="text-white"
                     />
                   </td>

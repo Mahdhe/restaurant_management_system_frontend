@@ -7,7 +7,7 @@ const SUMMARY = [
 
 const AttendanceSummaryCard = ({ title = "Attendance Summary" }) => {
   return (
-    <div className="bg-[#101B2C] border border-slate-800 rounded-xl p-5">
+    <div className="bg-[#1C2A38] border border-slate-800 rounded-xl p-5">
       <h2 className="text-white text-base font-semibold mb-4">{title}</h2>
       <div>
         {SUMMARY.map((item, index) => (

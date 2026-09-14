@@ -29,6 +29,9 @@ import LeaveRequestsCard from "../components/staffmanagement/LeaveRequestsCard";
 import AttendanceSummaryCard from "../components/staffmanagement/AttendanceSummaryCard";
 import LeaveStatisticsCard from "../components/staffmanagement/LeaveStatisticsCard";
 import MonthlyRateCard from "../components/staffmanagement/MonthlyRateCard";
+import StaffPerformanceScoresCard from "../components/staffmanagement/StaffPerformanceScoreCard";
+import StaffRankingCard from "../components/staffmanagement/StaffRankingCard";
+import ScoreBreakdownCard from "../components/staffmanagement/ScoreBreakdownCard";
 
 
 const StaffManagement = () => {
@@ -46,6 +49,12 @@ const StaffManagement = () => {
   { id: 2, label: "On Break", value: "5", trend: "Currently resting", trendColor: "text-gray-400" },
   { id: 3, label: "Late Today", value: "3", trend: "Needs review", trendColor: "text-amber-400" },
   { id: 4, label: "Clocked Out", value: "8", trend: "Shift ended", trendColor: "text-gray-400" },
+];
+  const PERFORMANCE_STATS = [
+  { id: 1, label: "Top Performer", value: "Kasun P.", trend: "Score: 98.2", trendColor: "text-emerald-400" },
+  { id: 2, label: "Average Rating", value: "4.6", trend: "Out of 5.0", trendColor: "text-gray-400" },
+  { id: 3, label: "Attendance Score", value: "94.8%", trend: "Team avg", trendColor: "text-emerald-400" },
+  { id: 4, label: "Service Score", value: "88%", trend: "Customer feedback", trendColor: "text-gray-400" },
 ];
 
   return (
@@ -178,6 +187,24 @@ const StaffManagement = () => {
               <AttendanceSummaryCard />
               <LeaveStatisticsCard />
               <MonthlyRateCard />
+            </div>
+          </div>
+        </>
+      )}
+
+      {activeTab === "Performance Tracking" && (
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {PERFORMANCE_STATS.map((item) => <StatCard key={item.id} {...item} />)}
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2">
+              <StaffPerformanceScoresCard />
+            </div>
+            <div className="space-y-6">
+              <AttendanceSummaryCard title="Top 5 Staff" />
+              <StaffRankingCard title="Leave Statistics" />
+              <ScoreBreakdownCard />
             </div>
           </div>
         </>
