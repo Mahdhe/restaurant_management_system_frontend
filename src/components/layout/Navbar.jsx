@@ -15,18 +15,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-<<<<<<< HEAD
-    <nav className="w-full bg-[#0F1923] border-b border-slate-700 px-6 md:px-10 py-4 z-50">
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-4.25 shrink-0">
-          <div className="bg-[#E67E22] items-center justify-center flex rounded-[14px] h-10.5 w-10.5">
-            <UtensilsCrossed
-              className="text-white"
-              size={22}
-              strokeWidth={2.2}
-            />
-=======
     <nav className="w-full bg-[#0B1220] px-6 md:px-10 py-4 flex items-center justify-between relative z-50">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2 shrink-0">
@@ -90,6 +78,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#0B1220] border-t border-slate-800 flex flex-col gap-5 px-6 py-6 md:hidden">
+          <Link>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
@@ -107,7 +96,6 @@ const Navbar = () => {
             <button className="px-4 py-2 rounded-md bg-orange-500 text-white text-sm font-semibold flex-1">
               Order Online
             </button>
->>>>>>> 1c93b9cc310022852f0db7dc47e5569b1223df93
           </div>
 
           <span className="font-playfair text-[#F0F4F8] text-[22px] font-bold tracking-[1.3px]">
