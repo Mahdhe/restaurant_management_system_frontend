@@ -32,6 +32,7 @@ import MonthlyRateCard from "../components/staffmanagement/MonthlyRateCard";
 import StaffPerformanceScoresCard from "../components/staffmanagement/StaffPerformanceScoreCard";
 import StaffRankingCard from "../components/staffmanagement/StaffRankingCard";
 import ScoreBreakdownCard from "../components/staffmanagement/ScoreBreakdownCard";
+import MonthlyPerformanceTrendCard from "../components/staffmanagement/MonthlyPerformanceTrendCard";  
 
 
 const StaffManagement = () => {
@@ -199,6 +200,25 @@ const StaffManagement = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
+              <StaffPerformanceScoresCard />
+            </div>
+            <div className="space-y-6">
+              <AttendanceSummaryCard title="Top 5 Staff" />
+              <StaffRankingCard title="Leave Statistics" />
+              <ScoreBreakdownCard />
+            </div>
+          </div>
+        </>
+      )}
+
+      {activeTab === "Profile View" && (
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {PERFORMANCE_STATS.map((item) => <StatCard key={item.id} {...item} />)}
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2 space-y-6">
+              <MonthlyPerformanceTrendCard onExport={() => console.log("Export")} />
               <StaffPerformanceScoresCard />
             </div>
             <div className="space-y-6">
