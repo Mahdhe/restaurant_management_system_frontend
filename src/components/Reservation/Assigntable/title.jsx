@@ -8,7 +8,7 @@ function Buttons(){
         <section
          className=" flex w-full min-w-0 min-h-[61px] flex-col  md:flex-row md:items-center md:justify-between gap-[16px] md:gap-[24px]">
         
-            <div className="flex w-full min-h-[61px] flex-col gap-[4px]">
+            <div className="flex w-full min-w-0 min-h-[61px] flex-col gap-[4px]">
                 <h2 className="w-full min-h-[36px] font-dm font-[600] text-[22px] sm:text-[24px] lg:text-[28px] text-[#F0F4F8] tracking-normal leading-none">
                     Reservation
                 </h2>

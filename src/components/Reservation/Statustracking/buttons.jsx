@@ -22,10 +22,10 @@ function Buttons(){
         <button
         type="button"
         // onClick={()=> navigate("/reservations/details")}
-         className="flex flex-1 max-w-[77px] min-h-[40px] gap-[8px] bg-[#243447] justify-center items-center border border-[#FFFFFF24] px-[16px] py-[8px] 
+         className="flex flex-1 w-fit min-h-[40px] gap-[8px] bg-[#243447] justify-center items-center border border-[#FFFFFF24] px-[16px] py-[8px] 
          opacity-100 rounded-[10px] text-[#F0F4F8] font-dm font-[600] text-[14px] leading-none tracking-normal cursor-pointer
          ">
-           Cancel
+           Send update
         </button>
       
 
@@ -36,7 +36,7 @@ function Buttons(){
          className="ml-auto flex min-h-[40px] gap-[8px] px-[16px] bg-[#E67E22] justify-center items-center border border-[#FFFFFF24] py-[8px]
          opacity-100 rounded-[10px] text-[#F0F4F8] font-dm font-[600] text-[14px] leading-none tracking-normal cursor-pointer whitespace-nowrap
          ">
-       Confirm Assignment
+      Mark Seated
         </button>
         </div>
        

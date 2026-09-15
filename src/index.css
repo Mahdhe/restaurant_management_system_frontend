@@ -14,3 +14,10 @@
 .font-dmsans{
     font-family: var(--font-dmsans)
 }
+
+
+html,
+body,
+#root {
+background-color: #0F1923;
+}

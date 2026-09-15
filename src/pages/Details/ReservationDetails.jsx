@@ -6,34 +6,32 @@ import Guestinformation from "../../components/Reservation/Reservationdetails/gu
 import Guestnote from "../../components/Reservation/Reservationdetails/guestnotes";
 import Heading from "../../components/Reservation/Reservationdetails/title";
 
+
 function ReservationDetails(){
-    return(
+  return(
 
-        <div className="w-full min-w-0 bg-[#0F1923]  p-6">  
-          <Heading />
-        <ButtonsRow />
+  <div className="w-full min-w-0 bg-[#0F1923]  p-6">
+  <Heading />
+  <ButtonsRow />
 
-{/*         
-        <Tabledetails />
-        <Pendingapprovals /> */}
-<section className="grid w-full min-w-0 grid-cols-1 gap-[24px] lg:grid-cols-[minmax(0,1.8fr)_minmax(0,1fr)]">
-  
-  {/* Left column */}
-  <div className="flex w-full  min-w-0 flex-col gap-[16px]">
-  
-    <Tabledetails />
-    <Guestinformation />
-    <Guestnote />
-  </div>
+  <section className="grid w-full min-w-0 grid-cols-1 gap-[24px] lg:grid-cols-[minmax(0,1.8fr)_minmax(0,1fr)]">
 
-  {/* Right column */}
-  <div className="flex w-full min-w-0 flex-col gap-[16px]">
-    <Pendingapprovals />
-  </div>
-
-</section>
+    {/* left column */}
+    <div className="flex w-full min-w-0 flex-col gap-[16px]">
+      <Tabledetails />
+      <Guestinformation />
+      <Guestnote />
     </div>
-    );
+
+    {/* right column */}
+    <div className="flex w-full min-w-0 flex-col gap-[16px]">
+      <Pendingapprovals />
+    
+    </div>
+  </section>
+    </div>
+  );
 }
+
 
 export default ReservationDetails;

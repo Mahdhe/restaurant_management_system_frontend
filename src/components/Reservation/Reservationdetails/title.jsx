@@ -1,17 +1,16 @@
 
-
 function Heading(){
 
 
     return(
         <section
-         className=" flex w-full min-w-0 min-h-[61px] flex-col  md:flex-row md:items-center md:justify-between gap-[16px] md:gap-[24px]">
+         className=" flex w-full min-w-0  flex-col  md:flex-row md:items-center md:justify-between gap-[16px] md:gap-[24px]">
         
-            <div className="flex w-full min-h-[61px] flex-col gap-[4px]">
+            <div className="flex w-full min-w-0 flex-col gap-[4px]">
                 <h2 className="w-full min-h-[36px] font-dm font-[600] text-[22px] sm:text-[24px] lg:text-[28px] text-[#F0F4F8] tracking-normal leading-none">
                     Reservation
                 </h2>
-                <p className="w-full min-h-[21px] font-dm font-[400] text-[16px] leading-none tracking-normal text-[#556070] ">
+                <p className="w-full min-w-0 font-dm font-[400] text-[16px] leading-none tracking-normal text-[#556070] ">
                     Manage guest reservations, table assignments, approvals, and booking status.
                 </p>
             </div>

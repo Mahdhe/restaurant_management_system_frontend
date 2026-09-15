@@ -1,3 +1,5 @@
+import {useNavigate} from "react-router-dom";
+
 
 const pendingApprovals =[
     {
@@ -10,10 +12,13 @@ const pendingApprovals =[
     }
 ];
 
-function Quickbutton({name,isPrimary=false,customtextColor=""}) {
+function Quickbutton({name,path,isPrimary=false,customtextColor=""}) {
+    const navigate = useNavigate();
+
     return(
         <button 
         type="button"
+        onClick={() => navigate(path)}
         className={`flex w-full min-h-[40px] items-center justify-center gap-[8px]  rounded-[10px] px-[16px] py-[8px]
         font-dm text-[14px] font-semibold"
         ${
@@ -155,15 +160,18 @@ function Statistics(){
        <div className="w-full flex flex-col min-h-[136px] gap-[8px]">
         <Quickbutton 
         name="Create Reservation"
+        path="/reservations/assign-table"
         isPrimary
         />
 
         <Quickbutton 
         name="Transfer Table"
+        // path="/reservations/transfer"
         />
 
         <Quickbutton 
         name="View Conflicts"
+        // path="/reservations/conflicts"
         customtextColor="text-[#556070]"
         />
 

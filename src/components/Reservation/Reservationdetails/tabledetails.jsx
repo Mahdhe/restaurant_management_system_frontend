@@ -43,11 +43,11 @@ function Detailscard({title,id,description,descriptioncolor}){
 
 function Tabledetails(){
     return(
-        <section className="min-w-0 h-[341px] rounded-[14px] gap-[20px] mt-[16px] border border-[#FFFFFF14] bg-[#1C2A38] p-[20px]">
+        <section className="min-w-0 min-h-[341px] rounded-[14px] gap-[20px] mt-[16px] border border-[#FFFFFF14] bg-[#1C2A38] p-[20px]">
 
 
 {/* Name details left*/}
-<div className="w-full flex flex-row min-w-0 mt-[16px] min-h-[137px]  gap-[16px]">
+<div className="w-full flex flex-col sm:flex-row min-w-0 mt-[16px] min-h-[137px]  gap-[16px]">
     <div className="flex h-[86px] w-[86px] flex-col items-center justify-center gap-[4px] rounded-[18px] border border-[#F39C1273] bg-[#F39C121F]
      text-[#F39C12] font-dm font-[700] leading-none tracking-[0.08em]">
 T04
@@ -75,7 +75,7 @@ text-[18px] font-semibold text-[#8E44AD]">
 
 
 {/* Cards */}
-<div className="w-full grid grid-cols-3 min-w-0 mt-[16px] min-h-[137px] gap-[12px]">
+<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 min-w-0 mt-[16px] min-h-[137px] gap-[12px]">
 {Carditem.map((item)=>(
     <Detailscard
     key={item.title}

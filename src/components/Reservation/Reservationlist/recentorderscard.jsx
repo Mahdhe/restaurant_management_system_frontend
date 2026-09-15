@@ -8,7 +8,7 @@
 
  function Tabletext({children,className=""}) {
     return(
-        <span className={`w-[172px] min-h-[18px] font-dm font-semibold text-[14px] tracking-[0.08em] leading-none text-[#F0F4F8] ${className}`}
+        <span className={`w-[172px] shrink-0 min-h-[18px] font-dm font-semibold text-[14px] tracking-[0.08em] leading-none text-[#F0F4F8] ${className}`}
         > {children} 
         </span>
     );
@@ -69,19 +69,19 @@
  
 
 return(
-    <div className="grid grid-cols-6 min-h-[64px] border-b border-[#FFFFFF14] p-[16px]">
+    <div className="grid grid-cols-6 min-w-[1032px] min-h-[64px] border-b border-[#FFFFFF14] p-[16px]">
         <Tabletext> {reservation.name} </Tabletext>
         <Tabletext> {reservation.date }</Tabletext>
         <Tabletext> {reservation.id} </Tabletext>
         <Tabletext> {reservation.table} </Tabletext>
 
-<div className="flex w-[172px] items-center"> 
+<div className="flex w-[172px] shrink-0 items-center"> 
     <span className={`inline-flex min-h-[24px] w-fit rounded-[999px] px-[9px] py-[4px] gap-[10px] items-center justify-between ${CurrentstatusColor}`}
         >
              {reservation.status} </span>
 </div>
         
-<div className="flex w-[172px] items-center"> 
+<div className="flex w-[172px] shrink-0 items-center"> 
        <span className="text-[#8A9BB0] flex border border-[#FFFFFF14] rounded-[10px] gap-[8px] h-[40px] items-center justify-center px-[16px] py-[8px] "
 >
         {reservation.action} </span>
@@ -105,8 +105,10 @@ function Recentorder() {
 </div>
 
 {/* live orders table */}
-<div className="w-full min-w-0 min-h-[332px] p-[10px]">
+<div className="w-full min-w-0 min-h-[332px] overflow-x-auto p-[10px]">
 
+
+<div className="min-w-[1032px]">
 {/* headings */}
 <div className="min-h-[46px] grid grid-cols-6 items-center  rounded-[10px] p-[16px] bg-[#243447]">
 
@@ -117,6 +119,7 @@ function Recentorder() {
 <Tableheading Title=" STATUS" />
 <Tableheading Title=" ACTION" />
 
+</div>
 </div>
 
 
