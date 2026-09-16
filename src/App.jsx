@@ -2,7 +2,7 @@ import { useState } from "react";
 import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
-import AnalyticsDashboard from "./pages/Analytics/AnalyticsDashboard";
+import AnalyticsDashboard from "./pages/Insights/AnalyticsDashboard";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");

@@ -1,12 +1,12 @@
 import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
-import ExportReports from "../Components/ExportReports";
-import LiveInsights from "../Components/LiveInsights";
-import MonthComparison from "../Components/MonthComparison";
-import AnalyticsChart from "../Components/PeakHourComponents/AnalyticsChart";
-import QuickInsight from "../Components/PeakHourComponents/QuickInsight";
-import TrafficbyDay from "../Components/PeakHourComponents/TrafficbyDay";
-import QuickFilters from "../Components/QuickFilters";
-import StatsGrid from "../Components/StatsGrid";
+import ExportReports from "../ExportReports";
+import LiveInsights from "../LiveInsights";
+import MonthComparison from "../MonthComparison";
+import AnalyticsChart from "../PeakHourComponents/AnalyticsChart";
+import QuickInsight from "../PeakHourComponents/QuickInsight";
+import TrafficbyDay from "../PeakHourComponents/TrafficbyDay";
+import QuickFilters from "../QuickFilters";
+import StatsGrid from "../StatsGrid";
 
 export default function PeakHours() {
   return (

@@ -1,12 +1,12 @@
 import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
-import ExportReports from "../Components/ExportReports";
-import LiveInsights from "../Components/LiveInsights";
-import MonthComparison from "../Components/MonthComparison";
-import QuickFilters from "../Components/QuickFilters";
-import StatsGrid from "../Components/StatsGrid";
-import AvgTurnTime from "../Components/TableOccupancyComponents/AvgTimeCard";
-import OccupancyChart from "../Components/TableOccupancyComponents/OccupancyChart";
-import TableStatus from "../Components/TableOccupancyComponents/TableStatus";
+import ExportReports from "../ExportReports";
+import LiveInsights from "../LiveInsights";
+import MonthComparison from "../MonthComparison";
+import QuickFilters from "../QuickFilters";
+import StatsGrid from "../StatsGrid";
+import AvgTurnTime from "../TableOccupancyComponents/AvgTimeCard";
+import OccupancyChart from "../TableOccupancyComponents/OccupancyChart";
+import TableStatus from "../TableOccupancyComponents/TableStatus";
 
 export default function TableOccupancy() {
   return (

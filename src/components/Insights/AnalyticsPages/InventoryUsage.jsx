@@ -1,13 +1,13 @@
 import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
-import ExportReports from "../Components/ExportReports";
-import CostBreakdown from "../Components/InventoryUsageComponents/CostBreakdown";
-import TopIngredientTable from "../Components/InventoryUsageComponents/TopIngredientTable";
-import WeeklySummary from "../Components/InventoryUsageComponents/WeeklySummary";
-import LiveInsights from "../Components/LiveInsights";
-import MonthComparison from "../Components/MonthComparison";
-import QuickFilters from "../Components/QuickFilters";
-import RevenueTrend from "../Components/SalesReportComponents/RevenueTrend";
-import StatsGrid from "../Components/StatsGrid";
+import ExportReports from "../ExportReports";
+import CostBreakdown from "../InventoryUsageComponents/CostBreakdown";
+import TopIngredientTable from "../InventoryUsageComponents/TopIngredientTable";
+import WeeklySummary from "../InventoryUsageComponents/WeeklySummary";
+import LiveInsights from "../LiveInsights";
+import MonthComparison from "../MonthComparison";
+import QuickFilters from "../QuickFilters";
+import RevenueTrend from "../SalesReportComponents/RevenueTrend";
+import StatsGrid from "../StatsGrid";
 
 export default function InventoryUsage() {
   return (

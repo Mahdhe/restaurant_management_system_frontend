@@ -1,11 +1,11 @@
 import { cancellationStats, Stats } from "../../../data/AnalyticsData/AnalyticsStats";
-import ComparisionGraph from "../Components/CancellationComponents/ComparisionCard";
-import LogTable from "../Components/CancellationComponents/LogTable";
-import ExportReports from "../Components/ExportReports";
-import LiveInsights from "../Components/LiveInsights";
-import MonthComparison from "../Components/MonthComparison";
-import QuickFilters from "../Components/QuickFilters";
-import StatsGrid from "../Components/StatsGrid";
+import ComparisionGraph from "../CancellationComponents/ComparisionCard";
+import LogTable from "../CancellationComponents/LogTable";
+import ExportReports from "../ExportReports";
+import LiveInsights from "../LiveInsights";
+import MonthComparison from "../MonthComparison";
+import QuickFilters from "../QuickFilters";
+import StatsGrid from "../StatsGrid";
 
 export default function Cancellation() {
   return (

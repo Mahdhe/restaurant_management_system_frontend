@@ -1,12 +1,12 @@
 import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
-import ExportReports from "../Components/ExportReports";
-import LiveInsights from "../Components/LiveInsights";
-import MonthComparison from "../Components/MonthComparison";
-import CategoryShare from "../Components/PopularItemComponents/CategoryShare";
-import ItemInsights from "../Components/PopularItemComponents/ItemInsights";
-import TopSellingItems from "../Components/PopularItemComponents/TopSellingItems";
-import QuickFilters from "../Components/QuickFilters";
-import StatsGrid from "../Components/StatsGrid";
+import ExportReports from "../ExportReports";
+import LiveInsights from "../LiveInsights";
+import MonthComparison from "../MonthComparison";
+import CategoryShare from "../PopularItemComponents/CategoryShare";
+import ItemInsights from "../PopularItemComponents/ItemInsights";
+import TopSellingItems from "../PopularItemComponents/TopSellingItems";
+import QuickFilters from "../QuickFilters";
+import StatsGrid from "../StatsGrid";
 
 export default function PopularItems() {
   return (

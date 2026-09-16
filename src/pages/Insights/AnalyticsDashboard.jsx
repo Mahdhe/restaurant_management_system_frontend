@@ -1,12 +1,12 @@
 import { useState } from "react";
-import SalesReport from "./AnalyticsPages/SalesReport";
-import PeakHours from "./AnalyticsPages/PeakHours";
-import PopularItems from "./AnalyticsPages/PopularItems";
-import TableOccupancy from "./AnalyticsPages/TableOccupancy";
-import Cancellation from "./AnalyticsPages/Cancellation";
-import InventoryUsage from "./AnalyticsPages/InventoryUsage";
-import AnalyticsHeader from "./Components/AnalyticsHeader";
-import AnalyticsTabs from "./Components/AnalyticsTabs";
+import SalesReport from "../../components/Insights/AnalyticsPages/SalesReport";
+import PeakHours from "../../components/Insights/AnalyticsPages/PeakHours";
+import PopularItems from "../../components/Insights/AnalyticsPages/PopularItems";
+import TableOccupancy from "../../components/Insights/AnalyticsPages/TableOccupancy";
+import Cancellation from "../../components/Insights/AnalyticsPages/Cancellation";
+import InventoryUsage from "../../components/Insights/AnalyticsPages/InventoryUsage";
+import AnalyticsHeader from "../../components/Insights/AnalyticsHeader";
+import AnalyticsTabs from "../../components/Insights/AnalyticsTabs";
 
 export default function AnalyticsDashboard() {
   const [activeTab, setActiveTab] = useState("salesReport");

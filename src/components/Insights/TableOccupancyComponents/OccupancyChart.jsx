@@ -1,26 +1,25 @@
 import { Clock1 } from "lucide-react";
-import BarChart from "../BarChart";
-import { peakHour, peakHourLabels } from "../../../../data/AnalyticsData/GraphData";
+import { occupanctInsights } from "../../../data/AnalyticsData/ProgressData";
 
 const cardData = [
   {
-    title: "7-8:30 PM",
-    subtitle: "Peak Window",
+    title: "84%",
+    subtitle: "Average",
     valueColor: "text-[#E67E22]",
   },
   {
-    title: "42/hr",
-    subtitle: "Avg Orders",
+    title: "95%",
+    subtitle: "Peak",
     valueColor: "text-[#27AE60]",
   },
   {
-    title: "91%",
-    subtitle: "Peak Occupancy",
+    title: "42%",
+    subtitle: "Lowest",
     valueColor: "text-[#2980B9]",
   },
 ];
 
-export default function AnalyticsChart() {
+export default function OccupancyChart() {
   return (
     <div className="mt-4 w-full min-w-0 rounded-2xl border border-white/15 bg-[#1c2a38] overflow-hidden p-4 sm:p-5 font-dmsans">
       {/* header */}
@@ -32,18 +31,41 @@ export default function AnalyticsChart() {
 
           <div className="min-w-0">
             <h2 className="text-[14px] font-semibold text-[#f0f4f8]">
-              Peak Hour Analytics
+              Occupancy by Hour
             </h2>
 
             <p className="text-[12px] text-[#8a9bb0]">
-              Customer traffic distribution - today
+              Today - % of tables occupied
             </p>
           </div>
         </div>
       </div>
 
-      <div className="w-full min-w-0 overflow-hidden">
-        <BarChart data={peakHour} labels={peakHourLabels} />
+      {/* chart */}
+      <div className="space-y-4 py-4 sm:py-5 w-full min-w-0">
+        {occupanctInsights.map((item) => (
+          <div
+            key={item.time}
+            className="flex items-center gap-2 sm:gap-3 min-w-0"
+          >
+            <span className="w-14 sm:w-15.25 shrink-0 text-[12px] sm:text-[14px] text-[#8A9BB0] block text-center">
+              {item.time}
+            </span>
+
+            <div className="h-[17.5px] min-w-0 flex-1 overflow-hidden rounded-md bg-[#5560704d]">
+              <div
+                className={`h-full rounded-md ${item.color}`}
+                style={{ width: item.width }}
+              />
+            </div>
+
+            <span
+              className={`w-6.5 shrink-0 text-right text-[12px] sm:text-[14px] font-semibold ${item.textColor}`}
+            >
+              {item.percentage}
+            </span>
+          </div>
+        ))}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-4 sm:p-5">
@@ -57,7 +79,8 @@ export default function AnalyticsChart() {
             >
               {data.title}
             </h2>
-            <span className="text-[14px] sm:text-[16px] text-[#8A9BB0]">
+
+            <span className="text-[14px] sm:text-[16px] text-[#8a9bb0]">
               {data.subtitle}
             </span>
           </div>

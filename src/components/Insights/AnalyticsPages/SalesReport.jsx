@@ -1,13 +1,13 @@
 import { Stats } from "../../../data/AnalyticsData/AnalyticsStats";
-import ExportReports from "../Components/ExportReports";
-import LiveInsights from "../Components/LiveInsights";
-import MonthComparison from "../Components/MonthComparison";
-import QuickFilters from "../Components/QuickFilters";
-import DailySalesBreakdown from "../Components/SalesReportComponents/DailySalesBreakdown";
-import PaymentBreakdown from "../Components/SalesReportComponents/PaymentBreakdown";
-import RevenueSummary from "../Components/SalesReportComponents/RevenueSummary";
-import RevenueTrend from "../Components/SalesReportComponents/RevenueTrend";
-import StatsGrid from "../Components/StatsGrid";
+import ExportReports from "../ExportReports";
+import LiveInsights from "../LiveInsights";
+import MonthComparison from "../MonthComparison";
+import QuickFilters from "../QuickFilters";
+import DailySalesBreakdown from "../SalesReportComponents/DailySalesBreakdown";
+import PaymentBreakdown from "../SalesReportComponents/PaymentBreakdown";
+import RevenueSummary from "../SalesReportComponents/RevenueSummary";
+import RevenueTrend from "../SalesReportComponents/RevenueTrend";
+import StatsGrid from "../StatsGrid";
 
 export default function SalesReport() {
   return (
