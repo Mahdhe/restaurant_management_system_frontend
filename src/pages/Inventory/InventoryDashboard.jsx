@@ -1,12 +1,12 @@
 import { useState } from "react";
-import DashboardPage from "./InventoryPages/DashboardPage";
-import StockList from "./InventoryPages/StockList";
-import AddOrEditStock from "./InventoryPages/Add-EditStock";
-import LowAlertPage from "./InventoryPages/LowAlertPage";
-import SupplierPage from "./InventoryPages/SupplierPage";
-import StockTracking from "./InventoryPages/TrackingPage";
-import InventoryHeader from "./components/InventoryDashboardHeader";
-import InventoryTabs from "./components/InventoryTabs";
+import DashboardPage from "../../components/Inventory/InventoryPages/DashboardPage";
+import StockList from "../../components/Inventory/InventoryPages/StockList";
+import AddOrEditStock from "../../components/Inventory/InventoryPages/Add-EditStock";
+import LowAlertPage from "../../components/Inventory/InventoryPages/LowAlertPage";
+import SupplierPage from "../../components/Inventory/InventoryPages/SupplierPage";
+import StockTracking from "../../components/Inventory/InventoryPages/TrackingPage";
+import InventoryHeader from "../../components/Inventory/InventoryDashboardHeader";
+import InventoryTabs from "../../components/Inventory/InventoryTabs";
 
 export default function InventoryDashboard() {
   const [activeTab, setActiveTab] = useState("dashboard");

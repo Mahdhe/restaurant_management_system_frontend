@@ -1,8 +1,8 @@
 import { StockStats } from "../../../data/InventoryData/InventoryStats";
-import StatsGrid from "../components/StatsGrid";
-import StockLog from "../components/TrackingPageComponents/StockLogTable";
-import TopUsage from "../components/TrackingPageComponents/TopUsageCard";
-import UsageTrend from "../components/TrackingPageComponents/UsageTrend";
+import StatsGrid from "../StatsGrid";
+import StockLog from "../TrackingPageComponents/StockLogTable";
+import TopUsage from "../TrackingPageComponents/TopUsageCard";
+import PrepTime from "../TrackingPageComponents/UsageTrend";
 
 export default function StockTracking() {
   return (
@@ -15,7 +15,7 @@ export default function StockTracking() {
         </div>
 
         <div className="w-full xl:flex-1 min-w-0 space-y-5">
-          <UsageTrend />
+          <PrepTime />
           <TopUsage />
         </div>
       </div>

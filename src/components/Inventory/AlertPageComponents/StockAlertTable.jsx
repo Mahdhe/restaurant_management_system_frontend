@@ -1,4 +1,4 @@
-import { LowStocks } from "../../../../data/InventoryData/TableData";
+import { LowStocks } from "../../../data/InventoryData/TableData";
 
 export default function StockAlertTable() {
   return (

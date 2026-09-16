@@ -1,8 +1,8 @@
 import { InventoryStats } from "../../../data/InventoryData/InventoryStats";
-import QuickActions from "../components/DashboardComponents/QuickActions";
-import StockOverview from "../components/DashboardComponents/StockOverview";
-import StockSummary from "../components/DashboardComponents/StockSummary";
-import StatsGrid from "../components/StatsGrid";
+import QuickActions from "../DashboardComponents/QuickActions";
+import StockOverview from "../DashboardComponents/StockOverview";
+import StockSummary from "../DashboardComponents/StockSummary";
+import StatsGrid from "../StatsGrid";
 
 export default function DashboardPage() {
   return (

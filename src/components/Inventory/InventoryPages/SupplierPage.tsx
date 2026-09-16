@@ -1,7 +1,7 @@
 import { SupplierStats } from "../../../data/InventoryData/InventoryStats";
-import SupplierTable from "../components/SpplierComponents/SuplierTable";
-import SupplierForm from "../components/SpplierComponents/SupplierForm";
-import StatsGrid from "../components/StatsGrid";
+import SupplierTable from "../SpplierComponents/SuplierTable";
+import SupplierForm from "../SpplierComponents/SupplierForm";
+import StatsGrid from "../StatsGrid";
 
 export default function SupplierPage() {
   return (

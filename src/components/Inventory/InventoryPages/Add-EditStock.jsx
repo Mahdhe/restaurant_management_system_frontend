@@ -1,6 +1,6 @@
-import Form from "../components/Add-EditPageComponents/AddOrEditForm";
-import LinkedItems from "../components/Add-EditPageComponents/LinkedItems";
-import StockPreview from "../components/Add-EditPageComponents/StockPreview";
+import Form from "../Add-EditPageComponents/AddOrEditForm";
+import LinkedItems from "../Add-EditPageComponents/LinkedItems";
+import StockPreview from "../Add-EditPageComponents/StockPreview";
 
 export default function AddOrEditStock() {
   return (

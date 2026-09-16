@@ -1,4 +1,4 @@
-import { Suppliers } from "../../../../data/InventoryData/TableData";
+import { Suppliers } from "../../../data/InventoryData/TableData";
 
 export default function SupplierTable() {
   return (

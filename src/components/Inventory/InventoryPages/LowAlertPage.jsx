@@ -1,6 +1,6 @@
 import { TriangleAlert } from "lucide-react";
-import StockAlertTable from "../components/AlertPageComponents/StockAlertTable";
-import ReorderSummary from "../components/AlertPageComponents/ReorderSummary";
+import StockAlertTable from "../AlertPageComponents/StockAlertTable";
+import ReorderSummary from "../AlertPageComponents/ReorderSummary";
 
 export default function LowAlertPage() {
   return (
