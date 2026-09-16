@@ -88,14 +88,14 @@ Select a suitable frame
     
         <Tablebox 
         tablename="T02"
-        status="38 min"
+        status="15 min"
         color="red"
         />
 
         
         <Tablebox 
         tablename="T03"
-        status="2 seats"
+        status="4 seats"
         color="yellow"
         />
     </div>
