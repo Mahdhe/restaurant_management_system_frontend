@@ -1,4 +1,4 @@
-import React from "react";
+
 
 // input field
 function InputField({ type="text", placeholder,name}) {

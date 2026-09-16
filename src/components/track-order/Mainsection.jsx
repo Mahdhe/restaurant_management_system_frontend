@@ -1,8 +1,8 @@
-import React from "react";
+
 
 function Mainsection(){
     return(
-        <section className="w-full min-h-[372px] px-6 md:px-10 lg:px-[120px] py-10 flex flex-col gap-[10px] opacity-100 md:py-[12] lg:py-[72px] bg-main-gradient" >
+        <section className="w-full px-6 md:px-10 lg:px-[120px] py-10 flex flex-col gap-[10px] opacity-100 md:py-[12] lg:py-[72px] bg-main-gradient" >
  <div className="relative w-full min-h-[228px] p-5  flex flex-col opacity-100 overflow-hidden"
  style={{
     background:`

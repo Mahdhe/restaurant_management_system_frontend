@@ -1,4 +1,4 @@
-import React from "react";
+
 import {Check} from "lucide-react";
 
 function OrderSetp({ title,description,time}){
@@ -50,7 +50,7 @@ function Detailsrow({label,price,quantity,isTotal=false}){
 function Orderdetails(){
     return(
    
-   <section className="w-full min-h-[610px] px-6 md:px-10 lg:px-[120px] py-10 flex flex-col gap-[48px] opacity-100 md:py-12 lg:py-[72px] bg-[#1A2535] lg:flex-row ">
+   <section className="w-full min-h-[610px] px-6 md:px-10 lg:px-[120px] py-10 flex flex-col gap-[48px] opacity-100 md:py-12 lg:py-[72px] bg-[#1A2535] lg:flex-row overflow-hidden">
 
 {/* left side */}
 <div className="flex w-full min-h-[466px] flex-col gap-4 mx-auto lg:gap-5">
