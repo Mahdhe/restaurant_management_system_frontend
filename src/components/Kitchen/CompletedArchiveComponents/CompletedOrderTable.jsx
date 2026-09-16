@@ -1,4 +1,4 @@
-import { CompletedOrders } from "../../../../data/KitchenData/TableContents";
+import { CompletedOrders } from "../../../data/KitchenData/TableContents";
 
 export default function CompletedOrderTable() {
   return (

@@ -27,8 +27,8 @@ function App() {
 
         <main className="sticky top-0 min-w-0 flex-1">
           <Header user={currentUser} page={pageDetials[activeItem]} />
-          <div>
-            <KitchenDashboard />
+          <div className="p-6 min-h-screen bg-[#0f1923] font-dmsans">
+            {activeItem === "Kitchen Display" && <KitchenDashboard />}
           </div>
         </main>
       </div>

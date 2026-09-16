@@ -1,10 +1,10 @@
 import { useState } from "react";
-import ActionButtons from "../components/ActionButtons";
-import StatsGrid from "../components/StatsGrid";
-import { ProgressOrders } from "../../../data/KitchenData/ProgressOrders";
-import ProgressOrderCard from "../components/ProgressOrderComponents/ProgressOrderCard";
+import StatsGrid from "../StatsGrid";
 import { ProgressStats } from "../../../data/KitchenData/KitchenStats";
+import ActionButtons from "../ActionButtons";
 import { ProgressButtons } from "../../../data/KitchenData/ActionButtons";
+import { ProgressOrders } from "../../../data/KitchenData/ProgressOrders";
+import ProgressOrderCard from "../ProgressOrderComponents/ProgressOrderCard";
 
 export default function InProgressOrders() {
   const [activeButton, setActiveButton] = useState("all");

@@ -1,4 +1,4 @@
-import KitchenMain from "./KitchenPages/KitchenMain";
+import KitchenMain from "../../components/Kitchen/KitchenPages/KitchenMain";
 
 export default function KitchenDashboard() {
   return (

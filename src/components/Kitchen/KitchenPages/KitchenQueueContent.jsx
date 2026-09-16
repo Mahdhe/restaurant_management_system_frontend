@@ -1,14 +1,14 @@
 import { TriangleAlert } from "lucide-react";
-import StatsGrid from "../components/StatsGrid";
-import ActionButtons from "../components/ActionButtons";
 import { useState } from "react";
-import { QueueOrders } from "../../../data/KitchenData/QueueOrders";
-import KitchenSummeryCard from "../components/KitchenQueueComponents/KitchenSummeryCard";
-import PriorityOrderCard from "../components/KitchenQueueComponents/PriorityOrderCard";
-import FilterCard, { filterButtons } from "../components/KitchenQueueComponents/StationFilterCard";
-import QueueOrderCard from "../components/KitchenQueueComponents/QueueOrderCard";
+import StatsGrid from "../StatsGrid";
 import { QueueStats } from "../../../data/KitchenData/KitchenStats";
+import ActionButtons from "../ActionButtons";
 import { QueueButtons } from "../../../data/KitchenData/ActionButtons";
+import { QueueOrders } from "../../../data/KitchenData/QueueOrders";
+import QueueOrderCard from "../KitchenQueueComponents/QueueOrderCard";
+import KitchenSummeryCard from "../KitchenQueueComponents/KitchenSummeryCard";
+import PriorityOrderCard from "../KitchenQueueComponents/PriorityOrderCard";
+import FilterCard, { filterButtons } from "../KitchenQueueComponents/StationFilterCard";
 
 export default function KitchenQueueContent() {
   const [activeButton, setActiveButton] = useState("all");

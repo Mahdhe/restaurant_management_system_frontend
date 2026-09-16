@@ -1,9 +1,9 @@
 import { useState } from "react";
+import KitchenQueueContent from "./KitchenQueueContent";
 import InProgressOrders from "./In-ProgressOrders";
 import CompletedArchive from "./CompletedArchive";
-import KitchenTabs from "../components/KitchenTabs";
-import KitchenQueueContent from "./KitchenQueueContent";
-import KitchenDashboardHeader from "../components/KitchenDashboardHeader";
+import KitchenDashboardHeader from "../KitchenDashboardHeader";
+import KitchenTabs from "../KitchenTabs";
 
 export default function KitchenMain() {
   const [activeTab, setActiveTab] = useState("queue");
