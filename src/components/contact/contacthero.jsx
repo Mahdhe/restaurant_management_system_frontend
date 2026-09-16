@@ -1,4 +1,4 @@
-import React  from "react";
+
 
 function ContactHero(){
     return(
@@ -8,11 +8,8 @@ function ContactHero(){
 className="
 relative
 w-full
-px-6
-md:px-10
-lg:px-[120px]
-min-h-125
-md:h-151.75
+lg:h-[607px]
+
 overflow-hidden
 bg-main-gradient
 
@@ -38,6 +35,7 @@ bg-main-gradient
 
   {/* ellipse two */}
   <div
+  
     style={{
       position: "absolute",
       width: "600px",
@@ -48,6 +46,7 @@ bg-main-gradient
       background: "rgba(41, 128, 185, 0.14)",
       filter: "blur(260px)",
       pointerEvents: "none",
+      
     }}
   />
 
@@ -57,19 +56,21 @@ bg-main-gradient
   relative
   z-10
   w-full
-  min-h-125
-  lg:h-147
-  lg:py-18
-  pt-20
-  sm:pt-24
-  lg:pt-18
+  px-6
+  lg:h-[588px]
+  sm:px-10
+  lg:px-[120px]
+  pt-10
+  sm:pt-12
+  lg:pt-[72px]
   pb-10
-  lg:pb-18
+  sm:pb-12
+  lg:pb-[72px]
   flex
   flex-col
   items-center
   gap-8
-  lg:gap-12
+  lg:gap-[48px]
   
   ">
             
@@ -79,19 +80,17 @@ bg-main-gradient
     z-10
     w-full
     
-    h-auto
-    sm:h-95
-    lg:h-125.75
+    h-[280px]
+    sm:h-[360px]
+    lg:h-[503px]
 
-    lg:pt-18
+   
     bg-cover
     bg-center
-
+    bg-no-repeat
     flex
     flex-col
-    items-center
-    gap-4
-    lg:gap-2.5
+    items-cente
     overflow-hidden
   
   " 

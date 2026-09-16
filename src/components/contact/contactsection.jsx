@@ -1,4 +1,4 @@
-import React from "react";
+
 
 import locationIcon from "../../assets/icons/Vector.svg";
 import Phone from "../../assets/icons/phone.svg";
@@ -23,6 +23,7 @@ function ContactSection(){
     lg:py-18
     bg-main-gradient
     isolate
+    overflow-hidden
       "
     >
 
@@ -130,7 +131,7 @@ gap-3
 "
 > 
 {/* first name */}
-<div className="w-66.5 h-16.5 flex flex-col gap-2">
+<div className="w-full sm:w-66.5 h-16.5 flex flex-col gap-2">
 <label className="w-18.25 h-4.5  text-[14px] text-[#F0F4F8] leading-[100%] font-semibold tracking-[0%]">
 First Name
 </label>
@@ -138,7 +139,8 @@ First Name
 type="text"
 placeholder="John Doe"
 className="
-w-66.5
+w-full 
+sm:w-66.5
 h-10
 py-2
 px-3
@@ -161,7 +163,7 @@ placeholder:tracking-[0%]
 </div>
 
 {/* email */}
-<div className="w-66.5 h-16.5 flex gap-2 flex-col">
+<div className="w-full sm:w-66.5 h-16.5 flex gap-2 flex-col">
 <label className=" text-sm text-[#FFFFFF] leading-[100%] font-semibold tracking-[0%]">
 Email Address
 </label>
@@ -169,7 +171,8 @@ Email Address
 type="text"
 placeholder="John@example.com"
 className="
-w-66.5
+w-full 
+sm:w-66.5
 h-10
 py-2
 px-3
@@ -214,7 +217,8 @@ Phone Number
 type="text"
 placeholder="+94 77 123 4567"
 className="
-w-66.5
+w-full 
+sm:w-66.5
 h-10
 py-2
 px-3
@@ -245,7 +249,8 @@ Subject
 type="text"
 placeholder="Reservation Enquiry"
 className="
-w-66.5
+w-full
+sm:w-66.5
 h-10
 py-2
 px-3
@@ -362,7 +367,8 @@ leading-none
   relative
   w-full
   max-w-132
-  h-141.75
+  h-auto
+  lg:h-141.75
   px-5
   py-8
   lg:py-12.5
