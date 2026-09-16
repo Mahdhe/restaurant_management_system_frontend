@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function Titlesection(){
     const categories =["Mains","Desserts","Drinks"];

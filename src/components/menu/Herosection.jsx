@@ -1,11 +1,11 @@
-import React from "react";
+
 
 function Herosection(){
     return(
         <section
         className="
         w-full
-        min-h-[617px]
+        h-auto
         px:6 
         md:px-10
          lg:px-[120px]
