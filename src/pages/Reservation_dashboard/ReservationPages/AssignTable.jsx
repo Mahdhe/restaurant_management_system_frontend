@@ -1,8 +1,8 @@
-import Button from "../../components/Reservation/Assigntable/title";
-import ButtonsRow from "../../components/Reservation/Common/buttonrow";
-import Mappicker from "../../components/Reservation/Assigntable/mappicker";
-import Reservationsummary from "../../components/Reservation/Assigntable/reservationsummary";
-import Confirm from "../../components/Reservation/Assigntable/confirm";
+import Button from "../../../components/Reservation/Assigntable/title";
+import ButtonsRow from "../../../components/Reservation/Common/buttonrow";
+import Mappicker from "../../../components/Reservation/Assigntable/mappicker";
+import Reservationsummary from "../../../components/Reservation/Assigntable/reservationsummary";
+import Confirm from "../../../components/Reservation/Assigntable/confirm";
 
 
 

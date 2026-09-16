@@ -1,10 +1,10 @@
 import {Routes,Route, Navigate} from "react-router-dom";
 
-import Reservationdashboard from "../pages/Reservation/Dashboard/Reservationdashboard";
-import ReservationList from "../pages/Reservationlist/ReservationList";
-import Reservationdetails from "../pages/Details/ReservationDetails";
-import Assigntable from "../pages/AssignTable/AssignTable";
-import StatusTracking from "../pages/StatusTracking/StatusTracking";
+import Reservationdashboard from "./ReservationPages/Reservationdashboard";
+import ReservationList from "./ReservationPages/ReservationList";
+import Reservationdetails from "./ReservationPages/ReservationDetails";
+import Assigntable from "./ReservationPages/AssignTable";
+import StatusTracking from "./ReservationPages/StatusTracking";
 
 
 

@@ -3,7 +3,8 @@ import AdminSidebar from "./components/layout/Sidebar";
 import Header from "./components/layout/Header";
 import { pageDetials } from "./data/PageDetails";
 
-import ReservationRoutes from "./routes/ReservationRoutes";
+import ReservationRoutes from "./pages/Reservation_dashboard/ReservationRoutes";
+
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -30,7 +31,8 @@ function App() {
           <Header user={currentUser} page={pageDetials[activeItem]} />
 <div className="min-h-screen bg-[#0f1923] font-dmsans">
             {activeItem === "Reservations" && <ReservationRoutes />}
-          {/* <ReservationRoutes/> */}
+          <ReservationRoutes/>
+          
           </div>
         </main>
       </div>

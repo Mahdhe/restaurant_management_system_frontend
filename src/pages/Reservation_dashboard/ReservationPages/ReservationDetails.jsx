@@ -1,10 +1,10 @@
 
-import ButtonsRow from "../../components/Reservation/Common/buttonrow";
-import Tabledetails from "../../components/Reservation/Reservationdetails/tabledetails";
-import Pendingapprovals from "../../components/Reservation/Reservationdetails/pendingapprovals";
-import Guestinformation from "../../components/Reservation/Reservationdetails/guestinformation";
-import Guestnote from "../../components/Reservation/Reservationdetails/guestnotes";
-import Heading from "../../components/Reservation/Reservationdetails/title";
+import ButtonsRow from "../../../components/Reservation/Common/buttonrow";
+import Tabledetails from "../../../components/Reservation/Reservationdetails/tabledetails";
+import Pendingapprovals from "../../../components/Reservation/Reservationdetails/pendingapprovals";
+import Guestinformation from "../../../components/Reservation/Reservationdetails/guestinformation";
+import Guestnote from "../../../components/Reservation/Reservationdetails/guestnotes";
+import Heading from "../../../components/Reservation/Reservationdetails/title";
 
 
 function ReservationDetails(){
