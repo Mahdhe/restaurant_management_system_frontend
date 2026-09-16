@@ -93,7 +93,7 @@ const OrderBreakdown = () => {
                             <div className="w-[682px] h-[41px] gap-[20px] flex">
                                 <div className="w-[682px] h-[41px] p-[10px] gap-[10px] flex">
                                     <h2 className="w-[577px] h-[21px] font-[DM_Sans] font-bold text-[16px] leading-[100%] tracking-[0%] text-[#F0F4F8]">Grand Total</h2>
-                                    <p className="w-[75px] h-[21px] font-[DM_Sans] font-bold text-[16px] leading-[100%] tracking-[0%] text-[#E67E22]">LKR 4,990</p>
+                                    <p className="w-[80px] h-[21px] font-[DM_Sans] font-bold text-[16px] leading-[100%] tracking-[0%] text-[#E67E22]">LKR 4,990</p>
                                 </div>
 
                             </div>

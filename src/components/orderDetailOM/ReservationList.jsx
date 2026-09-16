@@ -9,12 +9,12 @@ const ReservationList = () => {
     return (
         <section className="w-[1132px] h-[50px] rounded-[14px] gap-[10px] flex items-center">
 
-            <div className="w-[147.25px] h-[40px] rounded-[10px] gap-[10px] p-[10px] border-[1px] border-[#FFFFFF14] flex items-center">
+            <div className="w-[160px] h-[40px] rounded-[10px] gap-[10px] p-[10px] border-[1px] border-[#FFFFFF14] flex items-center">
                 <IoIosArrowRoundBack size={20} className='text-white' />
                 <p className="font-[DM_Sans] font-medium text-[14px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Back to History</p>
             </div>
 
-            <div className="w-[172px] h-[29px] font-[DM_Sans] font-bold text-[22px] leading-[100%] tracking-[0%] text-[#F0F4F8] pt-1">
+            <div className="w-[182px] h-[29px] font-[DM_Sans] font-bold text-[22px] leading-[100%] tracking-[0%] text-[#F0F4F8] pt-1">
                 ORD-2024-0411
             </div>
 

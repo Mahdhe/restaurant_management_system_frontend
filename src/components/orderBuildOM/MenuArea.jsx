@@ -56,7 +56,7 @@ const MenuArea = () => {
                     <div className="w-[230px] h-[82px] rounded-b-[16px] border-[1px] py-[12px] px-[10px] gap-[8px] flex flex-wrap border-[#FFFFFF14]">
 
                         <div className="w-[210px] h-[18px] gap-[4px] flex items-center">
-                            <p className="w-[188px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
+                            <p className="w-[210px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
                         </div>
 
                         <div className="w-[210px] h-[32px] gap-[4px] flex justify-between items-center">
@@ -81,7 +81,7 @@ const MenuArea = () => {
                     <div className="w-[230px] h-[82px] rounded-b-[16px] border-[1px] py-[12px] px-[10px] gap-[8px] flex flex-wrap border-[#FFFFFF14]">
 
                         <div className="w-[210px] h-[18px] gap-[4px] flex items-center">
-                            <p className="w-[188px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
+                            <p className="w-[210px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
                         </div>
 
                         <div className="w-[210px] h-[32px] gap-[4px] flex justify-between items-center">
@@ -106,7 +106,7 @@ const MenuArea = () => {
                     <div className="w-[230px] h-[82px] rounded-b-[16px] border-[1px] py-[12px] px-[10px] gap-[8px] flex flex-wrap border-[#FFFFFF14]">
 
                         <div className="w-[210px] h-[18px] gap-[4px] flex items-center">
-                            <p className="w-[188px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
+                            <p className="w-[210px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
                         </div>
 
                         <div className="w-[210px] h-[32px] gap-[4px] flex justify-between items-center">
@@ -131,7 +131,7 @@ const MenuArea = () => {
                     <div className="w-[230px] h-[82px] rounded-b-[16px] border-[1px] py-[12px] px-[10px] gap-[8px] flex flex-wrap border-[#FFFFFF14]">
 
                         <div className="w-[210px] h-[18px] gap-[4px] flex items-center">
-                            <p className="w-[188px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
+                            <p className="w-[210px] h-[18px] font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8] "  >Stawberry Cheese Cake</p>
                         </div>
 
                         <div className="w-[210px] h-[32px] gap-[4px] flex justify-between items-center">

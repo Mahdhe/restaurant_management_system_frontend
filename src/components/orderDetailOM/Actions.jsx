@@ -16,7 +16,7 @@ const Actions = () => {
           </button>
 
           <button className="w-[290px] h-[40px] rounded-[10px] border-[1px] py-[8px] px-[16px] gap-[8px] bg-[#243447] border-[#FFFFFF24] flex justify-center items-center">
-            <p className="w-[87px] h-[18px] font-[DM_Sans] font-semibold text-[14px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Email Receipt</p>
+            <p className="w-[100px] h-[18px] font-[DM_Sans] font-semibold text-[14px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Email Receipt</p>
           </button>
 
           <button className="w-[290px] h-[40px] rounded-[10px] border-[1px] py-[8px] px-[16px] gap-[8px] bg-[#E74C3C1F] border-[#E74C3C26] flex justify-center items-center">

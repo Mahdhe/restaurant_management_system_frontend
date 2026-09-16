@@ -11,7 +11,7 @@ const menuItems = [
 
 const Menubar = () => {
   return (
-    <div className="w-full max-w-[622px] min-h-[60px] rounded-[14px] border-[1px] border-[#FFFFFF14] p-[10px] bg-[#1C2A38] flex items-center gap-2 sm:gap-3 mt-3 overflow-x-auto">
+    <div className="w-full max-w-[650px] min-h-[60px] rounded-[14px] border-[1px] border-[#FFFFFF14] p-[10px] bg-[#1C2A38] flex items-center gap-2 sm:gap-3 mt-3 overflow-x-auto">
       {menuItems.map((item) => (
         <NavLink
           key={item.path}

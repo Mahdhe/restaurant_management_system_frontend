@@ -39,6 +39,7 @@ const Categories = ({ activeCategory, onSelectCategory }) => {
       {/* Items */}
       {categories.map((cat) => {
         const isActive = cat.key === activeCategory;
+        const isAllItems = cat.key === "all";
         const Icon = cat.icon;
 
         return (
@@ -47,14 +48,16 @@ const Categories = ({ activeCategory, onSelectCategory }) => {
             onClick={() => onSelectCategory(cat.key)}
             className={`w-full lg:w-full min-w-[150px] lg:min-w-0 h-[44px] border-[1px] py-[10px] px-[16px] lg:px-[20px]
                         flex justify-between items-center gap-2 transition-colors shrink-0 ${
-              isActive
+              isAllItems
+                ? "bg-[#E67E220F] border-[#FFFFFF14]"
+                : isActive
                 ? "bg-[#E67E220F] border-[#FFFFFF14]"
                 : "border-[#FFFFFF14] hover:bg-[#FFFFFF08]"
             }`}
           >
             <div
               className={`flex gap-2 items-center min-w-0 ${
-                isActive ? "text-[#E67E22]" : "text-[#8A9BB0]"
+                isAllItems ? "text-[#E67E22]" : isActive ? "text-[#E67E22]" : "text-[#8A9BB0]"
               }`}
             >
               <Icon size={14} className="shrink-0" />
@@ -64,7 +67,9 @@ const Categories = ({ activeCategory, onSelectCategory }) => {
             </div>
             <p
               className={`font-[DM_Sans] font-semibold text-[11px] leading-[100%] tracking-[8%] border-[1px] p-1 rounded-full shrink-0 ${
-                isActive
+                isAllItems
+                  ? "text-[#E67E22] border-[#E67E22]"
+                  : isActive
                   ? "text-[#E67E22] border-[#E67E22]"
                   : "text-[#556070] border-[#556070]"
               }`}

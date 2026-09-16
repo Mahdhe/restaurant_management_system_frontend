@@ -8,7 +8,7 @@ const OrderItems = () => {
             <section className="w-[782px] h-[60px] py-[10px] px-[20px] gap-[10px] flex justify-between items-center">
 
                 <h1 className="font-[DM_Sans] font-bold text-[18px] leading-[100%] tracking-[0%] text-[#F0F4F8]" >Order Items</h1>
-                <button className="w-[101px] h-[40px] rounded-[10px] border-[1px] py-[13px] px-[16px] border-[#FFFFFF24] gap-[8px] flex">
+                <button className="w-[105px] h-[40px] rounded-[10px] border-[1px] py-[13px] px-[16px] border-[#FFFFFF24] gap-[8px] flex">
                     <p className="font-[DM_Sans] font-semibold text-[14px] leading-[100%] tracking-[0%] text-[#8A9BB0] text-center">Edit Items</p>
                 </button>
 

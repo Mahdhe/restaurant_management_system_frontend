@@ -19,7 +19,7 @@ const TableInfo = () => {
 
                 <div className="w-[290px] h-[36px] border-b-[1px] py-[10px] gap-[10px] border-[#FFFFFF14] flex justify-between">
                     <h2 className="w-[176px] h-[17px] font-[DM_Sans] text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Table</h2>
-                    <h1 className="w-[120px] h-[17px] font-[DM_Sans] font-semibold text-[13px] leading-[100%] tracking-[0%] text-[#F0F4F8] text-end">Table 04 - Section A</h1>
+                    <h1 className="w-[150px] h-[17px] font-[DM_Sans] font-semibold text-[13px] leading-[100%] tracking-[0%] text-[#F0F4F8] text-end">Table 04 - Section A</h1>
                 </div>
 
                 <div className="w-[290px] h-[36px] border-b-[1px] py-[10px] gap-[10px] border-[#FFFFFF14] flex justify-between">
