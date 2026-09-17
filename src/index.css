@@ -3,6 +3,11 @@
 
 @import "tailwindcss";
 
+html, body, #root {
+  min-height: 100%;
+  background-color: #0F1923;
+}
+
 :root {
   --font-playfair: "Playfair Display", serif;
   --font-dmsans: "DM Sans", sans-serif;
