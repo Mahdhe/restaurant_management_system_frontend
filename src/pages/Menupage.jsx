@@ -1,7 +1,4 @@
-import React from "react";
 
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
 
 import Herosection from "../components/menu/Herosection";
 import  Titlesection from "../components/menu/Titlesection";
@@ -14,7 +11,7 @@ import Reserve from "../components/menu/Reserve";
 function Menu(){
     return(
         <>
-        <Navbar />
+        
 
         <Herosection />
 
@@ -30,7 +27,7 @@ function Menu(){
 
          <Reserve />
 
-        <Footer /> 
+        
 
         </>
     );
