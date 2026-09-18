@@ -3,7 +3,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import OrderConfirmation from "./pages/Orderconfirmationpage";
-import AboutUs from "./pages/AboutUs";
+import Aboutus from "./pages/AboutUs";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/" element={<Aboutus />} />
       </Routes>
       <Footer />
     </>
