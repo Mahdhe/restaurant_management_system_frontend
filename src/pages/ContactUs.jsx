@@ -1,6 +1,6 @@
 
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
+// import Navbar from "../components/layout/Navbar";
+// import Footer from "../components/layout/Footer";
 
 import ContactHero from "../components/contact/contacthero";
 import ContactSection from "../components/contact/contactsection";
@@ -11,7 +11,7 @@ import ReserveTable  from "../components/contact/reservetable";
 function ContactUs() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <ContactHero />
 
@@ -21,7 +21,7 @@ function ContactUs() {
 
       <ReserveTable />
       
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

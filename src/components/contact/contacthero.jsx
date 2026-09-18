@@ -117,7 +117,7 @@ bg-main-gradient
    
 
 <div className="
-flex flex-col gap-4 lg:gap-5 w-full">
+flex flex-col gap-4 lg:gap-5 w-full pt-[40px]">
 
 
   <h1 className="w-full  text-[#F0F4F8]  text-3xl sm:text-4xl lg:text-[56px] leading-tight lg:leading-[80px] font-extrabold text-center tracking-[0.008em]"
