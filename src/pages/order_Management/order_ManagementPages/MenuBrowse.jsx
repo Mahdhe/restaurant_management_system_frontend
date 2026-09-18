@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Topbar from '../components/commonOM/Topbar'
-import Menubar from '../components/commonOM/Menubar';
-import Searchbar from '../components/menuBrowseOM/Searchbar';
-import Categories from '../components/menuBrowseOM/Categories';
-import Cards from '../components/menuBrowseOM/Cards';
+import Topbar from '../../../components/orderManagement/common/Topbar'
+import Menubar from '../../../components/orderManagement/common/Menubar';
+import Searchbar from '../../../components/orderManagement/menubrowse/Searchbar';
+import Categories from '../../../components/orderManagement/menubrowse/Categories';
+import Cards from '../../../components/orderManagement/menubrowse/Cards';
 
-const OrderManagementMenuBrowse = (props) => {
+const MenuBrowse = (props) => {
   return (
     <>
       {/* Main-Section */}
@@ -42,4 +42,4 @@ const OrderManagementMenuBrowse = (props) => {
   )
 }
 
-export default OrderManagementMenuBrowse
+export default MenuBrowse

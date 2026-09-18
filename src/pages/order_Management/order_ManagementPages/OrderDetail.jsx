@@ -1,14 +1,14 @@
 import React from 'react'
-import Topbar from '../components/commonOM/Topbar'
-import Menubar from '../components/commonOM/Menubar'
-import ReservationList from '../components/orderDetailOM/ReservationList'
-import OrderBreakdown from '../components/orderDetailOM/OrderBreakdown'
-import StatusTimeline from '../components/orderDetailOM/StatusTimeline'
-import OrderInfo from '../components/orderDetailOM/OrderInfo'
-import PaymentInfo from '../components/orderDetailOM/PaymentInfo'
-import Actions from '../components/orderDetailOM/Actions'
+import Topbar from '../../../components/orderManagement/common/Topbar'
+import Menubar from '../../../components/orderManagement/common/Menubar'
+import ReservationList from '../../../components/orderManagement/orderDetail/ReservationList'
+import OrderBreakdown from '../../../components/orderManagement/orderDetail/OrderBreakdown'
+import StatusTimeline from '../../../components/orderManagement/orderDetail/StatusTimeline'
+import OrderInfo from '../../../components/orderManagement/orderDetail/OrderInfo'
+import PaymentInfo from '../../../components/orderManagement/orderDetail/PaymentInfo'
+import Actions from '../../../components/orderManagement/orderDetail/Actions'
 
-const OrderManagementOrderDetail = () => {
+const OrderDetail = () => {
     return (
         <>
             {/* Main-Section */}
@@ -56,4 +56,4 @@ const OrderManagementOrderDetail = () => {
     )
 }
 
-export default OrderManagementOrderDetail
+export default OrderDetail

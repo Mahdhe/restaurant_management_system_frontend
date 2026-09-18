@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Pic1 from '../../assets/orderBuildPics/cardIMG1.jpg'
-import Pic2 from '../../assets/orderBuildPics/cardIMG2.jpg'
-import Pic3 from '../../assets/orderBuildPics/cardIMG3.jpg'
-import Pic4 from '../../assets/orderBuildPics/cardIMG4.jpg'
+import Pic1 from '../../../assets/orderBuildPics/cardIMG1.jpg'
+import Pic2 from '../../../assets/orderBuildPics/cardIMG2.jpg'
+import Pic3 from '../../../assets/orderBuildPics/cardIMG3.jpg'
+import Pic4 from '../../../assets/orderBuildPics/cardIMG4.jpg'
 
 const MenuArea = () => {
     return (

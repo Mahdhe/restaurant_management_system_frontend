@@ -1,6 +1,6 @@
 import React from 'react'
 
-import pic1 from '../../assets/orderBuildPics/cardIMG2.jpg'
+import pic1 from '../../../assets/orderMenuBrowsePics/cardIMG1.jpg'
 
 const OrderBreakdown = () => {
     return (

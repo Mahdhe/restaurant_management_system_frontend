@@ -1,11 +1,11 @@
 import React from 'react'
-import Topbar from '../components/commonOM/Topbar'
-import Menubar from '../components/commonOM/Menubar'
-import KPIrow from '../components/orderHistoryOM/KPIrow'
-import ReservationList from '../components/orderHistoryOM/ReservationList'
-import RecentOrderCard from '../components/orderHistoryOM/RecentOrderCard'
+import Topbar from '../../../components/orderManagement/common/Topbar'
+import Menubar from '../../../components/orderManagement/common/Menubar'
+import KPIrow from '../../../components/orderManagement/orderHistory/KPIrow'
+import ReservationList from '../../../components/orderManagement/orderHistory/ReservationList'
+import RecentOrderCard from '../../../components/orderManagement/orderHistory/RecentOrderCard'
 
-const OrderManagementOrderHistory = () => {
+const OrderHistory = () => {
     return (
         <>
             {/* Main-Section */}
@@ -30,4 +30,4 @@ const OrderManagementOrderHistory = () => {
     )
 }
 
-export default OrderManagementOrderHistory
+export default OrderHistory

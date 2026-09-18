@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Pic1 from '../../assets/orderBuildPics/cardIMG2.jpg'
-import Pic2 from '../../assets/orderBuildPics/cardIMG4.jpg'
+import Pic1 from '../../../assets/orderBuildPics/cardIMG1.jpg'
+import Pic2 from '../../../assets/orderBuildPics/cardIMG2.jpg'
 
 const CurrentOrderPanel = () => {
     return (
@@ -16,7 +16,7 @@ const CurrentOrderPanel = () => {
                         <p className="font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">3 items · Table 04</p>
                     </div>
 
-                    <div className="w-[100px] h-[24px] rounded-[999px] border-[1px] py-[4px] px-[9px] gap-[10px] bg-[#F39C121F] border-[#F39C124D]">
+                    <div className="w-[120px] h-[24px] rounded-[999px] border-[1px] py-[4px] px-[9px] gap-[10px] bg-[#F39C121F] border-[#F39C124D]">
                         <h1 className="font-[DM_Sans] font-semibold text-[11px] leading-[18px] tracking-[0.8%] text-[#E67E22] text-center">T-04 Section A</h1>
                     </div>
 

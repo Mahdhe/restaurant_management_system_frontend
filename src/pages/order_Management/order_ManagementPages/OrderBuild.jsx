@@ -1,13 +1,14 @@
 import React from 'react'
-import Topbar from '../components/commonOM/Topbar'
-import Menubar from '../components/commonOM/Menubar'
-import TableOrderBar from '../components/orderBuildOM/TableOrderBar'
-import MenuArea from '../components/orderBuildOM/MenuArea'
-import CurrentOrderPanel from '../components/orderBuildOM/CurrentOrderPanel'
+
+import Topbar from '../../../components/orderManagement/common/Topbar'
+import Menubar from '../../../components/orderManagement/common/Menubar'
+import TableOrderBar from '../../../components/orderManagement/orderBuild/TableOrderBar'
+import MenuArea from '../../../components/orderManagement/orderBuild/MenuArea'
+import CurrentOrderPanel from '../../../components/orderManagement/orderBuild/CurrentOrderPanel'
 
 
 
-const OrderManagementOrderBuild = () => {
+const OrderBuild = () => {
     return (
         <>
             {/* Main-Section */}
@@ -42,4 +43,4 @@ const OrderManagementOrderBuild = () => {
     )
 }
 
-export default OrderManagementOrderBuild
+export default OrderBuild

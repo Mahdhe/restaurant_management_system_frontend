@@ -2,12 +2,12 @@ import React from 'react'
 
 import { CiStopwatch } from "react-icons/ci";
 
-import card1 from "../../assets/orderMenuBrowsePics/cardIMG1.jpg"
-import card2 from "../../assets/orderMenuBrowsePics/cardIMG2.jpg"
-import card3 from "../../assets/orderMenuBrowsePics/cardIMG3.jpg"
-import card4 from "../../assets/orderMenuBrowsePics/cardIMG4.jpg"
-import card5 from "../../assets/orderMenuBrowsePics/cardIMG5.jpg"
-import card6 from "../../assets/orderMenuBrowsePics/cardIMG6.jpg"
+import card1 from "../../../assets/orderMenuBrowsePics/cardIMG1.jpg"
+import card2 from "../../../assets/orderMenuBrowsePics/cardIMG2.jpg"
+import card3 from "../../../assets/orderMenuBrowsePics/cardIMG3.jpg"
+import card4 from "../../../assets/orderMenuBrowsePics/cardIMG4.jpg"
+import card5 from "../../../assets/orderMenuBrowsePics/cardIMG5.jpg"
+import card6 from "../../../assets/orderMenuBrowsePics/cardIMG6.jpg"
 
 const menuItems = [
     { img: card1, name: "Garden Fresh Salad", desc: "Fresh mixed greens with cucumber and tomato", price: "LKR 650", time: "5 min", available: true },
