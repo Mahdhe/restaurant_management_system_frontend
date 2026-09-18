@@ -9,7 +9,7 @@ const Hero2 = () => {
             }}
 
     >
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-12" >
+      <div className="mx-auto flex w-full max-w-[1260px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-12" >
 
         {/* Booking form card */}
         <div className="w-full rounded-[14px] border border-white/10 bg-[#1C2A38] p-5 sm:p-7 lg:w-2/3 lg:p-[30px]">
