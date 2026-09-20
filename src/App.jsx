@@ -11,6 +11,7 @@ import OrderSummary from "./pages/order_Management/order_ManagementPages/OrderSu
 import OrderHistory from "./pages/order_Management/order_ManagementPages/OrderHistory";
 import OrderDetail from "./pages/order_Management/order_ManagementPages/OrderDetail";
 import MenuItemsList from "./pages/menu_Management/menu_ManagementPages/MenuItemsList";
+import AddEditItems from "./pages/menu_Management/menu_ManagementPages/AddEditItems";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -42,7 +43,8 @@ function App() {
           {/* <OrderHistory></OrderHistory> */}
           {/* <OrderDetail></OrderDetail> */}
 
-          <MenuItemsList></MenuItemsList>
+          {/* <MenuItemsList></MenuItemsList> */}
+          <AddEditItems></AddEditItems>
           
 
       
