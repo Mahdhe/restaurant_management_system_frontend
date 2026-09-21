@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import React from 'react'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
@@ -9,7 +11,9 @@ const App = () => {
   return (
     <>
       <Navbar />
-        <Reservation></Reservation>            
+      <Routes>
+        <Route path="/reservations" element={<Reservation></Reservation>} />
+      </Routes>
       <Footer />
     </>
   )
