@@ -108,6 +108,7 @@ const Footer = () => {
           </p>
           <p className="text-white text-xs">Colombo, Sri Lanka</p>
         </div>
+        
       </div>
     </footer>
   );
