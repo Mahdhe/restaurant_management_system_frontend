@@ -4,3 +4,16 @@
 @theme {
   --font-playfair: "Playfair Display", DM Sans, serif;
 }
+
+
+@theme{
+    --font-dm:"DM Sans", sans-serif;
+    --font-playfair:"Playfair Display" ,serif;
+
+}
+
+.bg-main-gradient{
+   background: #0F1923;      
+                    
+}
+
