@@ -1,6 +1,6 @@
 import Title from "../../../components/Cupons_tax/Common/title";
 import Button from "../../../components/Cupons_tax/Common/buttonrow";
-import Kpirow from "../../../components/Reservation/Dashboard/kpirow";
+import Kpirow from "../../../components/Cupons_tax/Common/kpirow";
 import Filtercard from "../../../components/Cupons_tax/Cuponmanagement/filltercard";
 import Management from "../../../components/Cupons_tax/Cuponmanagement/management";
 
