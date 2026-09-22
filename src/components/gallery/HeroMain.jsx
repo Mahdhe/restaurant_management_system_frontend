@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from '../../../assets/galleryBG.jpg'
+import bg from '../../assets/galleryBG.jpg'
 
 const HeroMain = () => {
   return (
@@ -29,4 +29,4 @@ const HeroMain = () => {
   )
 }
 
-export default HeroMain
+export default HeroMain;

@@ -1,15 +1,15 @@
 import React from 'react'
 
-import img1 from '../../../assets/col1img1imgcol.jpg'
-import img2 from '../../../assets/col1img2imgcol.jpg'
-import img3 from '../../../assets/col2img1imgcol.jpg'
-import img4 from '../../../assets/col2img2imgcol.jpg'
-import img5 from '../../../assets/col2img3imgcol.jpg'
-import img6 from '../../../assets/col3img1imgcol.jpg'
-import img7 from '../../../assets/col3img2imgcol.jpg'
-import img8 from '../../../assets/col3img3imgcol.jpg'
-import img9 from '../../../assets/col4img1imgcol.jpg'
-import img10 from '../../../assets/col4img2imgcol.jpg'
+import img1 from '../../assets/col1img1imgcol.jpg'
+import img2 from '../../assets/col1img2imgcol.jpg'
+import img3 from '../../assets/col2img1imgcol.jpg'
+import img4 from '../../assets/col2img2imgcol.jpg'
+import img5 from '../../assets/col2img3imgcol.jpg'
+import img6 from '../../assets/col3img1imgcol.jpg'
+import img7 from '../../assets/col3img2imgcol.jpg'
+import img8 from '../../assets/col3img3imgcol.jpg'
+import img9 from '../../assets/col4img1imgcol.jpg'
+import img10 from '../../assets/col4img2imgcol.jpg'
 
 const ImagesCol = () => {
     return (
