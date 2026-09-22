@@ -1,0 +1,35 @@
+
+
+import Herosection from "../components/menu/Herosection";
+import  Titlesection from "../components/menu/Titlesection";
+import Starters from "../components/menu/Starters";
+import Mains from "../components/menu/Mains";
+import Desserts from "../components/menu/Desserts";
+import Drinks from "../components/menu/Drinks";
+import Reserve from "../components/menu/Reserve";
+
+function Menu(){
+    return(
+        <>
+        
+
+        <Herosection />
+
+         <Titlesection />
+
+        <Starters />
+
+        <Mains />
+
+         <Desserts />
+
+         <Drinks /> 
+
+         <Reserve />
+
+        
+
+        </>
+    );
+}
+export default Menu;
