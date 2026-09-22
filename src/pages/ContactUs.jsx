@@ -12,7 +12,7 @@ import ReserveTable  from "../components/contact/reservetable";
 function ContactUs() {
   return (
     <>
-      <Navbar />
+      
 
       <ContactHero />
 
@@ -22,7 +22,7 @@ function ContactUs() {
 
       <ReserveTable />
       
-      <Footer />
+      
     </>
   );
 }
