@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { UtensilsCrossed, Moon, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -13,6 +13,9 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const location = useLocation();
+  const isOrderOnlinePage = location.pathname === "/order-online";
 
   return (
     <nav className="sticky top-0 w-full bg-[#0F1923] px-6 lg:px-[120px] md:px-10 py-4 flex items-center justify-between z-50 border-b border-slate-800">

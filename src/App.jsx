@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/reservations" element={<Reservation></Reservation>} />
         <Route path="/gallery" element={<Gallery></Gallery>} />
+        <Route path="/" element={<OrderOnline />} />
       </Routes>
       <Footer />
     </>
