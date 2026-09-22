@@ -1,5 +1,3 @@
-
-
 import Herosection from "../components/menu/Herosection";
 import  Titlesection from "../components/menu/Titlesection";
 import Starters from "../components/menu/Starters";
