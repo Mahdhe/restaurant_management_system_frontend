@@ -12,6 +12,7 @@ import OrderHistory from "./pages/order_Management/order_ManagementPages/OrderHi
 import OrderDetail from "./pages/order_Management/order_ManagementPages/OrderDetail";
 import MenuItemsList from "./pages/menu_Management/menu_ManagementPages/MenuItemsList";
 import AddEditItems from "./pages/menu_Management/menu_ManagementPages/AddEditItems";
+import Order_ManagementMain from "./pages/order_Management/Order_ManagementMain";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -37,14 +38,10 @@ function App() {
         <main className="min-w-0 flex-1">
           <Header user={currentUser} page={pageDetials[activeItem]} />
 
-          {/* <MenuBrowse></MenuBrowse> */}
-          {/* <OrderBuild></OrderBuild> */}
-          {/* <OrderSummary></OrderSummary> */}
-          {/* <OrderHistory></OrderHistory> */}
-          {/* <OrderDetail></OrderDetail> */}
+          <Order_ManagementMain></Order_ManagementMain>
 
           {/* <MenuItemsList></MenuItemsList> */}
-          <AddEditItems></AddEditItems>
+          {/* <AddEditItems></AddEditItems> */}
           
 
       
