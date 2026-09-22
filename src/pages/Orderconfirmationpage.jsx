@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ORDER_ITEMS = [
   { id: 1, name: "Duck a l'Orange", qty: 1, price: "6,800" },
@@ -10,6 +11,7 @@ const DELIVERY_FEE = "500";
 const TOTAL = "6,700";
 
 const OrderConfirmation = () => {
+  const navigate = useNavigate();
   return (
     <section className="w-full bg-[#0F1923] px-6 md:px-10 py-16 md:py-20">
       <div className="max-w-5xl mx-auto">
@@ -129,7 +131,8 @@ const OrderConfirmation = () => {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               type="button"
-              className="flex-1 px-6 py-3 rounded-md bg-[#E67E22] text-white text-sm font-bold tracking-wide uppercase hover:bg-orange-600 transition-colors duration-200"
+              onClick={() => navigate("/track-order")}
+              className="flex-1 rounded-md bg-[#E67E22] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-orange-600"
             >
               Track this order
             </button>

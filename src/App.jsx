@@ -25,7 +25,7 @@ function App() {
         <Route path="/gallery" element={<Gallery></Gallery>} />
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
-        <Route path="/" element={<Trackorder />} />
+        <Route path="/track-order" element={<Trackorder />} />
       </Routes>
       <Footer />
     </>
