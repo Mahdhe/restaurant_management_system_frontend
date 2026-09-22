@@ -5,6 +5,8 @@ import { pageDetials } from "./data/PageDetails";
 
 import ReservationRoutes from "./pages/Reservation_dashboard/ReservationRoutes";
 
+import CouponRoutes from "./pages/Coupon/CouponRoutes";
+
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -31,8 +33,8 @@ function App() {
           <Header user={currentUser} page={pageDetials[activeItem]} />
 <div className="min-h-screen bg-[#0f1923] font-dmsans">
             {activeItem === "Reservations" && <ReservationRoutes />}
-          <ReservationRoutes/>
-          
+           {activeItem === "Coupons & Tax" && <CouponRoutes /> }
+           {/* <CouponManagement /> */}
           </div>
         </main>
       </div>
