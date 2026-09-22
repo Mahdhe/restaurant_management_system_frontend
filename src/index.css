@@ -33,3 +33,7 @@
 .font-dmsans{
     font-family: var(--font-dmsans)
 }
+.bg-main-gradient{
+   background: #0F1923;      
+                    
+}

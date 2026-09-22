@@ -10,7 +10,7 @@ import MenuPage from "./pages/Menupage";
 import Reservation from "./pages/Reservation";
 import Gallery from "./pages/Gallery";
 import OrderOnline from "./pages/OrderOnline";
-
+import Trackorder from "./pages/Trackorder";
 
 function App() {
   return (
@@ -25,9 +25,11 @@ function App() {
         <Route path="/gallery" element={<Gallery></Gallery>} />
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
+        <Route path="/" element={<Trackorder />} />
       </Routes>
       <Footer />
     </>
   );
 }
+
 export default App;
