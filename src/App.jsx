@@ -11,6 +11,7 @@ import Reservation from "./pages/Reservation";
 import Gallery from "./pages/Gallery";
 import OrderOnline from "./pages/OrderOnline";
 
+
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/reservations" element={<Reservation></Reservation>} />
         <Route path="/gallery" element={<Gallery></Gallery>} />
         <Route path="/order-online" element={<OrderOnline />} />
+        <Route path="/order-confirmation" element={<OrderConfirmation />} />
       </Routes>
       <Footer />
     </>

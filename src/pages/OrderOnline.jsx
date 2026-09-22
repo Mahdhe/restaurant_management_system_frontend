@@ -5,6 +5,7 @@ import chickenImg from "../assets/grilled-chicken.jpg";
 import striploinImg from "../assets/striploin.jpg";
 import lobsterImg from "../assets/lobster.jpg";
 import { Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const menuItems = [
   {
@@ -52,6 +53,7 @@ export default function OrderOnline() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Starters");
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
 
   const filteredItems = useMemo(() => {
     return menuItems.filter((item) => {
@@ -367,13 +369,13 @@ export default function OrderOnline() {
 
               <button
                 disabled={cart.length === 0}
-                onClick={() =>
-                  alert(
-                    cart.length
-                      ? `${orderType} order placed successfully!`
-                      : "Add items before placing an order.",
-                  )
-                }
+                onClick={() => {
+                  if (cart.length > 0) {
+                    navigate("/order-confirmation");
+                  } else {
+                    alert("Add items before placing an order.");
+                  }
+                }}
                 className={`w-full cursor-pointer rounded-[10px] px-4.5 py-2.5 text-[14px] font-semibold transition disabled:cursor-not-allowed disabled:opacity-60 ${
                   cart.length > 0
                     ? "bg-[#E67E22] text-slate-50"
