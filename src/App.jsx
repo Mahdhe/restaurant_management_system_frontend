@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/order-online" element={<OrderOnline />} />
+        <Route path="/" element={<OrderOnline />} />
       </Routes>
       <Footer />
     </>
