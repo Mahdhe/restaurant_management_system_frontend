@@ -60,12 +60,12 @@ const Navbar = () => {
           Track Order
         </button>
 
-        <button
-          type="button"
-          className="px-5 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
+        <Link
+          to="/order-online"
+          className="px-5 py-2 rounded-md bg-[#E67E22] text-white text-sm font-semibold hover:bg-orange-600 transition-colors duration-200 inline-block text-center"
         >
           Order Online
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Toggle */}

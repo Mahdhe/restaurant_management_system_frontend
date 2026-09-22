@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
@@ -9,6 +9,7 @@ import ContactUs from "./pages/ContactUs";
 import MenuPage from "./pages/Menupage";
 import Reservation from "./pages/Reservation";
 import Gallery from "./pages/Gallery";
+import OrderOnline from "./pages/OrderOnline";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/reservations" element={<Reservation></Reservation>} />
         <Route path="/gallery" element={<Gallery></Gallery>} />
-        <Route path="/" element={<OrderOnline />} />
+        <Route path="/order-online" element={<OrderOnline />} />
       </Routes>
       <Footer />
     </>
