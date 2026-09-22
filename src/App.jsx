@@ -1,5 +1,3 @@
-
-
 import { Routes,Route } from "react-router-dom";
 import ContactUs from "./pages/ContactUs";
 import Navbar from "./components/layout/Navbar";
