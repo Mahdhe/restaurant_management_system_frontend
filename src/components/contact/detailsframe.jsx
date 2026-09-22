@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function Detailsframe({ icon, title , value,className=""}) {
     return(
@@ -28,9 +28,9 @@ function Detailsframe({ icon, title , value,className=""}) {
       <h3 className="w-full max-w-81 h-6.25 font-playfair font-semibold text-[18px] leading-6.25 text-white
       "
       > {title} </h3>
-      <p className="font-dm font-normal text-[12px] leading-5 text-[#8A9BB0]">
+      <div className="font-dm font-normal text-[12px] leading-5 text-[#8A9BB0]">
         {value}
-      </p>
+      </div>
     </div>
   </div>
 
