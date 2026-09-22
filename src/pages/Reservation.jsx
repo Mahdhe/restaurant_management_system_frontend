@@ -1,6 +1,6 @@
 import React from 'react'
-import MainHero from '../components/layout/Reservation/MainHero'
-import Hero2 from '../components/layout/Reservation/Hero2'
+import MainHero from '../components/Reservation/MainHero'
+import Hero2 from '../components/Reservation/Hero2'
 
 
 
