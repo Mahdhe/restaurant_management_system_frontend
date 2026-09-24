@@ -171,14 +171,14 @@ function Management(){
  </div>
 
 {/* Cupon preview */}
- <div className="min-w-0 min-h-[240px] mt-[16px] rounded-[14px] border border-[#FFFFFF14] bg-[#1C2A38]">
+ <div className="min-w-0 min-h-[230px] mt-[16px] rounded-[14px] border border-[#FFFFFF14] bg-[#1C2A38]">
 <div className="min-w-0 min-h-[53px] rounded-t-[14px] border-b border-[#FFFFFF14] px-[20px] pt-[20px] pb-[10px] gap-[10px]">
     <h2 className="font-dm font-bold leading-none tracking-normal text-[18px] text-[#FFFFFF]">
       Coupon Preview  
     </h2>
 </div>
 
-<div className="min-w-0 min-h-[187px] gap-[10px] p-[20px]">
+<div className="min-w-0 h-[180px] gap-[10px] p-[20px]">
 
 <Cupon title="Customer sees" value="Checkout"/>
 <Cupon title="Most Used" value="WECOME10"/>
