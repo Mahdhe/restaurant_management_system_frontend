@@ -34,7 +34,7 @@ function App() {
 <div className="min-h-screen bg-[#0f1923] font-dmsans">
             {activeItem === "Reservations" && <ReservationRoutes />}
            {activeItem === "Coupons & Tax" && <CouponRoutes /> }
-           {/* <CouponManagement /> */}
+           
           </div>
         </main>
       </div>

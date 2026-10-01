@@ -41,14 +41,14 @@ function TableContent({category,tax,service,status,toggle}){
         <div className="min-w-0 w-full  h-[62px] gap-[10px] border-[#FFFFFF14] py-[8px] border-b opacity-100">
         
         <div className="flex min-w-[740px]"> 
-        <div className="min-w-[330px] min-h-[41px] p-[10px] gap-[10px]">
+        <div className="min-w-[360px] min-h-[41px] p-[10px] py-[14px] gap-[10px]">
             <h3 className="font-dm font-medium leading-none tracking-normal text-[16px] text-[#FFFFFF]">
                    {category}
             </h3>
          
         </div>
 
-<div className="flex min-w-[370px] justify-between min-h-[41px] gap-[10px]  p-[10px] px-12">
+<div className="flex min-w-[370px] justify-between min-h-[41px] gap-[10px]  p-[10px] px-12 py-[6px]">
        
         <div className="flex min-w-[90px] shrink-0 min-h-[34px] border border-[#FFFFFF14] items-center bg-[#243447] px-[10px] py-[3px] gap-[10px] rounded-[10px]">    
         <h2 className="font-dm font-normal  tracking-normal text-[14px] leading-none text-[#FFFFFF]">
@@ -59,9 +59,9 @@ function TableContent({category,tax,service,status,toggle}){
         <select
         value={service}
         onChange={()=>{}}
-         className="font-dm font-normal tracking-normal text-[16px] leading-none  text-[#FFFFFF] bg-[#243447] focus:outline-none">
-            <option value="yes"> Yes </option>
-            <option value="no"> NO </option>
+         className="font-dm font-normal tracking-normal text-[14px] leading-none  text-[#FFFFFF] bg-[#243447] focus:outline-none">
+            <option value="yes"> yes </option>
+            <option value="no"> No </option>
           
         </select> </div>
 

@@ -8,11 +8,11 @@
 }
 
 .font-playfair{
-    font-family: var(--font-playfair)
+    font-family: var(--font-playfair);
 }
 
 .font-dmsans{
-    font-family: var(--font-dmsans)
+    font-family: var(--font-dmsans);
 }
 
 

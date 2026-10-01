@@ -49,21 +49,21 @@ function Kpirow() {
         title="ACTIVE COUPONS"
         number="18"
         description="Currently usable "
-        numbercolor= "text-white"
+        numbercolor= "text-[#27AE60]"
       />
 
       <CardItem
         title="USED TODAY"
         number="86"
         description="Transactions"
-        numbercolor="text-[#F39C12]"
+        numbercolor="text-[#E67E22]"
       />
 
       <CardItem
         title="DISCOUNT GIVEN"
         number="LKR 18K"
-        description="LKR 18K"
-        numbercolor="text-[#27AE60]"
+        description="Today"
+        numbercolor="text-[#F0F4F8]"
       />
 
       <CardItem

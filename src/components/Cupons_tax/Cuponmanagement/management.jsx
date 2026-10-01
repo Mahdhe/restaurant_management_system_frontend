@@ -92,7 +92,7 @@ function Management(){
         Add / Edit Coupon
     </h2>
 
-    <span className="w-[44px] min-h-[24px] rounded-full border border-[#8E44AD4D] px-[9px] py-[4px] text-[#8E44AD] 
+    <span className="min-w-[44px] min-h-[24px] rounded-full border border-[#8E44AD4D] px-[9px] py-[4px] text-[#8E44AD] 
     font-dm font-semibold text-[12px] leading-[18px] tracking-[0.08em]"> Rule</span>
   </div>
 
@@ -171,7 +171,7 @@ function Management(){
  </div>
 
 {/* Cupon preview */}
- <div className="min-w-0 min-h-[230px] mt-[16px] rounded-[14px] border border-[#FFFFFF14] bg-[#1C2A38]">
+ <div className="min-w-0 min-h-[230px] mt-[16px] rounded-[14px] border border-[#FFFFFF14] bg-[#1C2A38] border-t-2 overflow-hidden">
 <div className="min-w-0 min-h-[53px] rounded-t-[14px] border-b border-[#FFFFFF14] px-[20px] pt-[20px] pb-[10px] gap-[10px]">
     <h2 className="font-dm font-bold leading-none tracking-normal text-[18px] text-[#FFFFFF]">
       Coupon Preview  
@@ -182,7 +182,7 @@ function Management(){
 
 <Cupon title="Customer sees" value="Checkout"/>
 <Cupon title="Most Used" value="WECOME10"/>
-<Cupon title="Avg Discount" value="LKR 470"/>
+<Cupon title="Avg Discount" value="LKR 470"/> 
 
 </div>
 </div>
