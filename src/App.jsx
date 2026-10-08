@@ -6,7 +6,7 @@ import { pageDetials } from "./data/PageDetails";
 import ReservationRoutes from "./pages/Reservation_dashboard/ReservationRoutes";
 
 import CouponRoutes from "./pages/Coupon/CouponRoutes";
-
+import RoleManagementRoutes from "./pages/RolesManagment/roleandpermission";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -32,8 +32,9 @@ function App() {
         <main className="sticky top-0 min-w-0 flex-1">
           <Header user={currentUser} page={pageDetials[activeItem]} />
 <div className="min-h-screen bg-[#0f1923] font-dmsans">
-            {activeItem === "Reservations" && <ReservationRoutes />}
-           {activeItem === "Coupons & Tax" && <CouponRoutes /> }
+            {activeItem === "Reservations" && (<ReservationRoutes />)}
+           {activeItem === "Coupons & Tax" && (<CouponRoutes />) }
+          {activeItem === "Roles & Permissions" && (<RoleManagementRoutes />) }
            
           </div>
         </main>

@@ -1,6 +1,6 @@
 
 
-function CardItem({ title, number, description,numbercolor }) {
+function CardItem({ title, number, description,descriptionColor }) {
   return (
     <div
       className="
@@ -17,17 +17,17 @@ function CardItem({ title, number, description,numbercolor }) {
       </h3>
 
       <div className="flex flex-col mt-[8px] h-[56px] gap-[12px]">
-        <span className={`font-dm text-[28px] font-bold leading-none ${
-          numbercolor 
-        }`
-      }
+        <span className="font-dm text-[28px] font-bold leading-none text-[#F0F4F8]"
+        
       >
           {number}
         </span>
 
-        <p
-          className="truncate font-dm text-[12px] font-semibold h-[16px] text-[#F0F4F8]">
-         
+         <p
+          className={`truncate font-dm text-[12px] font-semibold leading-[16px] ${
+            descriptionColor 
+          }`}
+        >
           {description}
         </p>
       </div>
@@ -46,31 +46,35 @@ function Kpirow() {
       "
     >
       <CardItem
-        title="ACTIVE COUPONS"
-        number="18"
-        description="Currently usable "
-        numbercolor= "text-[#27AE60]"
+        title="CUSTOM ACCESS"
+        number="12"
+        description="+3 this week"
+        descriptionColor="text-[#3BB273]"
+        
       />
 
       <CardItem
-        title="USED TODAY"
-        number="86"
-        description="Transactions"
-        numbercolor="text-[#E67E22]"
+        title="INACTIVE ROLES"
+        number="2"
+        description="Review needed !"
+        descriptionColor="text-[#E74C3C]"
+        
       />
 
       <CardItem
-        title="DISCOUNT GIVEN"
-        number="LKR 18K"
-        description="Today"
-        numbercolor="text-[#F0F4F8]"
+        title="SECURITY ALERTS"
+        number="5"
+        description="Needs attention"
+       descriptionColor="text-[#E74C3C]"
+        
       />
 
       <CardItem
-        title="EXPIRED"
-        number="4"
-        description="Need review"
-        numbercolor="text-[#E74C3C]"
+        title="PERMISSION USAGE"
+        number="98%"
+        description="Optimized"
+        descriptionColor="text-[#3BB273]"
+        
       />
     </section>
   );

@@ -1,6 +1,6 @@
 
 
-function CardItem({ title, number, description,numbercolor }) {
+function CardItem({ title, number, description}) {
   return (
     <div
       className="
@@ -17,16 +17,13 @@ function CardItem({ title, number, description,numbercolor }) {
       </h3>
 
       <div className="flex flex-col mt-[8px] h-[56px] gap-[12px]">
-        <span className={`font-dm text-[28px] font-bold leading-none ${
-          numbercolor 
-        }`
-      }
-      >
+        <span className="font-dm text-[28px] font-bold leading-none text-[#F0F4F8]">
+      
           {number}
         </span>
 
         <p
-          className="truncate font-dm text-[12px] font-semibold h-[16px] text-[#F0F4F8]">
+          className="truncate font-dm text-[12px] font-semibold h-[16px] text-[#3BB273]">
          
           {description}
         </p>
@@ -46,30 +43,30 @@ function Kpirow() {
       "
     >
       <CardItem
-        title="ACTIVE COUPONS"
-        number="18"
-        description="Currently usable "
+        title="TOTAL ROLES"
+        number="7"
+        description="2 custom roles"
         numbercolor= "text-[#27AE60]"
       />
 
       <CardItem
-        title="USED TODAY"
-        number="86"
-        description="Transactions"
+        title="ACTIVE USERS"
+        number="48"
+        description="+4 this month"
         numbercolor="text-[#E67E22]"
       />
 
       <CardItem
-        title="DISCOUNT GIVEN"
-        number="LKR 18K"
-        description="Today"
+        title="ADMIN USERS"
+        number="3"
+        description="All active"
         numbercolor="text-[#F0F4F8]"
       />
 
       <CardItem
-        title="EXPIRED"
-        number="4"
-        description="Need review"
+        title="CUSTOM ROLES"
+        number="2"
+        description="+ Add more"
         numbercolor="text-[#E74C3C]"
       />
     </section>

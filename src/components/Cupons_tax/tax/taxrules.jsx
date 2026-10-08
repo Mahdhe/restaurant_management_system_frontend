@@ -8,8 +8,7 @@ import  TableContent from "./tablecontent";
 
  <section className="min-h-[919px] w-full min-w-0  gap-[20px] overflow-hidden">
 
-         
-            {/* <div className="grid grid-cols-1 lg:grid-cols-[820px_1fr] gap-[8px]"> */}
+      
 <div className="min-w-0 w-full"> 
       <div className="min-w-0 min-h-[919px] mt-[16px] rounded-[16px] px-[20px] py-[10px] gap-[20px] bg-[#1C2A38] border border-[#1C2A38]">
         <div className="flex min-h-[48px] w-full min-w-0  py-[12px] gap-[10px] items-center justify-between">
