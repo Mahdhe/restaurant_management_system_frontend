@@ -2,16 +2,15 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const menuItems = [
-  { label: 'Menu Browse', path: '/order-management/menu-browse' },
-  { label: 'Order Build', path: '/order-management/order-build' },
-  { label: 'Order Summary', path: '/order-management/order-summary' },
-  { label: 'Order History', path: '/order-management/order-history' },
-  { label: 'Order Detail', path: '/order-management/order-detail' },
+  { label: 'Menu Items List', path: '/menu-management/items-list' },
+  { label: 'Add/Edit Items', path: '/menu-management/add-edit-items' },
+  { label: 'Category Management', path: '/menu-management/category-management' },
+  { label: 'Availability Scheduler', path: '/menu-management/last-page' },
 ]
 
-const RedirectingButtons = () => {
+const MenuManagementMenubar = () => {
   return (
-    <div className="w-full max-w-[650px] min-h-[60px] rounded-[14px] border-[1px] border-[#FFFFFF14] p-[10px] bg-[#1C2A38] flex items-center gap-2 sm:gap-3 mt-3 overflow-x-auto">
+    <div className="w-full max-w-[680px] min-h-[60px] rounded-[14px] border-[1px] border-[#FFFFFF14] p-[10px] bg-[#1C2A38] flex items-center gap-2 sm:gap-3 mt-3 overflow-x-auto">
       {menuItems.map((item) => (
         <NavLink
           key={item.path}
@@ -31,5 +30,4 @@ const RedirectingButtons = () => {
   )
 }
 
-
-export default RedirectingButtons
+export default MenuManagementMenubar

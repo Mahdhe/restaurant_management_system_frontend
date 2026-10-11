@@ -23,8 +23,14 @@ const AddEditMenuItemTable = () => {
           </div>
 
           <div className="w-[365px] h-[66px] gap-[8px] flex flex-col">
-            <h4 className="font-[DM_Sans] text-[14px] text-[#8A9BB0] leading-[100%] tracking-[0%]">CATEGORY</h4>
-            <input type="text" className="w-[365px] h-[40px] gap-[8px] flex rounded-[10px] border-[1px] py-[8px] px-[12px] bg-[#243447] border-[#FFFFFF24]" />
+            {/* <h4 className="font-[DM_Sans] text-[14px] text-[#8A9BB0] leading-[100%] tracking-[0%]">CATEGORY</h4> */}
+            <div className="w-[262px] h-[59px] gap-[8px] flex flex-col">
+              <label htmlFor="status" className="font-[DM_Sans] font-medium text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">STATUS</label>
+              <select id="status" className="w-[365px] h-[40px] rounded-[10px] border-[1px] py-[3px] px-[10px] bg-[#243447] border-[#FFFFFF14] text-white">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
           </div>
 
 
@@ -48,13 +54,25 @@ const AddEditMenuItemTable = () => {
         <div className="w-[762px] h-[86px] gap-[12px] py-[10px] bg-[#1C2A38] flex">
 
           <div className="w-[365px] h-[66px] gap-[8px] flex flex-col">
-            <h4 className="font-[DM_Sans] text-[14px] text-[#8A9BB0] leading-[100%] tracking-[0%]">ITEM NAME</h4>
-            <input type="text" className="w-[365px] h-[40px] gap-[8px] flex rounded-[10px] border-[1px] py-[8px] px-[12px] bg-[#243447] border-[#FFFFFF24]" />
+            {/* <h4 className="font-[DM_Sans] text-[14px] text-[#8A9BB0] leading-[100%] tracking-[0%]">ITEM NAME</h4> */}
+            <div className="w-[262px] h-[59px] gap-[8px] flex flex-col">
+              <label htmlFor="status" className="font-[DM_Sans] font-medium text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">STATUS</label>
+              <select id="status" className="w-[365px] h-[40px] rounded-[10px] border-[1px] py-[3px] px-[10px] bg-[#243447] border-[#FFFFFF14] text-white">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
           </div>
 
           <div className="w-[365px] h-[66px] gap-[8px] flex flex-col">
-            <h4 className="font-[DM_Sans] text-[14px] text-[#8A9BB0] leading-[100%] tracking-[0%]">CATEGORY</h4>
-            <input type="text" className="w-[365px] h-[40px] gap-[8px] flex rounded-[10px] border-[1px] py-[8px] px-[12px] bg-[#243447] border-[#FFFFFF24]" />
+            {/* <h4 className="font-[DM_Sans] text-[14px] text-[#8A9BB0] leading-[100%] tracking-[0%]">CATEGORY</h4> */}
+            <div className="w-[262px] h-[59px] gap-[8px] flex flex-col">
+              <label htmlFor="status" className="font-[DM_Sans] font-medium text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">STATUS</label>
+              <select id="status" className="w-[365px] h-[40px] rounded-[10px] border-[1px] py-[3px] px-[10px] bg-[#243447] border-[#FFFFFF14] text-white">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
           </div>
 
 
@@ -67,7 +85,7 @@ const AddEditMenuItemTable = () => {
             <input type="text" className="w-[742px] h-[70px] gap-[8px] flex rounded-[10px] border-[1px] py-[8px] px-[12px] bg-[#243447] border-[#FFFFFF24]" />
           </div>
 
-          
+
 
 
         </div>

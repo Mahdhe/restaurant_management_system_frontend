@@ -13,10 +13,14 @@ import OrderDetail from "./pages/order_Management/order_ManagementPages/OrderDet
 import MenuItemsList from "./pages/menu_Management/menu_ManagementPages/MenuItemsList";
 import AddEditItems from "./pages/menu_Management/menu_ManagementPages/AddEditItems";
 import Order_ManagementMain from "./pages/order_Management/Order_ManagementMain";
+import CategoryManagement from "./pages/menu_Management/menu_ManagementPages/CategoryManagement";
+import LastPage from "./pages/menu_Management/menu_ManagementPages/LastPage";
+import Menu_ManagementMain from "./pages/menu_Management/Menu_ManagementMain";
+import CRM_Main from "./pages/crm/CRM_Main";
 
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
-
+  
   const currentUser = {
     name: "Ashan k.",
     initials: "AK",
@@ -25,7 +29,7 @@ function App() {
   };
 
   return (
-    <div className="h-[1218px] bg-[#0F1923] font-dmsans">
+    <div className="min-h-screen bg-[#0F1923]">
       <div className="flex items-start">
         <div className="sticky top-0 self-start">
           <AdminSidebar
@@ -35,19 +39,20 @@ function App() {
           />
         </div>
 
-        <main className="min-w-0 flex-1">
-          <Header user={currentUser} page={pageDetials[activeItem]} />
+        {/* <main className="min-w-0 flex-1">
+          <div className="sticky top-0 z-40">
+            <Header user={currentUser} page={pageDetials[activeItem]} />
+          </div>
 
-          <Order_ManagementMain></Order_ManagementMain>
+          <div>
+            {activeItem === "Order Management" && <Order_ManagementMain/>}
+            {activeItem === "Menu Management" && <Menu_ManagementMain/>}
+            {activeItem === "Customers " && <CRM_Main></CRM_Main>}
+          </div>
+        </main> */}
 
-          {/* <MenuItemsList></MenuItemsList> */}
-          {/* <AddEditItems></AddEditItems> */}
-          
+        <CRM_Main></CRM_Main>
 
-      
-
-          
-        </main>
       </div>
     </div>
   );
