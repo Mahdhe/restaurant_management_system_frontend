@@ -1,4 +1,4 @@
-import DirectoryTable from "../../common/directorytable";
+import DirectoryTable from "../common/directorytable";
 
 function EmployeeDirectory(){
     return(

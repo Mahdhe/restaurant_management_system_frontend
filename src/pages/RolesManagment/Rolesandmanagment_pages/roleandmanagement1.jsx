@@ -1,8 +1,8 @@
 import ButtonsRow from "../../../components/RolesandPermission/common/buttonrow";
 import Kpirow from "../../../components/RolesandPermission/common/kpirow";
 import Titlesection from "../../../components/RolesandPermission/common/title";
-import EmployeeDirectory from "../../../components/RolesandPermission/roleandmanagment1/employee/directory";
-import RoleDetails from "../../../components/RolesandPermission/roleandmanagment1/employee/roledetails";
+import EmployeeDirectory from "../../../components/RolesandPermission/roleandmanagment1/directory";
+import RoleDetails from "../../../components/RolesandPermission/roleandmanagment1/roledetails";
 
 
 function RoleManagement1(){

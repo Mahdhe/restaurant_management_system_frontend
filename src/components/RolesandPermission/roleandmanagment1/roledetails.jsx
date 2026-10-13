@@ -1,4 +1,4 @@
-import Commonbutton from "../../../Reservation/Common/button";
+import Commonbutton from "../../Reservation/Common/button";
 
 function Data({title,value,pill=false}){
     return(
