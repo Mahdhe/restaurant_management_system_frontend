@@ -3,11 +3,11 @@ import Kpirow from "../../../components/RolesandPermission/roleandmanagment2/kpi
 import Titlesection from "../../../components/RolesandPermission/common/title";
 import Searchbar from "../../../components/RolesandPermission/roleandmanagment2/searchbar";
 import Employee from "../../../components/RolesandPermission/roleandmanagment2/employeecard";
-
+import CustomAccess from "../../../components/RolesandPermission/roleandmanagment2/customaccess";
 
 function RoleManagement2(){
     return(
-        <div className="w-full min-w-0 min-h-[1158px] bg-[#0F1923]  p-6">
+        <div className="w-full min-w-0 min-h-[1158px] bg-[#0F1923] p-3 sm:p-4 lg:p-6">
             <Titlesection />
             <ButtonsRow />
            <Kpirow />
@@ -18,6 +18,9 @@ function RoleManagement2(){
                 <Employee />   
                 </div>
                 
+                <div className="min-w-0">
+                    <CustomAccess />
+                </div>
               </div>
         </div>
     );

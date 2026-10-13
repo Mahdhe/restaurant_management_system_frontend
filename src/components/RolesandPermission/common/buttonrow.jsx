@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 
 const buttons =[
     {
-        name:"Role Management1",
+        name:"Role Management",
         Path:"/roles/management1"
     },
 
     {
-         name:"Role Management2",
+         name:"Access Control",
         Path:"/roles/management2"
     }
 
