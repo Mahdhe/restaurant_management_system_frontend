@@ -36,7 +36,7 @@ export const menuGroups = [
         roles: ["admin", "waiter", "manager"],
       },
       {
-        label: "Oder Management",
+        label: "Order Management",
         icon: ClipboardList,
         roles: ["admin", "waiter", "manager"],
       },
