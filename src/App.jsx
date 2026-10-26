@@ -8,6 +8,8 @@ import ReservationRoutes from "./pages/Reservation_dashboard/ReservationRoutes";
 import CouponRoutes from "./pages/Coupon/CouponRoutes";
 import RoleManagementRoutes from "./pages/RolesManagment/roleandpermission";
 
+import Authenticationandsecurity from "./pages/Authentication/authentication";
+
 function App() {
   const [activeItem, setActiveItem] = useState("Dashboard");
 
@@ -35,6 +37,7 @@ function App() {
             {activeItem === "Reservations" && (<ReservationRoutes />)}
            {activeItem === "Coupons & Tax" && (<CouponRoutes />) }
           {activeItem === "Roles & Permissions" && (<RoleManagementRoutes />) }
+          {activeItem === "Authentication & Security" && (<Authenticationandsecurity/>) }
            
           </div>
         </main>
