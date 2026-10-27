@@ -31,7 +31,7 @@ export default function AnalyticsDashboard() {
   };
 
   return (
-    <div className="w-full min-w-0">
+    <div className="w-full min-w-0 p-6">
       <AnalyticsHeader />
       <AnalyticsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="mt-5 w-full min-w-0">{renderContent()}</div>
