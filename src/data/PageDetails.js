@@ -11,7 +11,7 @@ export const pageDetials = {
     category: "Operations > Reservations",
     title: "Reservations",
   },
-  "Oder Management": {
+  "Order Management": {
     category: "Operations > Order Management",
     title: "Order Management",
   },
