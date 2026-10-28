@@ -24,17 +24,17 @@ const OrderDetail = () => {
                     <ReservationList></ReservationList>
 
                     {/* Main-Grid */}
-                    <section className="w-[1132px] h-[999px] gap-[20px] flex">
+                    <section className="w-[1200px] max-w-full h-[999px] max-[1439px]:h-auto gap-[30px] flex max-[1439px]:flex-col">
 
                         {/* Left-Box */}
-                        <section className="w-[782px] h-[849px] gap-[20px] flex flex-col">
+                        <section className="w-[800px] max-w-full h-[849px] max-[1439px]:h-auto gap-[20px] flex flex-col">
                             <OrderBreakdown></OrderBreakdown>
                             <StatusTimeline></StatusTimeline>
                             
                         </section>
 
                         {/* Right-Box */}
-                        <section className="w-[330px] h-[999px] gap-[20px] flex flex-col">
+                        <section className="w-[400px] max-w-full h-[999px] max-[1439px]:h-auto gap-[20px] flex flex-col">
 
                             <OrderInfo></OrderInfo>
                             <PaymentInfo></PaymentInfo>

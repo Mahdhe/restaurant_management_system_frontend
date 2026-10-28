@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useRef } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const menuItems = [
   { label: 'Menu Browse', path: '/order-management/menu-browse' },
@@ -10,8 +10,20 @@ const menuItems = [
 ]
 
 const Menubar = () => {
+  const barRef = useRef(null)
+  const { pathname } = useLocation()
+
+  // Active tab mobile-la velila irundha, athai view-kulla konduvarum
+  useEffect(() => {
+    const active = barRef.current?.querySelector('[aria-current="page"]')
+    active?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' })
+  }, [pathname])
+
   return (
-    <div className="w-full max-w-[650px] min-h-[60px] rounded-[14px] border-[1px] border-[#FFFFFF14] p-[10px] bg-[#1C2A38] flex items-center gap-2 sm:gap-3 mt-3 overflow-x-auto">
+    <div
+      ref={barRef}
+      className="w-full max-w-[650px] min-h-[60px] rounded-[14px] border-[1px] border-[#FFFFFF14] p-[10px] bg-[#1C2A38] flex items-center gap-2 sm:gap-3 mt-3 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    >
       {menuItems.map((item) => (
         <NavLink
           key={item.path}

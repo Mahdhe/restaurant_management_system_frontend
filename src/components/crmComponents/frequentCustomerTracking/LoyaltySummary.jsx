@@ -1,0 +1,34 @@
+import React from 'react'
+
+const LoyaltySummary = () => {
+  return (
+    <section className="w-[300px] max-w-full min-w-0 h-[165px] rounded-[14px] border-[1px] bg-[#1C2A38] border-[#FFFFFF14] flex flex-col overflow-hidden box-border">
+
+        <div className="w-[300px] h-[53px] rounded-t-[14px] border-[1px] p-[20px] pb-[10px] gap-[10px] flex border-[#FFFFFF14]">
+            <h1 className="font-[DM_Sans] font-bold text-[18px] leading-[100%] tracking-[0%] text-[#FFFFFF]">Loyalty Summary</h1>
+        </div>
+
+        <div className="w-[300px] h-[184px] py-[10px] px-[20px] gap-[10px] flex">
+
+            <div className="w-[260px] h-[164px] py-[10px]">
+
+                <div className="w-[260px] h-[36px] border-b-[1px] py-[10px] gap-[10px] flex justify-between items-center border-[#FFFFFF14]">
+                    <h1 className="font-[DM_Sans] text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Points Issued </h1>
+                    <p className="font-[DM_Sans] font-semibold text-[13px] leading-[100%] tracking-[0%] text-[#3BB273] text-end">12,400</p>
+                </div>
+
+                <div className="w-[260px] h-[36px] border-b-[1px] py-[10px] gap-[10px] flex justify-between items-center border-[#FFFFFF14]">
+                    <h1 className="font-[DM_Sans] text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Points Redeemed</h1>
+                    <p className="font-[DM_Sans] font-semibold text-[13px] leading-[100%] tracking-[0%] text-[#3BB273] text-end">8,900</p>
+                </div>
+
+
+            </div>
+
+        </div>
+        
+    </section>
+  )
+}
+
+export default LoyaltySummary

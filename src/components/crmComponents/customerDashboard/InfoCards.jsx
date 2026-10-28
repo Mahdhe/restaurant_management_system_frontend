@@ -2,18 +2,18 @@ import React from 'react'
 
 const cards = [
   { label: 'TOTAL CUSTOMERS', value: '3,482',   trend: '↑ 6.2% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#E67E22]', trendColor: 'text-[#3BB273]' },
-  { label: 'TOTAL ORDERS',    value: '1,254',   trend: '↑ 3.1% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#3498DB]', trendColor: 'text-[#3BB273]' },
-  { label: 'REVENUE',         value: '$24,580', trend: '↑ 8.4% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#3BB273]', trendColor: 'text-[#3BB273]' },
-  { label: 'PENDING ORDERS',  value: '48',      trend: '↓ 2.0% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#F1C40F]', trendColor: 'text-[#E74C3C]' },
-  { label: 'RESERVATIONS',    value: '312',     trend: '↑ 4.5% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#9B59B6]', trendColor: 'text-[#3BB273]' },
-  { label: 'MENU ITEMS',      value: '86',      trend: '↑ 1.2% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#1ABC9C]', trendColor: 'text-[#3BB273]' },
-  { label: 'STAFF MEMBERS',   value: '24',      trend: '→ No change',        labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#E91E63]', trendColor: 'text-[#8A9BB0]' },
-  { label: 'CANCELLED',       value: '17',      trend: '↓ 5.3% this month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#E74C3C]', trendColor: 'text-[#3BB273]' },
+  { label: 'NEW CUSTOMERS',    value: '214',   trend: 'This month',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#3498DB]', trendColor: 'text-[#3BB273]' },
+  { label: 'FREQUENT CUSTOMERS',         value: '586', trend: '5+ visits',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#3BB273]', trendColor: 'text-[#3BB273]' },
+  { label: 'VIP CUSTOMERS',  value: '92',      trend: 'Top-tier members',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#E67E22]', trendColor: 'text-[#3BB273]' },
+  { label: 'CUSTOMER SATISFACTION',    value: '4.7 / 5',     trend: 'Based on 1,240 reviews',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#3BB273]', trendColor: 'text-[#3BB273]' },
+  { label: 'AVERAGE SPEND',      value: 'LKR 3,650',      trend: 'Per visit',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#E67E22]', trendColor: 'text-[#3BB273]' },
+  { label: 'RETURNING CUSTOMERS',   value: '68%',      trend: 'Of total base',        labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#2980B9]', trendColor: 'text-[#3BB273]' },
+  { label: 'RESERVATIONS TODAY',       value: '27',      trend: '6 pending confirmation',  labelColor: 'text-[#8A9BB0]', valueColor: 'text-[#E67E22]', trendColor: 'text-[#3BB273]' },
 ]
 
 const InfoCards = () => {
   return (
-    <section className="w-full max-w-[1132px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
+    <section className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
       {cards.map((card) => (
         <div
           key={card.label}

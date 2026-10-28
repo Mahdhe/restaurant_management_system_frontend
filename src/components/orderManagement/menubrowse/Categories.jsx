@@ -1,86 +1,57 @@
-import React from "react";
-import {
-  MdOutlineRestaurant,
-  MdOutlineRamenDining,
-  MdOutlineRiceBowl,
-  MdOutlineLunchDining,
-  MdOutlineOutdoorGrill,
-  MdOutlineFastfood,
-  MdOutlineIcecream,
-  MdOutlineLocalCafe,
-  MdOutlineLocalBar,
-} from "react-icons/md";
+import { useState } from "react";
 
-export const categories = [
-  { key: "all", icon: MdOutlineRestaurant, label: "All Items", count: 45 },
-  { key: "starters", icon: MdOutlineRamenDining, label: "Starters", count: 8 },
-  { key: "rice", icon: MdOutlineRiceBowl, label: "Rice & Curry", count: 4 },
-  { key: "pasta", icon: MdOutlineLunchDining, label: "Pasta & Noodles", count: 12 },
-  { key: "grills", icon: MdOutlineOutdoorGrill, label: "Grills & BBQ", count: 5 },
-  { key: "snacks", icon: MdOutlineFastfood, label: "Snacks", count: 5 },
-  { key: "desserts", icon: MdOutlineIcecream, label: "Desserts", count: 6 },
-  { key: "beverages", icon: MdOutlineLocalCafe, label: "Beverages", count: 7 },
-  { key: "mocktails", icon: MdOutlineLocalBar, label: "Mocktails", count: 9 },
+const categories = [
+  { id: "all", label: "All Items", icon: "🍽️", count: 45 },
+  { id: "starters", label: "Starters", icon: "🍲", count: 8 },
+  { id: "rice", label: "Rice & Curry", icon: "🍛", count: 4 },
+  { id: "pasta", label: "Pasta & Noodles", icon: "🍜", count: 12 },
+  { id: "grills", label: "Grills & BBQ", icon: "🍖", count: 5 },
+  { id: "snacks", label: "Snacks", icon: "🍟", count: 5 },
+  { id: "desserts", label: "Desserts", icon: "🍨", count: 6 },
+  { id: "beverages", label: "Beverages", icon: "🧋", count: 7 },
+  { id: "mocktails", label: "Mocktails", icon: "🥤", count: 9 },
 ];
 
-const Categories = ({ activeCategory, onSelectCategory }) => {
+export default function CategorySidebar({ onSelect }) {
+  const [active, setActive] = useState("all");
+
+  const handleClick = (id) => {
+    setActive(id);
+    onSelect?.(id);
+  };
+
   return (
-    <section
-      className="w-full lg:w-[240px] shrink-0 rounded-[14px] border-[1px] bg-[#1C2A38] border-[#FFFFFF14]
-                 flex lg:flex-col overflow-x-auto lg:overflow-visible"
-    >
-      {/* Header */}
-      <div className="hidden lg:flex w-full h-[54px] gap-[10px] px-[20px] items-center shrink-0">
-        <h1 className="font-[DM_Sans] font-semibold text-[11px] leading-[100%] tracking-[1%] text-[#556070]">
-          CATEGORIES
-        </h1>
-      </div>
+    <aside className="w-[300px] max-w-full h-[560px] rounded-2xl border border-[#2b394a] bg-[#1c2836] p-0 overflow-hidden font-['DM_Sans',sans-serif]">      <p className="px-5 pt-5 pb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-[#667589]">
+      Categories
+    </p>
 
-      {/* Items */}
-      {categories.map((cat) => {
-        const isActive = cat.key === activeCategory;
-        const isAllItems = cat.key === "all";
-        const Icon = cat.icon;
-
-        return (
-          <button
-            key={cat.key}
-            onClick={() => onSelectCategory(cat.key)}
-            className={`w-full lg:w-full min-w-[150px] lg:min-w-0 h-[44px] border-[1px] py-[10px] px-[16px] lg:px-[20px]
-                        flex justify-between items-center gap-2 transition-colors shrink-0 ${
-              isAllItems
-                ? "bg-[#E67E220F] border-[#FFFFFF14]"
-                : isActive
-                ? "bg-[#E67E220F] border-[#FFFFFF14]"
-                : "border-[#FFFFFF14] hover:bg-[#FFFFFF08]"
-            }`}
-          >
-            <div
-              className={`flex gap-2 items-center min-w-0 ${
-                isAllItems ? "text-[#E67E22]" : isActive ? "text-[#E67E22]" : "text-[#8A9BB0]"
-              }`}
-            >
-              <Icon size={14} className="shrink-0" />
-              <h1 className="font-[DM_Sans] font-medium text-[13px] sm:text-[14px] leading-[100%] tracking-[1%] truncate">
-                {cat.label}
-              </h1>
-            </div>
-            <p
-              className={`font-[DM_Sans] font-semibold text-[11px] leading-[100%] tracking-[8%] border-[1px] p-1 rounded-full shrink-0 ${
-                isAllItems
-                  ? "text-[#E67E22] border-[#E67E22]"
-                  : isActive
-                  ? "text-[#E67E22] border-[#E67E22]"
-                  : "text-[#556070] border-[#556070]"
-              }`}
-            >
-              {cat.count}
-            </p>
-          </button>
-        );
-      })}
-    </section>
+      <ul>
+        {categories.map((c) => {
+          const isActive = active === c.id;
+          return (
+            <li key={c.id} className="border-t border-[#2b394a]">
+              <button
+                onClick={() => handleClick(c.id)}
+                className={`flex w-full items-center gap-3 px-5 py-3.5 text-left text-[15px] transition-colors ${isActive
+                    ? "bg-[#f0883e]/10 font-medium text-[#f0883e]"
+                    : "text-[#8a98aa] hover:bg-white/[0.03] hover:text-[#b6c1cf]"
+                  }`}
+              >
+                <span className="text-base leading-none">{c.icon}</span>
+                <span className="flex-1">{c.label}</span>
+                <span
+                  className={`flex min-w-[26px] items-center justify-center rounded-full border px-2 py-0.5 text-xs ${isActive
+                      ? "border-transparent bg-[#f0883e]/15 text-[#f0883e]"
+                      : "border-[#33435a] text-[#667589]"
+                    }`}
+                >
+                  {c.count}
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </aside>
   );
-};
-
-export default Categories;
+}

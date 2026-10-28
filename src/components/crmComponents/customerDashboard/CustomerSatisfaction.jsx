@@ -1,49 +1,72 @@
-import React from 'react'
+
+import React from 'react';
+
+const satisfactionData = [
+  {
+    label: 'Average Rating',
+    value: '4.7 / 5',
+    percentage: 94,
+    color: '#27AE60',
+    textColor: 'text-[#3BB273]',
+  },
+  {
+    label: 'Review Score',
+    value: '89%',
+    percentage: 89,
+    color: '#2980B9',
+    textColor: 'text-[#2980B9]',
+  },
+];
 
 const CustomerSatisfaction = () => {
   return (
-    <section className="w-[300px] h-[207px] rounded-[14px] border-[1px] bg-[#1C2A38] border-[#FFFFFF14]">
+    <section className="box-border flex w-full min-w-0 flex-col overflow-hidden rounded-[14px] border border-[#FFFFFF14] bg-[#1C2A38] font-['DM_Sans']">
 
-        <div className="w-[300px] h-[53px] rounded-t-[14px] border-[1px] p-[20px] pb-[10px] gap-[10px] flex border-[#FFFFFF14]">
-            <h1 className="font-[DM_Sans] font-bold text-[18px] leading-[100%] tracking-[0%] text-[#FFFFFF]">Customer Satisfaction</h1>
-        </div>
+      {/* Header */}
+      <header className="flex min-h-[48px] items-center border-b border-[#FFFFFF14] px-3 py-3 sm:min-h-[53px] sm:px-5">
+        <h2 className="text-[15px] font-bold leading-5 text-white sm:text-[16px] md:text-[18px]">
+          Customer Satisfaction
+        </h2>
+      </header>
 
-        <div className="w-[300px] h-[154px] p-[20px]">
+      {/* Satisfaction Metrics */}
+      <div className="flex w-full flex-col gap-3 p-3 sm:gap-4 sm:p-5">
+        {satisfactionData.map((item) => (
+          <div key={item.label} className="flex w-full min-w-0 flex-col gap-2">
 
-            <div className="w-[300px] h-[154px] py-[10px] gap-[4px] flex flex-col">
+            {/* Label and Value */}
+            <div className="flex min-w-0 items-center justify-between gap-3">
+              <p className="min-w-0 text-[12px] leading-[18px] text-[#8A9BB0] sm:text-[13px] md:text-[14px]">
+                {item.label}
+              </p>
 
-                <div className="">
-
-                    
-                </div>
-
-                <div className="w-[260px] h-[28px] border-b-[1px] pb-[10px] border-[#FFFFFF14] flex justify-between items-center">
-                    <h1 className="font-[DM_Sans] text-[14px] leading-[18px] tracking-[0.8%] text-[#8A9BB0]">Average Rating</h1>
-                    <p className="font-[DM_Sans] font-semibold text-[12px] leading-[18px] tracking-[0.8%] text-[#3BB273] text-end">4.7 / 5</p>
-                </div>
-
-                <div className="w-[260px] h-[10px] rounded-[999px] pr-[13px] gap-[10px] flex bg-[#5560704D]">
-                    <div className="w-[235px] h-[10px] rounded-[999px] bg-[#27AE60]"></div>
-                </div>
-
-                <div className="w-[260px] h-[28px] border-b-[1px] pb-[10px] border-[#FFFFFF14] flex justify-between items-center">
-                    <h1 className="font-[DM_Sans] text-[14px] leading-[18px] tracking-[0.8%] text-[#8A9BB0]">Review Score</h1>
-                    <p className="font-[DM_Sans] font-semibold text-[12px] leading-[18px] tracking-[0.8%] text-[#2980B9] text-end">89%</p>
-                </div>
-
-                <div className="w-[260px] h-[10px] rounded-[999px] pr-[13px] gap-[10px] flex bg-[#5560704D]">
-                    <div className="w-[235px] h-[10px] rounded-[999px] bg-[#2980B9]"></div>
-                </div>
-
+              <p className={`shrink-0 text-right text-[11px] font-semibold leading-[18px] sm:text-[12px] ${item.textColor}`}>
+                {item.value}
+              </p>
             </div>
 
-            
-
-        </div>
-
+            {/* Progress Bar */}
+            <div
+              className="h-[8px] w-full overflow-hidden rounded-full bg-[#5560704D] sm:h-[10px]"
+              role="progressbar"
+              aria-label={item.label}
+              aria-valuenow={item.percentage}
+              aria-valuemin={0}
+              aria-valuemax={100}
+            >
+              <div
+                className="h-full rounded-full transition-all duration-300"
+                style={{
+                  width: `${item.percentage}%`,
+                  backgroundColor: item.color,
+                }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
-
-  )
-}
+  );
+};
 
 export default CustomerSatisfaction

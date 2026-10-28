@@ -1,29 +1,42 @@
-import React from 'react'
+
+import React from 'react';
 
 const SearchCustomers = () => {
   return (
-    <section className="w-[1132px] h-[133px] rounded-[16px] py-[10px] px-[20px] gap-[10px] flex flex-col bg-[#1C2A38] my-4">
+    <section className="my-3 box-border flex w-full min-w-0 flex-col gap-3 rounded-[16px] border border-[#FFFFFF14] bg-[#1C2A38] p-3 sm:my-4 sm:gap-4 sm:p-5">
 
-      <h1 className="font-[DM_Sans] font-semibold text-[18px] leading-[100%] tracking-[0%] text-[#3BB273]">Search Customers</h1>
+      {/* Heading */}
+      <h2 className="text-[15px] font-semibold leading-5 text-[#3BB273] sm:text-[16px] md:text-[18px]">
+        Search Customers
+      </h2>
 
-      <div className="w-[1112px] h-[60px] py-[10px] gap-[8px] flex bg-[#1C2A38]">
+      {/* Search Fields */}
+      <div className="grid w-full min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 sm:gap-3">
 
-        <div className="w-[362.6666564941406px] h-[40px] gap-[8px] flex items-center">
-          <input type="text" placeholder='Search Customer name' className="w-[362.6666564941406px] h-[40px] rounded-[10px] border-[1px] py-[8px] px-[12px] gap-[8px] flex bg-[#243447] border-[#FFFFFF24] text-[#556070] text-[14px] text-[DM_Sans]" />
-        </div>
+        <input
+          type="text"
+          placeholder="Search customer name"
+          aria-label="Search customer name"
+          className="box-border h-10 w-full min-w-0 rounded-[10px] border border-[#FFFFFF24] bg-[#243447] px-3 py-2 font-['DM_Sans'] text-[12px] leading-5 text-[#F0F4F8] outline-none placeholder:text-[#8A9BB0] focus:border-[#3BB273] sm:text-[13px] md:text-[14px]"
+        />
 
-        <div className="w-[362.6666564941406px] h-[40px] gap-[8px] flex items-center">
-          <input type="text" placeholder='Search phone number' className="w-[362.6666564941406px] h-[40px] rounded-[10px] border-[1px] py-[8px] px-[12px] gap-[8px] flex bg-[#243447] border-[#FFFFFF24] text-[#556070] text-[14px] text-[DM_Sans]" />
-        </div>
+        <input
+          type="tel"
+          placeholder="Search phone number"
+          aria-label="Search phone number"
+          className="box-border h-10 w-full min-w-0 rounded-[10px] border border-[#FFFFFF24] bg-[#243447] px-3 py-2 font-['DM_Sans'] text-[12px] leading-5 text-[#F0F4F8] outline-none placeholder:text-[#8A9BB0] focus:border-[#3BB273] sm:text-[13px] md:text-[14px]"
+        />
 
-        <div className="w-[362.6666564941406px] h-[40px] gap-[8px] flex items-center">
-          <input type="text" placeholder='Search email' className="w-[362.6666564941406px] h-[40px] rounded-[10px] border-[1px] py-[8px] px-[12px] gap-[8px] flex bg-[#243447] border-[#FFFFFF24] text-[#556070] text-[14px] text-[DM_Sans]" />
-        </div>
+        <input
+          type="email"
+          placeholder="Search email"
+          aria-label="Search email"
+          className="box-border h-10 w-full min-w-0 rounded-[10px] border border-[#FFFFFF24] bg-[#243447] px-3 py-2 font-['DM_Sans'] text-[12px] leading-5 text-[#F0F4F8] outline-none placeholder:text-[#8A9BB0] focus:border-[#3BB273] sm:text-[13px] md:text-[14px]"
+        />
 
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default SearchCustomers
+export default SearchCustomers;

@@ -27,7 +27,7 @@ const OrderBuild = () => {
                     <TableOrderBar></TableOrderBar>
 
                     {/* HeroSection */}
-                    <section className="w-[1132px] h-[869px] gap-[20px] flex py-5">
+                    <section className="w-[1132px] max-w-full h-[869px] max-[1439px]:h-auto gap-[20px] flex max-[1439px]:flex-col py-5">
 
                         <MenuArea></MenuArea>
 

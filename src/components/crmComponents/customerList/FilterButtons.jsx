@@ -1,40 +1,44 @@
-import React from 'react'
+
+import React, { useState } from 'react';
+
+const filters = [
+  'All Customers',
+  'VIP',
+  'Frequent',
+  'New',
+  'Inactive',
+  'Walk-In',
+  'Reservation',
+];
 
 const FilterButtons = () => {
+  const [activeFilter, setActiveFilter] = useState('All Customers');
+
   return (
-    <div className="w-fit h-[32px] gap-[8px] flex">
+    <div className="flex w-full min-w-0 flex-wrap items-center gap-2 font-['DM_Sans']">
+      {filters.map((filter) => {
+        const isActive = activeFilter === filter;
 
-            <button className="w-[110px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#E67E2214] border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#E67E22]">All Customers</p>
-            </button>
-
-            <button className="w-[45px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#243447] border-[#FFFFFF14] transition hover:bg-[#E67E2214] hover:border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">VIP</p>
-            </button>
-
-            <button className="w-[80px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#243447] border-[#FFFFFF14] transition hover:bg-[#E67E2214] hover:border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Frequent</p>
-            </button>
-
-            <button className="w-[45px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#243447] border-[#FFFFFF14] transition hover:bg-[#E67E2214] hover:border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">New</p>
-            </button>
-
-            <button className="w-[60px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#243447] border-[#FFFFFF14] transition hover:bg-[#E67E2214] hover:border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Inactive</p>
-            </button>
-
-            <button className="w-[70px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#243447] border-[#FFFFFF14] transition hover:bg-[#E67E2214] hover:border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Walk-In</p>
-            </button>
-
-            <button className="w-[85px] h-[32px] rounded-[999px] border-[1px] px-[12px] gap-[10px] bg-[#243447] border-[#FFFFFF14] transition hover:bg-[#E67E2214] hover:border-[#E67E224D] flex items-center justify-center">
-                <p className="font-[DM_Sans] font-medium text-[12px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Reservation</p>
-            </button>
-
-
-        </div>
-  )
-}
+        return (
+          <button
+            key={filter}
+            type="button"
+            onClick={() => setActiveFilter(filter)}
+            aria-pressed={isActive}
+            className={`inline-flex min-h-[32px] shrink-0 items-center justify-center rounded-full border px-3 py-1.5 transition-colors duration-200 ${
+              isActive
+                ? 'border-[#E67E224D] bg-[#E67E2214] text-[#E67E22]'
+                : 'border-[#FFFFFF14] bg-[#243447] text-[#8A9BB0] hover:border-[#E67E224D] hover:bg-[#E67E2214] hover:text-[#E67E22]'
+            }`}
+          >
+            <span className="whitespace-nowrap text-[11px] font-medium leading-4 sm:text-[12px]">
+              {filter}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+};
 
 export default FilterButtons

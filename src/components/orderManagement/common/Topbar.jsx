@@ -2,13 +2,13 @@ import React from 'react'
 
 const Topbar = () => {
     return (
-        <section className="w-full">
+        <section className="w-[1200px] max-w-full">
             {/* Top-bar */}
             <section className="w-full gap-[10px] flex flex-col">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-white w-full p-2 gap-4">
 
                     <div>
-                        <h1 className="font-[DM_Sans] font-bold text-[22px] sm:text-[28px] leading-[100%] tracking-[0%] text-[#F0F4F8]">
+                        <h1 className="font-[DM_Sans] font-bold text-[22px] sm:text-[28px] leading-[100%] tracking-[0%] text-[#F0F4F8] pb-2">
                             Order Management
                         </h1>
                         <p className="font-[DM_Sans] text-[14px] sm:text-[16px] leading-[100%] tracking-[0%] text-[#556070]">

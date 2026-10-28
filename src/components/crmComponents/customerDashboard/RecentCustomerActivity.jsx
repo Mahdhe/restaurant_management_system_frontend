@@ -1,119 +1,83 @@
-import React from 'react'
+
+import React from 'react';
+
+const activities = [
+  {
+    initials: 'JS',
+    name: 'John Silva',
+    activity: 'New Reservation',
+    time: '08:20 AM',
+  },
+  {
+    initials: 'NF',
+    name: 'Nimali Fernando',
+    activity: 'Completed Payment',
+    time: '08:45 AM',
+  },
+  {
+    initials: 'AP',
+    name: 'Akila Perera',
+    activity: 'Earned Loyalty Points',
+    time: '09:15 AM',
+  },
+  {
+    initials: 'KS',
+    name: 'Kasun Silva',
+    activity: 'Visited Restaurant',
+    time: '12:00 PM',
+  },
+];
 
 const RecentCustomerActivity = () => {
   return (
-    <section className="w-[812px] h-[400px] rounded-[14px] border-[1px] bg-[#1C2A38] border-[#FFFFFF14]">
+    <section className="box-border w-full min-w-0 overflow-hidden rounded-[14px] border border-[#FFFFFF14] bg-[#1C2A38] font-['DM_Sans']">
 
-      <div className="w-[812px] h-[53px] rounded-t-[14px] border-[1px] p-[20px] pb-[10px] gap-[10px] flex border-[#FFFFFF14]">
-        <h1 className="font-[DM_Sans] font-bold text-[18px] leading-[100%] tracking-[0%] text-[#FFFFFF] flex items-center">Recent Customer Activity</h1>
+      {/* Header */}
+      <header className="flex min-h-[48px] items-center border-b border-[#FFFFFF14] px-3 py-3 sm:min-h-[53px] sm:px-5">
+        <h2 className="text-[15px] font-bold leading-5 text-white sm:text-[16px] md:text-[18px]">
+          Recent Customer Activity
+        </h2>
+      </header>
+
+      {/* Activity List */}
+      <div className="w-full px-3 sm:px-5">
+        {activities.map((item, index) => (
+          <div
+            key={item.name}
+            className={`flex min-h-[68px] w-full items-center justify-between gap-3 py-3 sm:min-h-[74px] sm:gap-4 ${
+              index !== activities.length - 1
+                ? 'border-b border-[#FFFFFF14]'
+                : ''
+            }`}
+          >
+            {/* Customer details */}
+            <div className="flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[6px] bg-[#E67E220F]">
+                <span className="text-[11px] font-bold leading-4 text-[#E67E22] sm:text-[12px] md:text-[14px]">
+                  {item.initials}
+                </span>
+              </div>
+
+              <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
+                <h3 className="truncate text-[12px] font-medium leading-[18px] text-[#3BB273] sm:text-[13px] md:text-[14px]">
+                  {item.name}
+                </h3>
+
+                <p className="truncate text-[10px] leading-[15px] text-[#8A9BB0] sm:text-[11px] md:text-[12px]">
+                  {item.activity}
+                </p>
+              </div>
+            </div>
+
+            {/* Timestamp */}
+            <p className="shrink-0 whitespace-nowrap text-right text-[10px] leading-4 text-[#8A9BB0] sm:text-[11px] md:text-[12px]">
+              {item.time}
+            </p>
+          </div>
+        ))}
       </div>
-
-      <div className="w-[812px] h-[296px] py-[10px] px-[20px]">
-
-        <div className="w-[772px] h-[74px]">
-          <div className="w-[772px] h-[74px] border-b-[1px] py-[10px] gap-[10px] flex border-[#FFFFFF14] justify-between items-center">
-
-            <div className="w-[701px] h-[54px] py-[10px] gap-[6px] flex">
-              <div className="w-[701px] h-[54px] gap-[10px] flex">
-
-                <div className="w-[32px] h-[32px] rounded-[6px] bg-[#E67E220F] flex items-center justify-center">
-                  <h3 className="text-[#E67E22] font-[DM_Sans] font-bold text-[14px] leading-[100%] tracking-[0%]">JS</h3>
-                </div>
-
-                <div className="w-[216px] h-[34px] flex flex-col gap-[4px] ">
-
-                  <h1 className="text-[#3BB273] font-[DM_Sans] font-medium text-[14px] leading-[100%] tracking-[0%]">John Silva</h1>
-                  <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">New Reservaion</p>
-
-                </div>
-
-              </div>
-            </div>
-
-            <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">08:20 AM</p>
-
-          </div>
-        </div>
-
-        <div className="w-[772px] h-[74px]">
-          <div className="w-[772px] h-[74px] border-b-[1px] py-[10px] gap-[10px] flex border-[#FFFFFF14] justify-between items-center">
-
-            <div className="w-[701px] h-[54px] py-[10px] gap-[6px] flex">
-              <div className="w-[701px] h-[54px] gap-[10px] flex">
-
-                <div className="w-[32px] h-[32px] rounded-[6px] bg-[#E67E220F] flex items-center justify-center">
-                  <h3 className="text-[#E67E22] font-[DM_Sans] font-bold text-[14px] leading-[100%] tracking-[0%]">JS</h3>
-                </div>
-
-                <div className="w-[216px] h-[34px] flex flex-col gap-[4px] ">
-
-                  <h1 className="text-[#3BB273] font-[DM_Sans] font-medium text-[14px] leading-[100%] tracking-[0%]">John Silva</h1>
-                  <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">New Reservaion</p>
-
-                </div>
-
-              </div>
-            </div>
-
-            <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">08:20 AM</p>
-
-          </div>
-        </div>
-
-        <div className="w-[772px] h-[74px]">
-          <div className="w-[772px] h-[74px] border-b-[1px] py-[10px] gap-[10px] flex border-[#FFFFFF14] justify-between items-center">
-
-            <div className="w-[701px] h-[54px] py-[10px] gap-[6px] flex">
-              <div className="w-[701px] h-[54px] gap-[10px] flex">
-
-                <div className="w-[32px] h-[32px] rounded-[6px] bg-[#E67E220F] flex items-center justify-center">
-                  <h3 className="text-[#E67E22] font-[DM_Sans] font-bold text-[14px] leading-[100%] tracking-[0%]">JS</h3>
-                </div>
-
-                <div className="w-[216px] h-[34px] flex flex-col gap-[4px] ">
-
-                  <h1 className="text-[#3BB273] font-[DM_Sans] font-medium text-[14px] leading-[100%] tracking-[0%]">John Silva</h1>
-                  <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">New Reservaion</p>
-
-                </div>
-
-              </div>
-            </div>
-
-            <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">08:20 AM</p>
-
-          </div>
-        </div>
-
-        <div className="w-[772px] h-[74px]">
-          <div className="w-[772px] h-[74px] py-[10px] gap-[10px] flex border-[#FFFFFF14] justify-between items-center">
-
-            <div className="w-[701px] h-[54px] py-[10px] gap-[6px] flex">
-              <div className="w-[701px] h-[54px] gap-[10px] flex">
-
-                <div className="w-[32px] h-[32px] rounded-[6px] bg-[#E67E220F] flex items-center justify-center">
-                  <h3 className="text-[#E67E22] font-[DM_Sans] font-bold text-[14px] leading-[100%] tracking-[0%]">JS</h3>
-                </div>
-
-                <div className="w-[216px] h-[34px] flex flex-col gap-[4px] ">
-
-                  <h1 className="text-[#3BB273] font-[DM_Sans] font-medium text-[14px] leading-[100%] tracking-[0%]">John Silva</h1>
-                  <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">New Reservaion</p>
-
-                </div>
-
-              </div>
-            </div>
-
-            <p className="text-[#8A9BB0] font-[DM_Sans] text-[12px] leading-[100%] tracking-[0%]">08:20 AM</p>
-
-          </div>
-        </div>
-
-      </div>
-
     </section>
-  )
-}
+  );
+};
 
 export default RecentCustomerActivity

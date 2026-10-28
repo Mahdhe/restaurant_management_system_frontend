@@ -11,7 +11,6 @@ import OrderDetail from './order_ManagementPages/OrderDetail'
 const Order_ManagementMain = () => {
   return (
     <div>
-      <Menubar />
 
       <Routes>
         <Route path="/order-management/menu-browse" element={<MenuBrowse />} />

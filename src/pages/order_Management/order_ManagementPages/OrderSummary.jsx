@@ -25,10 +25,10 @@ const OrderSummary = () => {
           <ReservationList></ReservationList>
 
           {/* Main_Grid */}
-          <section className="flex gap-[20px] w-[1132px] h-[1085px] bg-[#0F1923]">
+          <section className="flex max-[1439px]:flex-col gap-[20px] w-[1200px] max-w-full h-[1085px] max-[1439px]:h-auto bg-[#0F1923]">
 
             {/* Left-content */}
-            <div className="w-[782px] h-[1085px] gap-[20px] flex flex-col">
+            <div className="w-[782px] max-w-full h-[1085px] gap-[20px] flex flex-col">
 
               <OrderItems></OrderItems>
               <StatusTimeline></StatusTimeline>
@@ -36,7 +36,7 @@ const OrderSummary = () => {
             </div>
 
             {/* Right-content */}
-            <div className="w-[330p] h-[780px] gap-[16px] flex flex-col">
+            <div className="w-[330p] max-w-full h-[780px] gap-[16px] flex flex-col">
 
               <TableInfo></TableInfo>
               <Actions></Actions>

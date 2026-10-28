@@ -25,13 +25,17 @@ const MenuBrowse = (props) => {
           <Searchbar />
 
           {/* Hero-section */}
-          <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex flex-col xl:flex-row gap-4">
 
             {/* CATEGORIES */}
-            <Categories />
+            <div className="shrink-0 max-w-full">
+              <Categories />
+            </div>
 
             {/* Cards */}
-            <Cards />
+            <div className="min-w-0 max-w-full">
+              <Cards />
+            </div>
 
           </div>
 

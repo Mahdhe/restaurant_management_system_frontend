@@ -1,32 +1,51 @@
+
 import React from 'react'
 
 const CRM_header = () => {
   return (
-    <section className="w-[1132px] h-[61px] px-[10px] gap-[10px] flex mb-8">
-        <section className="flex w-[1112px] h-[61px] gap-[10px] ">
+    <section className="w-full max-w-[1200px] min-w-0 px-[10px] mb-8 box-border">
 
-            <div className="flex flex-col w-[824px] h-[61px] gap-[4px]">
-                <h1 className="w-[350px] h-[36px] font-[DM_Sans] font-bold text-[28px] leading-[100%] tracking-[0%] text-[#F0F4F8]">Customers Management </h1>
-                <p className="w-[686px] h-[21px] font-[DM_Sans] text-[16px] leading-[100%] tracking-[0%] text-[#556070]">Manage customer information, reservations, loyalty points, visit history and order history from one 
-centralized dashboard</p>
-            </div>
+      <div className="flex w-full min-w-0 items-center gap-6 max-[1439px]:flex-col max-[1439px]:items-stretch max-[1439px]:gap-4">
 
-            <div className="flex w-[300px] h-[40px] gap-[12px]">
-                
-                <div className="w-[200px] h-[40px] gap-[12px] flex">
-                    <button className="w-[170px] h-[40px] gap-[8px] rounded-[10px] border-[1px] py-[8px] px-[16px] bg-[#243447] border-[#FFFFFF24] flex justify-center items-center">
-                        <p className="w-[150px] h-[18px] font-[DM_Sans] font-bold text-[14px] leading-[100%] tracking-[0%] text-[#F0F4F8]">Export Customers</p>
-                    </button>
-                </div>
+        {/* Title + description */}
+        <div className="flex flex-col flex-1 min-w-0 gap-[6px]">
 
-                <div className="w-[150px] h-[40px] gap-[12px] flex">
-                    <button className="w-[150px] h-[40px] gap-[8px] rounded-[10px] border-[1px] py-[8px] px-[16px] bg-[#E67E22] border-[#FFFFFF24] flex justify-center items-center">
-                        <p className="w-[120px] h-[18px] font-[DM_Sans] font-bold text-[14px] leading-[100%] tracking-[0%] text-[#F0F4F8]">+ Add Customer</p>
-                    </button>
-                </div>
-            </div>
+          <h1 className="w-full min-w-0 font-[DM_Sans] font-bold text-[28px] max-sm:text-[20px] leading-[1.2] tracking-normal text-[#F0F4F8]">
+            Customers Management
+          </h1>
 
-        </section>
+          <p className="w-full min-w-0 font-[DM_Sans] text-[16px] max-sm:text-[13px] leading-[1.5] tracking-normal text-[#556070]">
+            Manage customer information, reservations, loyalty points, visit
+            history and order history from one centralized dashboard
+          </p>
+
+        </div>
+
+        {/* Action buttons */}
+        <div className="flex shrink-0 items-center justify-end gap-3 max-[1439px]:w-full max-[1439px]:justify-start max-sm:flex-wrap">
+
+          <button
+            type="button"
+            className="h-[40px] w-[170px] shrink-0 rounded-[10px] border border-[#FFFFFF24] px-4 bg-[#243447] flex justify-center items-center box-border transition hover:bg-[#2D4157]"
+          >
+            <span className="whitespace-nowrap text-center font-[DM_Sans] font-bold text-[14px] max-sm:text-[12px] leading-[18px] text-[#F0F4F8]">
+              Export Customers
+            </span>
+          </button>
+
+          <button
+            type="button"
+            className="h-[40px] w-[150px] shrink-0 rounded-[10px] border border-[#FFFFFF24] px-3 bg-[#E67E22] flex justify-center items-center box-border transition hover:brightness-110"
+          >
+            <span className="whitespace-nowrap text-center font-[DM_Sans] font-bold text-[14px] max-sm:text-[12px] leading-[18px] text-[#F0F4F8]">
+              + Add Customer
+            </span>
+          </button>
+
+        </div>
+
+      </div>
+
     </section>
   )
 }

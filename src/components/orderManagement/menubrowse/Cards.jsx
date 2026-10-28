@@ -20,55 +20,54 @@ const menuItems = [
 
 const Cards = () => {
     return (
-        
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {menuItems.map((item, i) => (
-                <div key={i} className="bg-[#1C2A38] p-2 rounded-[16px]">
 
-                    <div className="w-full h-[160px] rounded-t-[16px] p-[12px] gap-[10px] bg-[#243447] relative overflow-hidden">
+        <section className="w-[880px] max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">            {menuItems.map((item, i) => (
+            <div key={i} className="bg-[#1C2A38] p-2 rounded-[16px]">
 
-                        <img src={item.img} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
+                <div className="w-full h-[160px] rounded-t-[16px] p-[12px] gap-[10px] bg-[#243447] relative overflow-hidden">
 
-                        {item.available ? (
-                            <div className="w-[77px] h-[24px] rounded-[999px] border-[1px] py-[4px] px-[9px] bg-[#0D2217CC] border-[#3BB273] flex items-center gap-1 relative z-10">
-                                <span className="w-[6px] h-[6px] rounded-full bg-[#3BB273]"></span>
-                                <p className="font-[DM_Sans] font-semibold text-[11px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8]">Available</p>
-                            </div>
-                        ) : (
-                            <div className="w-[90px] h-[24px] rounded-[999px] border-[1px] py-[4px] px-[9px] bg-[#E74C3C80] border-[#E74C3C] flex items-center gap-1 relative z-10">
-                                <span className="w-[6px] h-[6px] rounded-full bg-[#E74C3C]"></span>
-                                <p className="font-[DM_Sans] font-semibold text-[11px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8]">Unavailable</p>
-                            </div>
-                        )}
+                    <img src={item.img} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
 
-                    </div>
-
-                    <div className="w-full h-auto rounded-b-[16px] border-[1px] py-[12px] px-[10px] gap-[8px] border-[#FFFFFF14]">
-
-                        <div className="w-full pb-[10px] gap-[4px] mt-3">
-                            <h2 className="font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-[#F0F4F8] truncate">{item.name}</h2>
-                            <p className="font-[DM_Sans] text-[12px] leading-[18px] tracking-[0.8px] text-[#8A9BB0] line-clamp-2">{item.desc}</p>
+                    {item.available ? (
+                        <div className="w-[77px] h-[24px] rounded-[999px] border-[1px] py-[4px] px-[9px] bg-[#0D2217CC] border-[#3BB273] flex items-center gap-1 relative z-10">
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#3BB273]"></span>
+                            <p className="font-[DM_Sans] font-semibold text-[11px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8]">Available</p>
                         </div>
-
-                        <div className="w-full h-[28px] border-y-[1px] p-[10px] gap-[4px] flex justify-between items-center border-[#FFFFFF14] mb-2">
-                            <h1 className="font-[DM_Sans] font-bold text-[24px] leading-[18px] tracking-[0.8px] text-[#E67E22]">{item.price}</h1>
-
-                            <div className="flex text-[#556070] items-center gap-[1px] shrink-0">
-                                <CiStopwatch size={14} />
-                                <p className="font-[DM_Sans] text-[12px] leading-[18px] tracking-[0.8px] text-[#556070]">
-                                    {item.time}
-                                </p>
-                            </div>
+                    ) : (
+                        <div className="w-[90px] h-[24px] rounded-[999px] border-[1px] py-[4px] px-[9px] bg-[#E74C3C80] border-[#E74C3C] flex items-center gap-1 relative z-10">
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#E74C3C]"></span>
+                            <p className="font-[DM_Sans] font-semibold text-[11px] leading-[18px] tracking-[0.8px] text-center text-[#F0F4F8]">Unavailable</p>
                         </div>
-
-                        <button className="w-full h-[34px] rounded-[10px] py-[8px] px-[16px] gap-[8px] bg-[#E67E22] flex justify-center items-center text-center">
-                            <p className="font-[DM_Sans] font-semibold text-[14px] leading-[100%] tracking-[0%] text-[#F0F4F8]">+ Add Item</p>
-                        </button>
-
-                    </div>
+                    )}
 
                 </div>
-            ))}
+
+                <div className="w-full h-auto rounded-b-[16px] border-[1px] py-[12px] px-[10px] gap-[8px] border-[#FFFFFF14]">
+
+                    <div className="w-full pb-[10px] gap-[4px] mt-3">
+                        <h2 className="font-[DM_Sans] font-semibold text-[16px] leading-[18px] tracking-[0.8px] text-[#F0F4F8] truncate">{item.name}</h2>
+                        <p className="font-[DM_Sans] text-[12px] leading-[18px] tracking-[0.8px] text-[#8A9BB0] line-clamp-2">{item.desc}</p>
+                    </div>
+
+                    <div className="w-full h-[28px] border-y-[1px] p-[10px] gap-[4px] flex justify-between items-center border-[#FFFFFF14] mb-2">
+                        <h1 className="font-[DM_Sans] font-bold text-[24px] leading-[18px] tracking-[0.8px] text-[#E67E22]">{item.price}</h1>
+
+                        <div className="flex text-[#556070] items-center gap-[1px] shrink-0">
+                            <CiStopwatch size={14} />
+                            <p className="font-[DM_Sans] text-[12px] leading-[18px] tracking-[0.8px] text-[#556070]">
+                                {item.time}
+                            </p>
+                        </div>
+                    </div>
+
+                    <button className="w-full h-[34px] rounded-[10px] py-[8px] px-[16px] gap-[8px] bg-[#E67E22] flex justify-center items-center text-center">
+                        <p className="font-[DM_Sans] font-semibold text-[14px] leading-[100%] tracking-[0%] text-[#F0F4F8]">+ Add Item</p>
+                    </button>
+
+                </div>
+
+            </div>
+        ))}
         </section>
     )
 }

@@ -1,36 +1,45 @@
-import React from 'react'
-import CRM_header from '../../../components/crmComponents/commonCRM/CRM_header'
-import RedirectButtons from '../../../components/crmComponents/commonCRM/RedirectButtons'
-import SearchCustomers from '../../../components/crmComponents/customerList/SearchCustomers'
-import FilterButtons from '../../../components/crmComponents/customerList/FilterButtons'
-import CustomerDirectory from '../../../components/crmComponents/customerList/CustomerDirectory'
+
+import React from 'react';
+
+import CRM_header from '../../../components/crmComponents/commonCRM/CRM_header';
+import RedirectButtons from '../../../components/crmComponents/commonCRM/RedirectButtons';
+import SearchCustomers from '../../../components/crmComponents/customerList/SearchCustomers';
+import FilterButtons from '../../../components/crmComponents/customerList/FilterButtons';
+import CustomerDirectory from '../../../components/crmComponents/customerList/CustomerDirectory';
 
 const CustomerList = () => {
-    return (
-        <>
+  return (
+    <main className="min-h-screen w-full min-w-0 bg-[#0F1923]">
+      <section className="mx-auto flex w-full min-w-0 flex-col gap-4 p-3 sm:gap-5 sm:p-5 md:p-6 lg:gap-6 lg:p-9">
 
+        {/* CRM Header */}
+        <div className="w-full min-w-0">
+          <CRM_header />
+        </div>
 
-        {/* Main-Section */ }
-        < section className = "w-full min-h-screen gap-[20px] flex flex-col" >
+        {/* Navigation Buttons */}
+        <div className="w-full min-w-0">
+          <RedirectButtons />
+        </div>
 
-            {/* sub-Section */ }
-            < section className = "w-full h-full p-4 sm:p-8 bg-[#0F1923]" >
+        {/* Search Customers */}
+        <div className="w-full min-w-0">
+          <SearchCustomers />
+        </div>
 
-            <CRM_header></CRM_header>
-            <RedirectButtons></RedirectButtons>
+        {/* Filter Buttons */}
+        <div className="w-full min-w-0">
+          <FilterButtons />
+        </div>
 
-            <SearchCustomers></SearchCustomers>
+        {/* Customer Directory */}
+        <div className="w-full min-w-0">
+          <CustomerDirectory />
+        </div>
 
-            <FilterButtons></FilterButtons>
-
-            <CustomerDirectory></CustomerDirectory>
-
-            </section >
-                
-        </section >
-
-         </>
-  )
-}
+      </section>
+    </main>
+  );
+};
 
 export default CustomerList
