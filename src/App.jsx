@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import OrderConfirmation from "./pages/Orderconfirmationpage";
 import Aboutus from "./pages/AboutUs";
@@ -14,6 +12,7 @@ import Trackorder from "./pages/Trackorder";
 
 
 import AdminLayout from "./components/layout/AdminLayout";
+import PublicLayout from "./components/layout/PublicLayout";
 import DashboardOverview from "./pages/DashboardOverview";
 import TableManagement from "./pages/TableManagement";
 import BillingAndPayments from "./pages/BillingAndPayments";
@@ -21,9 +20,8 @@ import StaffManagement from "./pages/StaffManagement";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
+    <Routes>
+      <Route element={<PublicLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -33,14 +31,8 @@ function App() {
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/track-order" element={<Trackorder />} />
-      </Routes>
-      <Footer />
-    </>
+      </Route>
 
-
-function App() {
-  return (
-    <Routes>
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<DashboardOverview />} />
         <Route path="table-management" element={<TableManagement />} />
