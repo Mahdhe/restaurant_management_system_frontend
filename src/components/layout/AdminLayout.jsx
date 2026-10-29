@@ -25,7 +25,6 @@ export default function AdminLayout() {
     const path = adminRoutes[label];
     if (path) navigate(path);
   };
-
   return (
     <div className="min-h-screen bg-[#0F1923]">
       <div className="flex items-start">
