@@ -17,6 +17,7 @@ import DashboardOverview from "./pages/DashboardOverview";
 import TableManagement from "./pages/TableManagement";
 import BillingAndPayments from "./pages/BillingAndPayments";
 import StaffManagement from "./pages/StaffManagement";
+import AnalyticsDashboard from "./pages/Insights/AnalyticsDashboard";
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
         <Route path="table-management" element={<TableManagement />} />
         <Route path="billing-payments" element={<BillingAndPayments />} />
         <Route path="staff-management" element={<StaffManagement />} />
+        <Route path="reports-analytics" element={<AnalyticsDashboard />} />
+        
       </Route>
     </Routes>
   );

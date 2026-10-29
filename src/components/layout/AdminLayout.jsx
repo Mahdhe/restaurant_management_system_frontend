@@ -36,12 +36,10 @@ export default function AdminLayout() {
             onNavigate={handleNavigate}
           />
         </div>
-
         <main className="min-w-0 flex-1">
           <div className="sticky top-0 z-40">
             <Header user={currentUser} page={pageDetials[activeItem]} />
           </div>
-
           <Outlet />
         </main>
       </div>
