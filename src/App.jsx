@@ -1,49 +1,20 @@
-import { useState } from "react";
-import AdminSidebar from "./components/layout/Sidebar";
-import Header from "./components/layout/Header";
-import { pageDetials } from "./data/PageDetails";
-
-import ReservationRoutes from "./pages/Reservation_dashboard/ReservationRoutes";
-
-import CouponRoutes from "./pages/Coupon/CouponRoutes";
-import RoleManagementRoutes from "./pages/RolesManagment/roleandpermission";
-
+import { Route, Routes } from "react-router-dom";
+import AdminLayout from "./components/layout/AdminLayout";
+import ReservationDashboard from "./pages/Reservation_dashboard/ReservationMain";
+import CouponDashboard from "./pages/Coupon/CouponMain";
+import RolesAndPermissions from "./pages/RolesManagment/roleandpermission";
 import Authenticationandsecurity from "./pages/Authentication/authentication";
 
 function App() {
-  const [activeItem, setActiveItem] = useState("Dashboard");
-
-  const currentUser = {
-    name: "Ashan k.",
-    initials: "AK",
-    role: "admin",
-    roleLabel: "Super Admin",
-  };
-
   return (
-    <div className="min-h-screen">
-      <div className="flex items-start">
-        <div className="sticky top-0 self-start">
-          <AdminSidebar
-            user={currentUser}
-            activeItem={activeItem}
-            onNavigate={setActiveItem}
-          />
-        </div>
-
-        <main className="sticky top-0 min-w-0 flex-1">
-          <Header user={currentUser} page={pageDetials[activeItem]} />
-<div className="min-h-screen bg-[#0f1923] font-dmsans">
-            {activeItem === "Reservations" && (<ReservationRoutes />)}
-           {activeItem === "Coupons & Tax" && (<CouponRoutes />) }
-          {activeItem === "Roles & Permissions" && (<RoleManagementRoutes />) }
-          {activeItem === "Authentication & Security" && (<Authenticationandsecurity/>) }
-           
-          </div>
-        </main>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route path="reservations" element={<ReservationDashboard />} />
+        <Route path="coupons-tax" element={<CouponDashboard />} />
+        <Route path="roles-permissions" element={<RolesAndPermissions />} />
+        <Route path="authentication-security" element={<Authenticationandsecurity />} />
+      </Route>
+    </Routes>
   );
 }
-
 export default App;
