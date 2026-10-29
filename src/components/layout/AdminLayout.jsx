@@ -3,7 +3,6 @@ import AdminSidebar from "./Sidebar";
 import Header from "./Header";
 import { pageDetials } from "../../data/PageDetails";
 import { adminRoutes } from "../../routes/adminRoutes";
-
 const currentUser = {
   name: "Ashan k.",
   initials: "AK",
@@ -19,7 +18,6 @@ export default function AdminLayout() {
   const activeItem =
     Object.keys(adminRoutes).find((label) => adminRoutes[label] === pathname) ??
     "Dashboard";
-
   // Sidebar still calls onNavigate(label); we translate that into a URL change
   const handleNavigate = (label) => {
     const path = adminRoutes[label];

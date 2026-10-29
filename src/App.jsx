@@ -24,6 +24,10 @@ import ReservationDashboard from "./pages/Reservation_dashboard/ReservationMain"
 import CouponDashboard from "./pages/Coupon/CouponMain";
 import RolesAndPermissions from "./pages/RolesManagment/roleandpermission";
 import Authenticationandsecurity from "./pages/Authentication/authentication";
+import Order_ManagementMain from "./pages/order_Management/Order_ManagementMain";
+import Menu_ManagementMain from "./pages/menu_Management/Menu_ManagementMain";
+import CRM_Main from "./pages/crm/CRM_Main";
+import CRM_Notifications_Main from "./pages/crmNotifications/CRM_Notifications_Main";
 
 function App() {
   return (
@@ -52,7 +56,10 @@ function App() {
         <Route path="coupons-tax" element={<CouponDashboard />} />
         <Route path="roles-permissions" element={<RolesAndPermissions />} />
         <Route path="authentication-security" element={<Authenticationandsecurity />} />
-
+        <Route path="order-management" element={<Order_ManagementMain></Order_ManagementMain>} />
+        <Route path="menu-management" element={<Menu_ManagementMain></Menu_ManagementMain>} />
+        <Route path="customers" element={<CRM_Main></CRM_Main>} />
+        <Route path="notifications" element={<CRM_Notifications_Main></CRM_Notifications_Main>} />
       </Route>
     </Routes>
   );
