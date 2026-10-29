@@ -57,6 +57,6 @@ export const pageDetials = {
   },
   "Authentication & Security": {
     category: "Security > Authenticationa & Security",
-    title: "Authenticationa & Security",
+    title: "Authentication & Security",
   },
 };

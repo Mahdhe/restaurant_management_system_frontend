@@ -20,6 +20,10 @@ import StaffManagement from "./pages/StaffManagement";
 import AnalyticsDashboard from "./pages/Insights/AnalyticsDashboard";
 import InventoryDashboard from "./pages/Inventory/InventoryDashboard";
 import KitchenDashboard from "./pages/Kitchen/KitchenDashboard";
+import ReservationDashboard from "./pages/Reservation_dashboard/ReservationMain";
+import CouponDashboard from "./pages/Coupon/CouponMain";
+import RolesAndPermissions from "./pages/RolesManagment/roleandpermission";
+import Authenticationandsecurity from "./pages/Authentication/authentication";
 
 function App() {
   return (
@@ -44,10 +48,13 @@ function App() {
         <Route path="reports-analytics" element={<AnalyticsDashboard />} />
         <Route path="inventory-stock" element={<InventoryDashboard />} />
         <Route path="kitchen-display" element={<KitchenDashboard />} />
-        
+        <Route path="reservations" element={<ReservationDashboard />} />
+        <Route path="coupons-tax" element={<CouponDashboard />} />
+        <Route path="roles-permissions" element={<RolesAndPermissions />} />
+        <Route path="authentication-security" element={<Authenticationandsecurity />} />
+
       </Route>
     </Routes>
   );
 }
-
 export default App;
