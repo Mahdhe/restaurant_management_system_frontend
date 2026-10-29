@@ -36,8 +36,8 @@ html, body, #root {
   --font-jetbrains: "JetBrains Mono", monospace;
 }
 
-.font-playfair{
-    font-family: var(--font-playfair)
+.font-playfair {
+  font-family: var(--font-playfair);
 }
 
 .font-dmsans{

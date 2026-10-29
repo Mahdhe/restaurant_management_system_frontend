@@ -1,0 +1,31 @@
+import { useState } from "react";
+import KitchenQueueContent from "./KitchenQueueContent";
+import InProgressOrders from "./In-ProgressOrders";
+import CompletedArchive from "./CompletedArchive";
+import KitchenDashboardHeader from "../KitchenDashboardHeader";
+import KitchenTabs from "../KitchenTabs";
+
+export default function KitchenMain() {
+  const [activeTab, setActiveTab] = useState("queue");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "queue":
+        return <KitchenQueueContent />;
+      case "progress":
+        return <InProgressOrders />;
+      case "completed":
+        return <CompletedArchive />;
+      default:
+        return <KitchenQueueContent />;
+    }
+  };
+
+  return (
+    <div className="w-full min-w-0">
+      <KitchenDashboardHeader activeTab={activeTab}/>
+      <KitchenTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div className="mt-5">{renderContent()}</div>
+    </div>
+  );
+}

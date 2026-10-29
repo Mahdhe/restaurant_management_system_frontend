@@ -19,6 +19,7 @@ import BillingAndPayments from "./pages/BillingAndPayments";
 import StaffManagement from "./pages/StaffManagement";
 import AnalyticsDashboard from "./pages/Insights/AnalyticsDashboard";
 import InventoryDashboard from "./pages/Inventory/InventoryDashboard";
+import KitchenDashboard from "./pages/Kitchen/KitchenDashboard";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="staff-management" element={<StaffManagement />} />
         <Route path="reports-analytics" element={<AnalyticsDashboard />} />
         <Route path="inventory-stock" element={<InventoryDashboard />} />
+        <Route path="kitchen-display" element={<KitchenDashboard />} />
         
       </Route>
     </Routes>
