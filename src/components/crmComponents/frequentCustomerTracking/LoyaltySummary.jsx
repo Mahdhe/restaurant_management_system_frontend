@@ -1,32 +1,35 @@
 import React from 'react'
 
+const ROWS = [
+    { label: 'Points Issued', value: '12,400' },
+    { label: 'Points Redeemed', value: '8,900' },
+]
+
 const LoyaltySummary = () => {
   return (
     <section className="w-[300px] max-w-full min-w-0 h-[165px] rounded-[14px] border-[1px] bg-[#1C2A38] border-[#FFFFFF14] flex flex-col overflow-hidden box-border">
 
-        <div className="w-[300px] h-[53px] rounded-t-[14px] border-[1px] p-[20px] pb-[10px] gap-[10px] flex border-[#FFFFFF14]">
-            <h1 className="font-[DM_Sans] font-bold text-[18px] leading-[100%] tracking-[0%] text-[#FFFFFF]">Loyalty Summary</h1>
+        {/* Header */}
+        <div className="w-[300px] max-w-full h-[53px] shrink-0 rounded-t-[14px] border-b-[1px] p-[20px] max-sm:px-[14px] pb-[10px] gap-[10px] flex items-center border-[#FFFFFF14] box-border">
+            <h1 className="min-w-0 truncate font-[DM_Sans] font-bold text-[18px] max-sm:text-[16px] leading-[23px] tracking-[0%] text-[#FFFFFF]">Loyalty Summary</h1>
         </div>
 
-        <div className="w-[300px] h-[184px] py-[10px] px-[20px] gap-[10px] flex">
+        {/* Body */}
+        <div className="w-[300px] max-w-full min-w-0 h-[184px] min-h-0 py-[10px] px-[20px] max-sm:px-[14px] gap-[10px] flex box-border">
 
-            <div className="w-[260px] h-[164px] py-[10px]">
+            <div className="w-[260px] max-w-full min-w-0 h-[164px] py-[10px] box-border">
 
-                <div className="w-[260px] h-[36px] border-b-[1px] py-[10px] gap-[10px] flex justify-between items-center border-[#FFFFFF14]">
-                    <h1 className="font-[DM_Sans] text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Points Issued </h1>
-                    <p className="font-[DM_Sans] font-semibold text-[13px] leading-[100%] tracking-[0%] text-[#3BB273] text-end">12,400</p>
-                </div>
-
-                <div className="w-[260px] h-[36px] border-b-[1px] py-[10px] gap-[10px] flex justify-between items-center border-[#FFFFFF14]">
-                    <h1 className="font-[DM_Sans] text-[13px] leading-[100%] tracking-[0%] text-[#8A9BB0]">Points Redeemed</h1>
-                    <p className="font-[DM_Sans] font-semibold text-[13px] leading-[100%] tracking-[0%] text-[#3BB273] text-end">8,900</p>
-                </div>
-
+                {ROWS.map((row) => (
+                    <div key={row.label} className="w-[260px] max-w-full h-[36px] shrink-0 border-b-[1px] py-[10px] gap-[10px] flex justify-between items-center border-[#FFFFFF14] box-border">
+                        <p className="min-w-0 truncate font-[DM_Sans] text-[13px] max-sm:text-[12px] leading-[16px] tracking-[0%] text-[#8A9BB0]">{row.label}</p>
+                        <p className="shrink-0 whitespace-nowrap font-[DM_Sans] font-semibold text-[13px] max-sm:text-[12px] leading-[16px] tracking-[0%] text-[#3BB273] text-end">{row.value}</p>
+                    </div>
+                ))}
 
             </div>
 
         </div>
-        
+
     </section>
   )
 }

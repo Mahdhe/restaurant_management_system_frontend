@@ -3,7 +3,7 @@ import React from 'react'
 
 const CRM_header = () => {
   return (
-    <section className="w-full max-w-[1200px] min-w-0 px-[10px] mb-8 box-border">
+    <section className="w-full max-w-[1200px] min-w-0 px-[10px] box-border">
 
       <div className="flex w-full min-w-0 items-center gap-6 max-[1439px]:flex-col max-[1439px]:items-stretch max-[1439px]:gap-4">
 

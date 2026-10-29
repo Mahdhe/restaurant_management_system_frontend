@@ -23,7 +23,7 @@ const AddEditCategory = () => {
                     <div className="w-[262px] max-w-full h-[59px] shrink-0 gap-[8px] flex flex-col">
                         <h3 className="font-[DM_Sans] font-medium text-[13px] max-sm:text-[12px] leading-[16px] tracking-[0%] text-[#8A9BB0]">ICON</h3>
                         <div className="w-[262px] max-w-full h-[34px] rounded-[10px] border-[1px] py-[3px] px-[10px] gap-[10px] flex items-center bg-[#243447] border-[#FFFFFF14] box-border">
-                            <p className="min-w-0 truncate font-[DM_Sans] text-[14px] leading-[18px] tracking-[0%] text-[#E74C3C80]">D</p>
+                            <p className="min-w-0 truncate font-[DM_Sans] text-[14px] leading-[18px] tracking-[0%] text-[#E74C3C80]">🍨</p>
                         </div>
                     </div>
 

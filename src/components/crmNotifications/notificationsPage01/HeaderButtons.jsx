@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeaderButtons = () => {
     return (
-        <section className="w-[1132px] max-w-full min-w-0 h-[40px] max-sm:h-auto gap-[12px] flex flex-wrap justify-end max-sm:justify-start items-center box-border">
+        <section className="w-[1200px] max-w-full min-w-0 h-[40px] max-sm:h-auto gap-[12px] flex flex-wrap justify-end max-sm:justify-start items-center box-border">
 
             <div className="w-[130px] h-[40px] shrink-0 gap-[12px] flex">
                 <button type="button" className="w-[130px] h-[40px] shrink-0 rounded-[10px] border-[1px] py-[8px] px-[16px] flex justify-center items-center gap-[10px] bg-[#243447] border-[#FFFFFF24] box-border transition hover:bg-[#2D4157]">

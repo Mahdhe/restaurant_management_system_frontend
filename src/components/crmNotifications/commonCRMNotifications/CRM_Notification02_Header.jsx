@@ -2,7 +2,7 @@ import React from 'react'
 
 const CRM_Notification02_Header = () => {
   return (
-    <section className="w-[1200px] max-w-full min-w-0 h-[61px] max-[1439px]:h-auto px-[10px] gap-[10px] flex mb-8 box-border">
+    <section className="w-[1200px] max-w-full min-w-0 h-[61px] max-[1439px]:h-auto px-[10px] gap-[10px] flex box-border">
         <section className="flex w-[1200px] max-w-full min-w-0 h-[61px] max-[1439px]:h-auto gap-[10px] max-[1439px]:gap-[16px] items-center max-[1439px]:items-start max-[1439px]:flex-col">
 
             {/* title + description */}

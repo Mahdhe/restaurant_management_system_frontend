@@ -30,7 +30,7 @@ const RestaurantAnnouncement = () => {
   }
 
   return (
-    <section className="w-[300px] rounded-[14px] bg-[#1C2A38] border border-[#FFFFFF14] font-['DM_Sans']">
+    <section className="sm:w-[300px] md:w-[350px] rounded-[14px] bg-[#1C2A38] border border-[#FFFFFF14] font-['DM_Sans']">
       {/* Header */}
       <div className="flex items-center gap-[10px] px-[20px] pt-[20px]">
         <div className="flex h-[36px] w-[36px] shrink-0 items-center justify-center rounded-[12px] bg-[#2980B91F]">

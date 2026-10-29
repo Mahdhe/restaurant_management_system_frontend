@@ -9,7 +9,7 @@ const cards = [
 
 const KPIrowNotifi02 = () => {
   return (
-    <section className="w-full max-w-[1132px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
+    <section className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
       {cards.map((card) => (
         <div
           key={card.label}

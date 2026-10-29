@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { ChartColumn, ChevronDown } from 'lucide-react'
 
@@ -25,77 +26,102 @@ const STATS = [
 
 const AlertFrequency = () => {
     return (
-        <section className="w-[1132px] h-[490px] gap-[10px] flex my-4 font-['DM_Sans',sans-serif]">
-            <section className="w-[1132px] h-[490px] gap-[20px] flex">
-                <div className="w-[1132px] h-[490px] rounded-[16px] border-[1px] p-[20px] bg-[#1C2A38] border-[#FFFFFF14] flex flex-col">
+        <section className="my-4 w-full min-w-0 font-['DM_Sans',sans-serif]">
+            <div className="flex w-full min-w-0 flex-col gap-5 rounded-2xl border border-[#FFFFFF14] bg-[#1C2A38] p-4 sm:p-5 lg:p-6">
 
-                    {/* Header */}
-                    <div className="w-[1092px] h-[64px] gap-[16px] flex justify-between items-center shrink-0">
-                        <div className="py-[12px] gap-[10px] flex">
-                            <div className="w-[36px] h-[36px] rounded-[12px] bg-[#E67E220F] flex items-center justify-center">
-                                <ChartColumn size={14} className="text-[#E67E22]" />
-                            </div>
-
-                            <div className="flex flex-col h-[36px] gap-[2px]">
-                                <h1 className="h-[18px] font-semibold text-[14px] leading-[100%] tracking-[0.08em] text-[#FFFFFF]">Alert Frequency</h1>
-                                <p className="h-[16px] text-[12px] leading-[100%] tracking-[0.08em] text-[#8A9BB0]">This week- all alert types</p>
-                            </div>
+                {/* Header */}
+                <div className="flex w-full min-w-0 flex-wrap items-center justify-between gap-3">
+                    <div className="flex min-w-0 items-center gap-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#E67E220F]">
+                            <ChartColumn size={18} className="text-[#E67E22]" />
                         </div>
 
-                        <button className="w-[140px] h-[40px] rounded-[10px] bg-[#243447] border-[1px] border-[#FFFFFF24] py-[8px] px-[16px] gap-[8px] flex justify-center items-center transition hover:bg-[#2C4058]">
-                            <p className="font-semibold text-[14px] leading-[100%] tracking-[0%] text-[#F0F4F8]">This Week</p>
-                            <ChevronDown size={12} className="text-[#F0F4F8]" />
-                        </button>
+                        <div className="min-w-0">
+                            <h2 className="text-sm font-semibold leading-5 tracking-wide text-white sm:text-base">
+                                Alert Frequency
+                            </h2>
+                            <p className="mt-1 text-[11px] leading-4 text-[#8A9BB0] sm:text-xs">
+                                This week - all alert types
+                            </p>
+                        </div>
                     </div>
 
-                    {/* Chart */}
-                    <div className="w-[960px] mt-[10px] shrink-0">
-                        <div className="relative w-full h-[190px]">
+                    <button
+                        type="button"
+                        className="flex h-9 shrink-0 items-center justify-center gap-2 rounded-lg border border-[#FFFFFF24] bg-[#243447] px-3 text-xs font-semibold text-[#F0F4F8] transition hover:bg-[#2C4058] sm:h-10 sm:px-4 sm:text-sm"
+                    >
+                        <span>This Week</span>
+                        <ChevronDown size={14} />
+                    </button>
+                </div>
 
-                            {/* Grid lines + y-axis labels */}
-                            {Y_TICKS.map((tick, i) => (
-                                <div
-                                    key={tick}
-                                    className="absolute left-0 right-0 flex items-center"
-                                    style={{ top: `${(i / (Y_TICKS.length - 1)) * 100}%` }}
-                                >
-                                    <span className="w-[40px] -translate-y-1/2 text-[12px] font-medium text-[#8A9BB0]">{tick}</span>
-                                    <div className="flex-1 border-t border-dashed border-[#FFFFFF14]" />
-                                </div>
-                            ))}
+                {/* Chart */}
+                <div className="w-full min-w-0 pt-2">
+                    <div className="relative h-44 w-full sm:h-48 md:h-52">
+                        {/* Grid lines and Y-axis labels */}
+                        {Y_TICKS.map((tick, i) => (
+                            <div
+                                key={tick}
+                                className="absolute right-0 flex w-full items-center"
+                                style={{
+                                    top: `${(i / (Y_TICKS.length - 1)) * 100}%`,
+                                }}
+                            >
+                                <span className="w-7 shrink-0 -translate-y-1/2 text-[10px] font-medium text-[#8A9BB0] sm:w-9 sm:text-xs">
+                                    {tick}
+                                </span>
 
-                            {/* Values sitting on the baseline */}
-                            <div className="absolute left-[40px] right-0 bottom-[8px] flex">
-                                {WEEK_DATA.map((d) => (
-                                    <div key={d.day} className="flex-1 flex justify-center">
-                                        <span className="text-[11px] font-bold text-[#E67E22]">{d.value}</span>
-                                    </div>
-                                ))}
+                                <div className="flex-1 border-t border-dashed border-[#FFFFFF14]" />
                             </div>
-                        </div>
+                        ))}
 
-                        {/* Day labels */}
-                        <div className="flex pl-[40px] mt-[20px]">
+                        {/* Values */}
+                        <div className="absolute bottom-0 left-7 right-0 flex sm:left-9">
                             {WEEK_DATA.map((d) => (
-                                <div key={d.day} className="flex-1 flex justify-center">
-                                    <span className="text-[12px] font-semibold text-[#FFFFFF]">{d.day}</span>
+                                <div
+                                    key={d.day}
+                                    className="flex min-w-0 flex-1 justify-center"
+                                >
+                                    <span className="text-[10px] font-bold text-[#E67E22] sm:text-xs">
+                                        {d.value}
+                                    </span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Stats */}
-                    <div className="w-[1050px] mt-[30px] flex justify-around shrink-0">
-                        {STATS.map((s) => (
-                            <div key={s.label} className="flex flex-col items-center gap-[6px]">
-                                <span className={`text-[28px] font-bold leading-none ${s.color}`}>{s.value}</span>
-                                <span className="text-[14px] leading-none text-[#8A9BB0]">{s.label}</span>
+                    {/* Day labels */}
+                    <div className="mt-3 flex pl-7 sm:pl-9">
+                        {WEEK_DATA.map((d) => (
+                            <div
+                                key={d.day}
+                                className="flex min-w-0 flex-1 justify-center"
+                            >
+                                <span className="text-[10px] font-semibold text-white sm:text-xs">
+                                    {d.day}
+                                </span>
                             </div>
                         ))}
                     </div>
-
                 </div>
-            </section>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-2 border-t border-[#FFFFFF14] pt-5 sm:gap-4 sm:pt-6">
+                    {STATS.map((s) => (
+                        <div
+                            key={s.label}
+                            className="flex min-w-0 flex-col items-center gap-2 text-center"
+                        >
+                            <span className={`text-xl font-bold leading-none sm:text-2xl lg:text-[28px] ${s.color}`}>
+                                {s.value}
+                            </span>
+                            <span className="text-[10px] leading-tight text-[#8A9BB0] sm:text-xs lg:text-sm">
+                                {s.label}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
     )
 }
